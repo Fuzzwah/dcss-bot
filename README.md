@@ -84,6 +84,12 @@ requests graceful stop. Start paused with `uv run --locked dcss-bot run --paused
 Controls use a private local Unix socket at `state/control.sock`, not an exposed
 HTTP API. Only one supervisor may own that socket. For separate simultaneous
 experiments, specify separate usernames and `--control-socket` paths.
+`--control-socket` is a global option and must come **before** the subcommand.
+Address that same socket for every control command, for example:
+
+```fish
+uv run --locked dcss-bot --control-socket state/experiment.sock status
+```
 
 Stop infrastructure **after** stopping the bot:
 
@@ -94,9 +100,26 @@ docker compose down
 For the bootstrap's Podman container: `podman stop dcss-webtiles`.
 Persistent `state/` is not deleted by these commands.
 
+### If the bot looks idle
+
+Check `dcss-bot status` before intervening: `paused`, `state`, `reason`, `turn`,
+`actions` and `objective` distinguish an intentional pause from recovery or pacing.
+If turns advance while the objective is `recover`, the bot is taking in-game rest
+turns; it is not paused. Those turns are still recorded.
+
+A safety pause deliberately stops new actions. Inspect the reported reason and
+the run's `events.jsonl`/`actions.jsonl` before resuming; repeatedly resuming an
+unresolved prompt or cycle guard does not fix it. Action/turn limits instead end
+the invocation and record the result in `summary.json`.
+
+“No bot control socket” means no supervisor is reachable at the selected path,
+not necessarily that the game server is down. Check which socket was used. To
+reattach a saved game after its supervisor exits, use `run` with the same account,
+credential directory and game mode; `resume` only controls a running supervisor.
+
 ## Logs and playable recordings
 
-Every invocation creates `runs/<UTC-timestamp>-<id>/` containing:
+Each `run` invocation creates `runs/<UTC-timestamp>-<id>/` containing:
 
 * `metadata.json`: run ID, engine revision, character and agent configuration.
 * `actions.jsonl`: decisions, explanations, timing and outcomes.
@@ -159,10 +182,11 @@ server logs are under `state/`; see the infrastructure document for paths.
 Keep the normal watchable bot running or paused. Evaluation uses **new accounts**
 and a **separate private control socket**, never the `MiBeBot` save:
 
-Use the updated server image: seeded runs use native game mode `dcss-seeded`,
-not the normal `dcss` slot label. For an existing installation, stop bots first,
-stop the container, then start `python3 scripts/server.py --rebuild` (or
-`docker compose up --build -d webtiles`). Saves remain under `state/`.
+The supplied server exposes both normal `dcss` and custom-seed `dcss-seeded`
+entries. An older image without the seeded entry needs rebuilding; ordinary
+evaluation does not require a server restart. After infrastructure changes, stop
+bots first, stop the container, then run `python3 scripts/server.py --rebuild`
+(or `docker compose up --build -d webtiles`). Saves remain under `state/`.
 
 ```fish
 uv run --locked dcss-bot evaluate --seeds 1 2 3 --repeats 2 --max-turns 700
@@ -243,11 +267,13 @@ For a single seeded watchable run, use a **new** username:
 uv run --locked dcss-bot --control-socket state/seed-demo.sock run --username SeedDemo --seed 12345 --paused
 ```
 
-Resume its saved character later with the same account/socket **without `--seed`**,
-selecting the seeded game mode:
+Resume its saved character later with the same account and credential directory,
+**without a seed request**. Explicitly clear `BOT_SEED` so a value in `.env` or
+the shell cannot accidentally request a new seeded run, and select the saved
+game's mode:
 
 ```fish
-env DCSS_GAME_ID=dcss-seeded uv run --locked dcss-bot --control-socket state/seed-demo.sock run --username SeedDemo --paused
+env BOT_SEED= DCSS_GAME_ID=dcss-seeded uv run --locked dcss-bot --control-socket state/seed-demo.sock run --username SeedDemo --paused
 ```
 
 Providing `--seed` to an existing account is deliberately rejected without
@@ -263,11 +289,24 @@ cp .env.example .env
 vi .env
 ```
 
-Environment variables override `.env`, and CLI flags override both. Useful flags:
-`--delay 0.4`, `--max-turns 10000`, `--max-actions 10000`, `--record`, `--paused`.
-The generated account password lives in `state/credentials-USERNAME.json` with
-mode `0600`, never in run metadata. `.env`, state, recordings and caches are ignored.
-Keep backups private: the server state contains accounts and saved characters.
+For `run`, supplied CLI options override environment values, which override `.env`.
+Useful flags: `--character mibe`, `--agent rule`, `--delay 0.4`, `--max-turns 10000`,
+`--max-actions 10000`, `--record`, `--paused`. Turn limits count turns played during
+this invocation, not a resumed character's lifetime.
+
+`evaluate` shares connection, character and storage configuration, but takes its
+engine list, pacing, limits and recording choice from its own `--agents`, `--delay`,
+`--max-turns`, `--max-actions`, `--seconds-per-run` and `--record` options. Those do
+not inherit `BOT_AGENT`, `ACTION_DELAY`, `MAX_*` or `RECORD_VIDEO`.
+
+Generated credentials live **beside the control socket**, with mode `0600`.
+The default is `state/credentials-USERNAME.json`; changing the socket's directory
+changes the credential lookup directory. Preserve that directory when resuming.
+Smoke-run credentials are under `.runtime/`, not `state/`; do not discard them
+as build caches if you intend to resume those accounts.
+
+Passwords never enter run metadata. `.env`, state, recordings and caches are
+ignored. Keep backups private: server state contains accounts and saved characters.
 
 ### Character modules
 
@@ -312,9 +351,10 @@ background. Unknown UI still pauses safely.
 Profile-owned RC options override native rc-editor values; unrelated settings are
 preserved. Changing a weapon/stat preference does not retrofit an existing save.
 
-No second combo or new tactics are included in this refactor. Modules using the
-existing action vocabulary need no adapter/supervisor changes. New mechanics such
-as spellcasting should extend shared actions, not add per-combo transport branches.
+Only MiBe is implemented; other combinations need their own policies and verification.
+Modules using the existing action vocabulary need no adapter/supervisor changes.
+New mechanics such as spellcasting should extend shared actions, not add per-combo
+transport branches.
 
 ### Current MiBe policy
 
@@ -369,6 +409,9 @@ seeded benchmark run automatically.
 
 ## Extend and test
 
+Contributors and coding agents should read [AGENTS.md](AGENTS.md) for component
+ownership, protocol invariants, safe test isolation and the development workflow.
+
 Implement `async decide(observation) -> Action`, using the immutable public models
 in `src/dcss_bot/models.py`. Run an installed strategy with
 `--agent your_package.your_module:YourAgent`. Strategy code cannot send WebSocket
@@ -377,9 +420,9 @@ adapter. No provider credentials or SDK are required by the core.
 An LLM backend is not bundled; endpoint/model/key configuration belongs in a
 strategy plugin. Provider exceptions and invalid actions cause a logged pause.
 The provider-neutral extension contract is described in the architecture document.
-The MiBe implementation is now imported from `dcss_bot.characters.mibe`; shared
-danger annotations are in `dcss_bot.danger`. The former strategy/helper exports
-from `dcss_bot.agents` were removed; that module only loads decision engines.
+Import the MiBe implementation from `dcss_bot.characters.mibe` and shared danger
+annotations from `dcss_bot.danger`. `dcss_bot.agents` only loads decision engines;
+it does not export character strategies or equipment preferences.
 
 ```fish
 uv sync --locked
@@ -391,24 +434,38 @@ reconnection, UI handling, action validation, survival regressions, lifecycle
 controls and recorder metrics. A live upstream server is required for the full
 integration smoke; mocked protocol tests are not its replacement.
 
-With the server running, reproduce the real-game acceptance check:
+With the local server and video prerequisites ready, reproduce the known seed-8
+opening acceptance scenario:
 
 ```fish
-uv run --locked --extra video python scripts/smoke.py --record --turns 130
+env BOT_CHARACTER=mibe BOT_AGENT=rule BOT_SEED=8 uv run --locked --extra video python scripts/smoke.py --record --turns 130
 ```
 
-This creates a disposable account, verifies character creation and
-pause/resume/step, plays real turns, checks the logs, and opens the finalized WebM
-in Chromium to prove it decodes. It fails explicitly if the agent unexpectedly
-pauses. `--username ACCOUNT` can resume a prior smoke save; turn limits are
-relative to that invocation, not the character's lifetime.
+This creates a fresh account and private `.runtime/smoke-...sock`, verifies
+character creation and pause/resume/step, plays real turns, checks logs, and opens
+the finalized WebM in Chromium to prove it decodes. It fails explicitly if the
+agent unexpectedly pauses. Seed 8 is an exercised acceptance case, not a general
+survival guarantee; use additional held-out seeds when evaluating strategy changes.
 
-The current implementation passed **333 automated tests**. Seeded runs have checked
-matching initial states and identical 300-turn public action/state traces across
-fresh accounts, live native spectating, armour acquisition and playable video.
-The earlier infrastructure milestone also exercised Firefox, container restart
-persistence and real character death. Exact artifacts, comparison results and
-unverified deployment paths are listed in [verification](docs/verification.md).
+`--username ACCOUNT` can resume a prior smoke save. Clear `BOT_SEED` and set
+`DCSS_GAME_ID=dcss-seeded` when resuming a seeded one. Keep its credentials in
+`.runtime/`; the smoke helper does not use the normal `state/control.sock`.
+
+### Recorded verification
+
+The latest recorded character-module verification (2026-10-30) passed **333 tests**.
+The seed-8 recorded run completed **130 turns and 10 kills**, with a public
+action/state trace identical to the pre-refactor MiBe run. Four explicit-module
+evaluation trials also completed 130 turns each with matching repeated traces.
+Ordinary unseeded creation, saved-game resumption, live native spectating and
+pause-aware WebM capture were exercised.
+
+Earlier milestones exercised Firefox on Linux, container restart persistence and
+real character death. Infrastructure was verified with rootless Podman; Docker
+Compose, native host compilation and MacBook SSH authentication were not exercised
+here. Commands, dated results and artifact paths are in [verification](docs/verification.md).
+Runtime artifacts are gitignored and may be absent in another checkout or after
+cleanup. Historical handover notes do not establish that a bot is currently running.
 
 See [architecture and research](docs/architecture.md) for component boundaries,
 licensing, integration tradeoffs and the visibility contract.
