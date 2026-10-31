@@ -32,6 +32,12 @@ def test_invalid_action_delays_are_rejected(delay):
         Config(delay=delay).validate()
 
 
+@pytest.mark.parametrize("delay", [float("nan"), float("inf"), -.01, 2.001, True])
+def test_invalid_native_exploration_delays_are_rejected(delay):
+    with pytest.raises(ValueError, match="Explore delay"):
+        Config(explore_delay=delay).validate()
+
+
 @pytest.mark.parametrize("seed", [0, -1, 2**64, True, 1.5, "123", "random"])
 def test_invalid_seeds_are_rejected(seed):
     with pytest.raises(ValueError, match="BOT_SEED"):

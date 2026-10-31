@@ -412,6 +412,7 @@ async def run_evaluation(base: Config, plan: Evaluation, output: Path | None = N
                 "seeds": list(plan.seeds), "agents": list(plan.agents), "repeats": plan.repeats,
                 "max_turns": plan.max_turns, "max_actions": plan.max_actions,
                 "seconds_per_run": plan.seconds_per_run, "delay": plan.delay, "record_video": plan.record_video,
+                "explore_delay": base.explore_delay,
                 "control_socket": str(socket), "package_sources_sha256": sources,
                 "pregen_dungeon": "incremental", "fresh_accounts": True}
     _json(directory / "manifest.json", manifest)

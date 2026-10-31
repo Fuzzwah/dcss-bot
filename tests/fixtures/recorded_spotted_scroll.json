@@ -1,0 +1,280 @@
+{
+  "source": "runs/20261031T193256.977862Z-2e13005056aa/observations.jsonl",
+  "note": "Readonly public records; local 3x3 map excerpt around (47,-1), scroll messages only. No hidden item fields or saved-game data. The second observation reveals a hostile at the scroll tile arrival.",
+  "records": [
+    {
+      "sequence": 347,
+      "phase": "after",
+      "observation": {
+        "hp": 19,
+        "hp_max": 19,
+        "turn": 517,
+        "place": "Dungeon",
+        "depth": 1,
+        "position": [
+          47,
+          -1
+        ],
+        "statuses": [],
+        "inventory": [
+          {
+            "slot": 0,
+            "letter": "a",
+            "name": "+0 hand axe",
+            "quantity": 1,
+            "equipped": true,
+            "category": "weapon"
+          },
+          {
+            "slot": 1,
+            "letter": "b",
+            "name": "+0 animal skin",
+            "quantity": 1,
+            "equipped": false,
+            "category": "armour"
+          },
+          {
+            "slot": 2,
+            "letter": "c",
+            "name": "+0 ring mail",
+            "quantity": 1,
+            "equipped": true,
+            "category": "armour"
+          },
+          {
+            "slot": 52,
+            "letter": "d",
+            "name": "bubbling dark potion",
+            "quantity": 1,
+            "equipped": false,
+            "category": "potion"
+          }
+        ],
+        "monsters": [],
+        "input_mode": 1,
+        "messages": [
+          "Found a scroll labelled KAMOOK LUTYEC."
+        ],
+        "cells": [
+          {
+            "x": 46,
+            "y": -2,
+            "feature": 33,
+            "glyph": ".",
+            "visible": true,
+            "cloud": false
+          },
+          {
+            "x": 47,
+            "y": -2,
+            "feature": 33,
+            "glyph": ".",
+            "visible": true,
+            "cloud": false
+          },
+          {
+            "x": 48,
+            "y": -2,
+            "feature": 33,
+            "glyph": ".",
+            "visible": true,
+            "cloud": false
+          },
+          {
+            "x": 46,
+            "y": -1,
+            "feature": 33,
+            "glyph": ".",
+            "visible": true,
+            "cloud": false
+          },
+          {
+            "x": 47,
+            "y": -1,
+            "feature": 33,
+            "glyph": "@",
+            "visible": true,
+            "cloud": false
+          },
+          {
+            "x": 48,
+            "y": -1,
+            "feature": 33,
+            "glyph": ".",
+            "visible": true,
+            "cloud": false
+          },
+          {
+            "x": 46,
+            "y": 0,
+            "feature": 33,
+            "glyph": ".",
+            "visible": true,
+            "cloud": false
+          },
+          {
+            "x": 47,
+            "y": 0,
+            "feature": 33,
+            "glyph": ".",
+            "visible": true,
+            "cloud": false
+          },
+          {
+            "x": 48,
+            "y": 0,
+            "feature": 33,
+            "glyph": "?",
+            "visible": true,
+            "cloud": false
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 348,
+      "phase": "after",
+      "observation": {
+        "hp": 19,
+        "hp_max": 19,
+        "turn": 518,
+        "place": "Dungeon",
+        "depth": 1,
+        "position": [
+          48,
+          0
+        ],
+        "statuses": [],
+        "inventory": [
+          {
+            "slot": 0,
+            "letter": "a",
+            "name": "+0 hand axe",
+            "quantity": 1,
+            "equipped": true,
+            "category": "weapon"
+          },
+          {
+            "slot": 1,
+            "letter": "b",
+            "name": "+0 animal skin",
+            "quantity": 1,
+            "equipped": false,
+            "category": "armour"
+          },
+          {
+            "slot": 2,
+            "letter": "c",
+            "name": "+0 ring mail",
+            "quantity": 1,
+            "equipped": true,
+            "category": "armour"
+          },
+          {
+            "slot": 52,
+            "letter": "d",
+            "name": "bubbling dark potion",
+            "quantity": 1,
+            "equipped": false,
+            "category": "potion"
+          }
+        ],
+        "monsters": [
+          {
+            "id": 14,
+            "name": "kobold",
+            "x": 47,
+            "y": 6,
+            "threat": 0,
+            "attitude": 0,
+            "description": null,
+            "statuses": [],
+            "equipment": [],
+            "speed_description": null,
+            "spells": [],
+            "spell_ranges": []
+          }
+        ],
+        "input_mode": 1,
+        "messages": [
+          "Found a scroll labelled KAMOOK LUTYEC.",
+          "You see here a scroll labelled KAMOOK LUTYEC."
+        ],
+        "cells": [
+          {
+            "x": 46,
+            "y": -2,
+            "feature": 33,
+            "glyph": ".",
+            "visible": true,
+            "cloud": false
+          },
+          {
+            "x": 47,
+            "y": -2,
+            "feature": 33,
+            "glyph": ".",
+            "visible": true,
+            "cloud": false
+          },
+          {
+            "x": 48,
+            "y": -2,
+            "feature": 33,
+            "glyph": ".",
+            "visible": true,
+            "cloud": false
+          },
+          {
+            "x": 46,
+            "y": -1,
+            "feature": 33,
+            "glyph": ".",
+            "visible": true,
+            "cloud": false
+          },
+          {
+            "x": 47,
+            "y": -1,
+            "feature": 33,
+            "glyph": ".",
+            "visible": true,
+            "cloud": false
+          },
+          {
+            "x": 48,
+            "y": -1,
+            "feature": 33,
+            "glyph": ".",
+            "visible": true,
+            "cloud": false
+          },
+          {
+            "x": 46,
+            "y": 0,
+            "feature": 33,
+            "glyph": ".",
+            "visible": true,
+            "cloud": false
+          },
+          {
+            "x": 47,
+            "y": 0,
+            "feature": 33,
+            "glyph": ".",
+            "visible": true,
+            "cloud": false
+          },
+          {
+            "x": 48,
+            "y": 0,
+            "feature": 33,
+            "glyph": "@",
+            "visible": true,
+            "cloud": false
+          }
+        ]
+      }
+    }
+  ]
+}

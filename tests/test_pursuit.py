@@ -4,8 +4,10 @@ from pathlib import Path
 
 import pytest
 
+from legacy_replay import decide_legacy_observation
+
 from dcss_bot.characters.mibe import RuleBasedAgent
-from dcss_bot.models import Cell, Item, Monster, Observation
+from dcss_bot.models import Ability, Action, Cell, Item, Monster, Observation
 
 
 def pursuit():
@@ -20,50 +22,79 @@ def pursuit():
         data["statuses"] = tuple(data["statuses"])
         observations.append(Observation(**data))
     agent = RuleBasedAgent()
-    agent.last_location = observations[0].location
-    agent.visits.update({tuple(pos): 1 for pos in fixture["known_retreat_positions"]})
+    agent.exploration.observe(observations[0])
+    agent.exploration.current.visits.update({tuple(pos): 1 for pos in fixture["known_retreat_positions"]})
     return agent, observations
 
 
-async def after_retreat():
+async def after_engagement():
     agent, observations = pursuit()
-    attack = await agent.decide(observations[0])
-    retreat = await agent.decide(observations[1])
-    assert (attack.kind, attack.value) == ("move", "y")
-    assert (retreat.kind, retreat.value, retreat.objective) == ("move", "l", "retreat")
+    first = await decide_legacy_observation(agent, observations[0])
+    damaged = await decide_legacy_observation(agent, observations[1])
+    assert (first.kind, first.value, first.objective) == ("move", "y", "combat")
+    # A normal-speed adjacent goblin can follow and make opportunity attacks:
+    # reduced HP is not evidence that walking east will escape it.
+    assert (damaged.kind, damaged.value, damaged.objective) == ("move", "y", "combat")
     return agent, observations[2]
 
 
-async def test_real_goblin_pursuit_uses_berserk_before_repeating_ineffective_escape():
-    agent, followed = await after_retreat()
-    action = await agent.decide(followed)
-    assert (action.kind, action.value) == ("ability", "a")
+def after_recorded_failed_retreat():
+    """Seed the genuine old-policy walk recorded between turns 191 and 192."""
+    agent, observations = pursuit()
+    agent.tactics.routine(observations[1], Action("move", "l", objective="retreat"))
+    return agent, observations[2]
+
+
+async def test_real_goblin_encounter_does_not_begin_an_ineffective_retreat_loop():
+    agent, followed = await after_engagement()
+    action = await decide_legacy_observation(agent, followed)
+    assert (action.kind, action.value, action.objective) == ("move", "h", "combat")
+
+
+async def test_observed_berserk_is_used_proactively_in_bounded_dangerous_melee():
+    agent, observations = pursuit()
+    ready = replace(observations[0], abilities=(Ability("Berserk", "a", True),),
+                    monsters=(replace(observations[0].monsters[0], name="gnoll", threat=2),))
+    action = await decide_legacy_observation(agent, ready)
+    assert (action.kind, action.value) == ("ability", "berserk")
 
 
 @pytest.mark.parametrize("statuses", [(), ("-Berserk",)])
-async def test_failed_retreat_does_not_offer_repeated_pursuit_attacks_at_low_hp(statuses):
-    agent, followed = await after_retreat()
-    action = await agent.decide(replace(followed, hp=8, statuses=statuses))
+async def test_low_hp_does_not_offer_repeated_pursuit_attacks_or_late_berserk(statuses):
+    agent, followed = after_recorded_failed_retreat()
+    action = await decide_legacy_observation(agent, replace(followed, hp=8, statuses=statuses,
+                                        abilities=(Ability("Berserk", "a", True),)))
     assert (action.kind, action.value, action.objective) == ("move", "h", "combat")
 
 
 async def test_known_healing_still_precedes_pursuit_commitment():
-    agent, followed = await after_retreat()
-    action = await agent.decide(replace(followed, hp=8,
-                                       inventory=(Item(3, "d", "a potion of heal wounds"),)))
+    agent, followed = await after_engagement()
+    action = await decide_legacy_observation(agent, replace(followed, hp=8,
+                                       inventory=(Item(3, "d", "a potion of heal wounds"),),
+                                       abilities=(Ability("Berserk", "a", True),)))
     assert (action.kind, action.value) == ("quaff", "d")
 
 
-async def test_actual_separation_does_not_trigger_or_retain_pursuit_commitment():
-    agent, followed = await after_retreat()
-    separated = replace(followed, monsters=(replace(followed.monsters[0], x=-1),))
-    assert (await agent.decide(separated)).kind != "ability"
-    action = await agent.decide(replace(followed, turn=193))
-    assert (action.kind, action.value) == ("move", "h")
+async def test_actual_separation_does_not_retain_a_forced_pursuit_commitment():
+    agent, followed = await after_engagement()
+    separated = replace(followed, monsters=(replace(followed.monsters[0], x=-3),),
+                        abilities=(Ability("Berserk", "a", True),))
+    assert (await decide_legacy_observation(agent, separated)).kind != "ability"
+    action = await decide_legacy_observation(agent, replace(followed, turn=193))
+    assert (action.kind, action.value, action.objective) == ("move", "h", "combat")
 
 
-@pytest.mark.parametrize("change", [{"statuses": ("-Berserk",)}, {"depth": 2},
-                                    {"monsters": (Monster(10, "large slime creature", 0, -10, 3),)}])
-async def test_pursuit_does_not_override_cooldown_floor_reset_or_slime_safety(change):
-    agent, followed = await after_retreat()
-    assert (await agent.decide(replace(followed, **change))).kind != "ability"
+@pytest.mark.parametrize("statuses", [("-Berserk",), ("Slow",), ("Pois",)])
+async def test_pursuit_never_overrides_observed_berserk_commitment_restrictions(statuses):
+    agent, followed = await after_engagement()
+    obs = replace(followed, statuses=statuses, abilities=(Ability("Berserk", "a", True),))
+    assert (await decide_legacy_observation(agent, obs)).kind != "ability"
+
+
+async def test_floor_change_does_not_make_merged_slime_a_safe_berserk_target():
+    agent, followed = await after_engagement()
+    obs = replace(followed, depth=2, abilities=(Ability("Berserk", "a", True),),
+                  monsters=(Monster(10, "large slime creature", 0, -10, 3),))
+    action = await decide_legacy_observation(agent, obs)
+    assert action.kind != "ability"
+    assert not (action.kind == "move" and action.value == "h")

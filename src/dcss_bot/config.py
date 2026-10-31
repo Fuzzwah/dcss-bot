@@ -40,6 +40,7 @@ class Config:
     game_id: str = "dcss"
     seeded_game_id: str = "dcss-seeded"
     delay: float = 0.4
+    explore_delay: float = 0.02
     max_actions: int = 10000
     max_turns: int = 10000
     stall_limit: int = 24
@@ -60,6 +61,7 @@ class Config:
             password=os.getenv("BOT_PASSWORD", ""), game_id=os.getenv("DCSS_GAME_ID", cls.game_id),
             seeded_game_id=os.getenv("DCSS_SEEDED_GAME_ID", cls.seeded_game_id),
             delay=float(os.getenv("ACTION_DELAY", "0.4")),
+            explore_delay=float(os.getenv("EXPLORE_DELAY", "0.02")),
             max_actions=int(os.getenv("MAX_ACTIONS", "10000")),
             max_turns=int(os.getenv("MAX_TURNS", "10000")),
             run_root=Path(os.getenv("RUN_DIR", "runs")),
@@ -79,6 +81,8 @@ class Config:
             raise ValueError("BOT_USERNAME must contain 3–20 ASCII letters/digits")
         if not math.isfinite(self.delay) or self.delay < 0 or self.delay > 60:
             raise ValueError("Action delay must be between 0 and 60 seconds")
+        if isinstance(self.explore_delay, bool) or not math.isfinite(self.explore_delay) or not 0 <= self.explore_delay <= 2:
+            raise ValueError("Explore delay must be between 0 and 2 seconds")
         if self.max_actions < 1 or self.max_turns < 1 or self.stall_limit < 1:
             raise ValueError("Run limits must be positive")
         if not math.isfinite(self.timeout) or self.timeout <= 0:

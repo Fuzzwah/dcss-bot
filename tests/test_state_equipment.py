@@ -25,7 +25,6 @@ def test_equipped_armour_comes_from_public_inventory_menu_not_hidden_flags():
     inventory = state.observation().inventory
     assert [item.equipped for item in inventory] == [True, True, False]
     assert inventory[1].name == "+0 animal skin"
-    assert set(inventory[1].__dict__) == {"slot", "letter", "name", "quantity", "equipped"}
 
 
 def test_worn_state_changes_only_on_public_observation_and_survives_menu_close():

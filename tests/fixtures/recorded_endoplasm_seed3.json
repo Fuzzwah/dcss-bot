@@ -1,0 +1,624 @@
+{
+  "source": {
+    "dcss": "0.34.1",
+    "development": 5,
+    "seed": 3,
+    "run": "20261031T031008.327035Z-fdbcaf71a553",
+    "turn": 144,
+    "capture": "summary final_observation; cells cropped to public visible cells"
+  },
+  "observation": {
+    "species": "Minotaur",
+    "god": "Trog",
+    "turn": 144,
+    "time": 1446,
+    "place": "Dungeon",
+    "depth": 1,
+    "hp": 19,
+    "hp_max": 19,
+    "xl": 1,
+    "position": [
+      -6,
+      20
+    ],
+    "statuses": [],
+    "inventory": [
+      {
+        "slot": 0,
+        "letter": "a",
+        "name": "+0 hand axe",
+        "quantity": 1,
+        "equipped": true,
+        "category": "weapon"
+      },
+      {
+        "slot": 1,
+        "letter": "b",
+        "name": "+0 animal skin",
+        "quantity": 1,
+        "equipped": true,
+        "category": "armour"
+      },
+      {
+        "slot": 52,
+        "letter": "d",
+        "name": "2 lumpy orange potions",
+        "quantity": 2,
+        "equipped": false,
+        "category": "potion"
+      }
+    ],
+    "monsters": [
+      {
+        "id": 8,
+        "name": "endoplasm",
+        "x": -12,
+        "y": 20,
+        "threat": 1,
+        "attitude": 0,
+        "description": "A glob of grey sludge that has somehow developed a rudimentary awareness and limited motility. It periodically draws heat from its surroundings to sustain itself, freezing enemies unfortunate enough to be adjacent at the time.\n\nMax HP: ~6       Will: none       AC: +          EV: +                          \nThreat: Low     Class: Natural  Size: V. Small  Int: Mindless   \n\n\nYou have about 86% to hit with your +0 hand axe and 85% to hit with your headbutt.\nIt has about 49% to hit you.\n\nAttack  Max Damage  \nHit     3           \n\nIt is immune to acid and corrosion and blinding.\nIt can see invisible.\nIt is amorphous and immune to ensnarement.\nTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.\nSpells:\nFreeze: (1d5)",
+        "statuses": [],
+        "equipment": [],
+        "speed_description": null,
+        "spells": [
+          "Freeze"
+        ]
+      }
+    ],
+    "cells": [
+      {
+        "x": 1,
+        "y": 19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 20,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 20,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 20,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": 19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": 20,
+        "feature": 33,
+        "glyph": "[",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": 21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 20,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 20,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 20,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 20,
+        "feature": 33,
+        "glyph": "@",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 20,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 20,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 20,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": 19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": 20,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": 21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": 19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": 20,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": 21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -12,
+        "y": 19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -12,
+        "y": 20,
+        "feature": 33,
+        "glyph": "J",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -12,
+        "y": 21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -13,
+        "y": 19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -13,
+        "y": 20,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -13,
+        "y": 21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      }
+    ],
+    "messages": [
+      "Welcome, Eval53fae1f6e6d24166 the Minotaur Berserker.",
+      "Game seed: 3 (custom seed); ",
+      "Trog says: Kill them all!",
+      "Press ? for a list of commands and other information.",
+      "Found a sling.",
+      "Found a staircase leading out of the dungeon.",
+      "Okay, then.",
+      "You see here a +0 sling.",
+      "You open the door.",
+      "There is an open door here.",
+      "Found 10 gold pieces.",
+      "There is a fountain of clear blue water here.",
+      "You take a small sip from the fountain. Refreshing.",
+      "There is a fountain of clear blue water here.",
+      "You briefly stop and wash some of the blood off your face.",
+      "As you open the door, it creaks loudly! You hear a loud squeak.",
+      "You hear an angry hiss.",
+      "You encounter a bat.",
+      "The bat leaves your sight.",
+      "There is an open door here.",
+      "You encounter a rat.",
+      "The bat closely misses you.",
+      "You hit the bat.",
+      "You kill the bat!",
+      "Trog accepts your kill.",
+      "There is an open door here.",
+      "There is a fountain of clear blue water here.",
+      "The fountain briefly ripples from your approaching presence.",
+      "There is a fountain of clear blue water here.",
+      "You see indigo graffiti wondering why Terence wants to spend his retirement in the dungeon on the fountain.",
+      "There is a fountain of clear blue water here.",
+      "You slash the rat!",
+      "You kill the rat!",
+      "Trog accepts your kill.",
+      "There is a fountain of clear blue water here.",
+      "There is an open door here.",
+      "Found a parchment of Animate Dead.",
+      "You encounter a frilled lizard.",
+      "There is an open door here.",
+      "There is a fountain of clear blue water here.",
+      "There is a fountain of clear blue water here.",
+      "You slash the frilled lizard!",
+      "You kill the frilled lizard!",
+      "Trog accepts your kill.",
+      "There is a fountain of clear blue water here.",
+      "You take a small sip from the fountain. Refreshing.",
+      "You see here a frilled lizard corpse.",
+      "There is an open door here.",
+      "Found 2 lumpy orange potions.",
+      "You see here a parchment of Animate Dead.",
+      "d - 2 lumpy orange potions",
+      "Found 7 gold pieces.",
+      "You encounter a kobold. It is wielding a +0 dagger.",
+      "You hit the kobold.",
+      "The kobold is moderately wounded.",
+      "The kobold barely misses you.",
+      "You hit the kobold.",
+      "The kobold is severely wounded.",
+      "The kobold hits you with a +0 dagger.",
+      "You closely miss the kobold. You headbutt the kobold.",
+      "You kill the kobold!",
+      "Trog accepts your kill.",
+      "You see here a +0 dagger.",
+      "Found a robe.",
+      "You see here a +0 robe.",
+      "You encounter an endoplasm.",
+      "The endoplasm quivers."
+    ],
+    "input_mode": 1,
+    "ac": 2,
+    "ev": 11,
+    "sh": 0,
+    "piety_rank": 1,
+    "poison_survival": 19,
+    "status_details": [],
+    "resistances": [
+      {
+        "name": "rFire",
+        "level": 0
+      },
+      {
+        "name": "rCold",
+        "level": 0
+      },
+      {
+        "name": "rNeg",
+        "level": 0
+      },
+      {
+        "name": "rPois",
+        "level": 0
+      },
+      {
+        "name": "rElec",
+        "level": 0
+      },
+      {
+        "name": "rCorr",
+        "level": 0
+      },
+      {
+        "name": "SInv",
+        "level": 0
+      },
+      {
+        "name": "Will",
+        "level": 0
+      }
+    ],
+    "will": 0,
+    "abilities": [
+      {
+        "name": "Renounce Religion",
+        "hotkey": "X",
+        "available": true,
+        "failure": 0
+      },
+      {
+        "name": "Berserk",
+        "hotkey": "a",
+        "available": true,
+        "failure": 10
+      }
+    ],
+    "skills": [
+      {
+        "name": "Fighting",
+        "level": 3.6,
+        "training": 0,
+        "target": null,
+        "hotkey": "a",
+        "enabled": false
+      },
+      {
+        "name": "Maces & Flails",
+        "level": 2.1,
+        "training": 0,
+        "target": null,
+        "hotkey": "b",
+        "enabled": false
+      },
+      {
+        "name": "Axes",
+        "level": 3.6,
+        "training": 100,
+        "target": 10.0,
+        "hotkey": "c",
+        "enabled": true
+      },
+      {
+        "name": "Polearms",
+        "level": 2.1,
+        "training": 0,
+        "target": null,
+        "hotkey": "d",
+        "enabled": false
+      },
+      {
+        "name": "Unarmed Combat",
+        "level": 0.0,
+        "training": 0,
+        "target": null,
+        "hotkey": "e",
+        "enabled": false
+      },
+      {
+        "name": "Armour",
+        "level": 2.4,
+        "training": 0,
+        "target": null,
+        "hotkey": "f",
+        "enabled": false
+      },
+      {
+        "name": "Dodging",
+        "level": 2.1,
+        "training": 0,
+        "target": null,
+        "hotkey": "g",
+        "enabled": false
+      },
+      {
+        "name": "Stealth",
+        "level": 0.0,
+        "training": 0,
+        "target": null,
+        "hotkey": "h",
+        "enabled": false
+      }
+    ],
+    "attack_delay": 1.1,
+    "weapon_skill": "Axes"
+  }
+}

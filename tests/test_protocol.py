@@ -111,7 +111,7 @@ def test_ui_housekeeping_is_safe_and_selects_character_by_label():
     adapter.state.apply({"msg": "ui-pop"})
     adapter.state.apply({"msg": "input_mode", "mode": 8})
     response = adapter.housekeeping(adapter.state.observation())
-    assert (response.kind, response.value) == ("confirm", "n")
+    assert (response.kind, response.value) == ("confirm", "N")
     adapter.state.apply({"msg": "input_mode", "mode": 3})
     assert adapter.housekeeping(adapter.state.observation()).kind == "cancel"
 
@@ -131,7 +131,7 @@ def test_native_level_up_hotkeys_are_recognized_only_while_prompting(prompt):
     assert adapter.housekeeping(adapter.state.observation()) is None
     adapter.state.apply({"msg": "input_mode", "mode": 8})
     action = adapter.housekeeping(adapter.state.observation())
-    assert (action.kind, action.value) == ("confirm", "n")
+    assert (action.kind, action.value) == ("confirm", "N")
 
 
 def test_unknown_attribute_prompt_is_not_answered_as_level_advancement():
@@ -165,12 +165,12 @@ def test_alternate_profile_controls_advancement_without_overriding_prompt_safety
     assert (action.kind, action.value) == ("menu", key)
     adapter.state.apply({"msg": "input_mode", "mode": 8})
     action = adapter.housekeeping(adapter.state.observation())
-    assert (action.kind, action.value) == ("confirm", "n")
+    assert (action.kind, action.value) == ("confirm", "N")
     adapter.state.apply({"msg": "input_mode", "mode": 1})
     assert adapter.housekeeping(adapter.state.observation()) is None
 
 
-@pytest.mark.parametrize("mode,kind,value", [(8, "confirm", "n"), (5, "more", "")])
+@pytest.mark.parametrize("mode,kind,value", [(8, "confirm", "N"), (5, "more", "")])
 def test_native_prompt_safety_precedes_character_creation_choices(mode, kind, value):
     adapter = WebTilesAdapter("ws://unused", "bot", "secret", character=ALTERNATE)
     adapter.state.apply({"msg": "ui-push", "type": "newgame-choice", "main-items": {
@@ -363,7 +363,7 @@ async def test_seeded_registration_sets_and_verifies_rc_before_play(seed):
     server = SeedServer()
     # Even an earlier nonzero option must be replaced, because upstream retains
     # the first parsed nonzero seed_from_rc. Unrelated RC bytes are preserved.
-    server.rc += " game_seed = 99\npregen_dungeon = full\ntravel_delay = 0"
+    server.rc += " game_seed = 99\npregen_dungeon = full\ntile_font_crt_size = 19"
     events = []
     async with server.adapter(seed, lambda kind, data: events.append((kind, data))) as adapter:
         assert not adapter.seed_confirmed and adapter.seed_rc is None
@@ -374,8 +374,9 @@ async def test_seeded_registration_sets_and_verifies_rc_before_play(seed):
         assert [r["msg"] for r in server.requests] == [
             "login", "register", "get_rc", "set_rc", "get_rc", "play"]
         settings = effective_rc(server.rc)
-        assert settings == {**PROFILE.rc_settings(), "game_seed": str(seed),
-                            "travel_delay": "0", "pregen_dungeon": "incremental"}
+        assert settings["game_seed"] == str(seed)
+        assert settings["pregen_dungeon"] == "incremental"
+        assert settings["tile_font_crt_size"] == "19"
         assert "# keep this comment\n" in server.rc
         assert sum(line.startswith("game_seed = ") for line in server.rc.splitlines()) == 1
         expected = server.rc

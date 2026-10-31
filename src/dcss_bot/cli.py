@@ -63,6 +63,7 @@ def parser() -> argparse.ArgumentParser:
     commands = root.add_subparsers(dest="command", required=True)
     start = commands.add_parser("run", help="Create or resume the bot's saved character")
     start.add_argument("--delay", type=float, help="Seconds between decisions (0 accelerates)")
+    start.add_argument("--explore-delay", type=float, help="Seconds per native exploration tile (0 accelerates)")
     start.add_argument("--username", help="Separate account/save slot for a new experiment")
     start.add_argument("--seed", type=int, help="Fixed uint64 seed; requires a fresh account (0 is random and rejected)")
     start.add_argument("--max-actions", type=int)
@@ -73,8 +74,10 @@ def parser() -> argparse.ArgumentParser:
     start.add_argument("--paused", action="store_true", help="Start paused after character creation")
     for command in ("status", "pause", "resume", "step", "stop"):
         commands.add_parser(command)
-    delay = commands.add_parser("delay", help="Change pacing without restarting")
+    delay = commands.add_parser("delay", help="Change time between decisions without interrupting travel")
     delay.add_argument("seconds", type=float)
+    explore_delay = commands.add_parser("explore-delay", help="Change native exploration speed without restarting")
+    explore_delay.add_argument("seconds", type=float)
     inspect = commands.add_parser("inspect", help="Print a run's metadata and final/live status")
     inspect.add_argument("run_directory", type=Path)
     evaluate = commands.add_parser("evaluate", help="Run isolated fresh-account trials on fixed seeds")
@@ -86,6 +89,7 @@ def parser() -> argparse.ArgumentParser:
     evaluate.add_argument("--max-actions", type=int, default=4000)
     evaluate.add_argument("--seconds-per-run", type=float, default=600)
     evaluate.add_argument("--delay", type=float, default=0)
+    evaluate.add_argument("--explore-delay", type=float, help="Seconds per native exploration tile")
     evaluate.add_argument("--record", action="store_true")
     evaluate.add_argument("--output-root", type=Path, help="Default: RUN_DIR/evaluations")
     return root
@@ -98,7 +102,7 @@ def main() -> None:
         if args.control_socket:
             config.control_socket = args.control_socket
         if args.command == "run":
-            for key in ("delay", "username", "seed", "max_actions", "max_turns", "agent", "character"):
+            for key in ("delay", "explore_delay", "username", "seed", "max_actions", "max_turns", "agent", "character"):
                 value = getattr(args, key)
                 if value is not None:
                     setattr(config, key, value)
@@ -109,6 +113,8 @@ def main() -> None:
             from .evaluation import Evaluation, run_evaluation
             if args.character is not None:
                 config.character = args.character
+            if args.explore_delay is not None:
+                config.explore_delay = args.explore_delay
             plan = Evaluation(tuple(args.seeds), tuple(args.agents), args.repeats,
                               args.max_turns, args.max_actions, args.seconds_per_run, args.delay, args.record)
             result = asyncio.run(run_evaluation(config, plan, args.output_root))

@@ -1,0 +1,4225 @@
+{
+  "source": "pilot3 seed1 observations at turns1626..1629: two retreats did not reduce visible priest pressure or adjacent attackers; cropped public cells radius5",
+  "observations": [
+    {
+      "name": "Evald3638f10044d4ae4",
+      "species": "Minotaur",
+      "god": "Trog",
+      "turn": 1626,
+      "time": 16527,
+      "place": "Dungeon",
+      "depth": 3,
+      "hp": 31,
+      "hp_max": 31,
+      "xl": 3,
+      "position": [
+        0,
+        0
+      ],
+      "statuses": [],
+      "inventory": [
+        {
+          "slot": 0,
+          "letter": "a",
+          "name": "+0 hand axe",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 1,
+          "letter": "b",
+          "name": "+0 animal skin",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 2,
+          "letter": "c",
+          "name": "+0 ring mail",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 3,
+          "letter": "d",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 4,
+          "letter": "e",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 5,
+          "letter": "f",
+          "name": "+0 scale mail",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 6,
+          "letter": "g",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 7,
+          "letter": "h",
+          "name": "+1 pair of boots",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 8,
+          "letter": "i",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 9,
+          "letter": "j",
+          "name": "+4 ring of protection",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 52,
+          "letter": "d",
+          "name": "2 fizzy dark potions",
+          "quantity": 2,
+          "equipped": false
+        },
+        {
+          "slot": 53,
+          "letter": "f",
+          "name": "2 ruby potions",
+          "quantity": 2,
+          "equipped": false
+        },
+        {
+          "slot": 54,
+          "letter": "c",
+          "name": "scroll labelled ESUSE MOPTULL",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 55,
+          "letter": "e",
+          "name": "scroll labelled NIOTERYHUI",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 56,
+          "letter": "j",
+          "name": "clear potion",
+          "quantity": 1,
+          "equipped": false
+        }
+      ],
+      "monsters": [
+        {
+          "id": 59,
+          "name": "orc",
+          "x": 1,
+          "y": -2,
+          "threat": 0,
+          "attitude": 0,
+          "description": null,
+          "statuses": [],
+          "equipment": [],
+          "speed_description": null,
+          "spells": []
+        },
+        {
+          "id": 57,
+          "name": "orc priest",
+          "x": 0,
+          "y": -1,
+          "threat": 2,
+          "attitude": 0,
+          "description": null,
+          "statuses": [],
+          "equipment": [],
+          "speed_description": null,
+          "spells": []
+        },
+        {
+          "id": 58,
+          "name": "orc",
+          "x": 1,
+          "y": 1,
+          "threat": 0,
+          "attitude": 0,
+          "description": null,
+          "statuses": [],
+          "equipment": [],
+          "speed_description": null,
+          "spells": []
+        }
+      ],
+      "cells": [
+        {
+          "x": -3,
+          "y": -5,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -5,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -5,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -5,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -5,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -5,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -5,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -5,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": -5,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": -4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -4,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -4,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -4,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -4,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -4,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -4,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": -4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -3,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -2,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -2,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -2,
+          "feature": 33,
+          "glyph": "o",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -2,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "feature": 33,
+          "glyph": "o",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -1,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -1,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 0,
+          "feature": 33,
+          "glyph": "\"",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "feature": 48,
+          "glyph": "@",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "feature": 33,
+          "glyph": "o",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 2,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 4,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 5,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 5,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        }
+      ],
+      "messages": [
+        "You are more poisoned.",
+        "The adder poisons you! The adder closely misses you.",
+        "You miss the adder. You feel sick. The adder bites you but does no damage.",
+        "You barely miss the adder. You feel sick.",
+        "The adder bites you but does no damage.",
+        "You closely miss the adder. You feel sick.",
+        "The adder bites you but does no damage.",
+        "You hit the adder.",
+        "The adder is heavily wounded.",
+        "You feel sick. The adder bites you but does no damage. The adder bites you.",
+        "You are more poisoned.",
+        "The adder poisons you!",
+        "You closely miss the adder. Your headbutt misses the adder.",
+        "The adder is heavily wounded.",
+        "You feel sick. The adder bites you.",
+        "You are more poisoned.",
+        "The adder poisons you!",
+        "You feel very sick.",
+        "The adder attacks as it pursues you! The adder barely misses you.",
+        "You hit the adder. Your headbutt misses the adder.",
+        "The adder is almost dead.",
+        "You feel very sick.",
+        "The adder barely misses you. You furiously retaliate! You headbutt the adder.",
+        "You kill the adder!",
+        "Trog accepts your kill.",
+        "* * * LOW HITPOINT WARNING * * *",
+        "You feel sick.",
+        "* * * LOW HITPOINT WARNING * * *",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You are no longer poisoned.",
+        "Okay, then.",
+        "Found 4 poisoned darts.",
+        "You encounter a rat.",
+        "The rat squeaks loudly.",
+        "The rat twitches its whiskers.",
+        "You hit the rat.",
+        "You kill the rat!",
+        "Trog accepts your kill.",
+        "There is a stone staircase leading down here.",
+        "You open the door.",
+        "Found a ruby potion.",
+        "There is an open door here.",
+        "f - 2 ruby potions (gained 1)",
+        "Found Rorafed's Antique Weapon Emporium.",
+        "There is a stone staircase leading up here.",
+        "You open the door.",
+        "You encounter a goblin. It is wielding a +0 dagger.",
+        "The goblin shouts!",
+        "Found a cabochon ring.",
+        "You closely miss the goblin. The goblin completely misses you.",
+        "You barely miss the goblin. Your headbutt misses the goblin.",
+        "The goblin hits you but does no damage.",
+        "You hit the goblin but do no damage. The goblin barely misses you.",
+        "You furiously retaliate! You headbutt the goblin.",
+        "You kill the goblin!",
+        "Trog accepts your kill.",
+        "Things that are here:",
+        "a +0 dagger; a goblin corpse",
+        "i - a +0 dagger",
+        "There is an open door here.",
+        "j - a +4 ring of protection",
+        "j - a +4 ring of protection (worn)",
+        "Okay, then.",
+        "There are no items here.",
+        "There is an open door here.",
+        "You now have 24 gold pieces (gained 9).",
+        "You open the door.",
+        "There is an open door here.",
+        "There is a stone staircase leading down here.",
+        "You climb downwards.",
+        "You encounter an orc priest and 2 orcs.",
+        "The orc shouts! The orc priest shouts! The orc shouts!",
+        "Found a blackened amethyst amulet.",
+        "There is a stone staircase leading up here."
+      ],
+      "prompt": "",
+      "menu": {},
+      "input_mode": 1,
+      "dead": false,
+      "game_over": false,
+      "ac": 12,
+      "ev": 9,
+      "sh": 0,
+      "piety_rank": 1,
+      "poison_survival": 31,
+      "status_details": [],
+      "resistances": [
+        {
+          "name": "rFire",
+          "level": 0
+        },
+        {
+          "name": "rCold",
+          "level": 0
+        },
+        {
+          "name": "rNeg",
+          "level": 0
+        },
+        {
+          "name": "rPois",
+          "level": 0
+        },
+        {
+          "name": "rElec",
+          "level": 0
+        },
+        {
+          "name": "rCorr",
+          "level": 0
+        },
+        {
+          "name": "SInv",
+          "level": 0
+        },
+        {
+          "name": "Will",
+          "level": 0
+        }
+      ],
+      "will": 0,
+      "abilities": [
+        {
+          "name": "Renounce Religion",
+          "hotkey": "X",
+          "available": true,
+          "failure": 0
+        },
+        {
+          "name": "Berserk",
+          "hotkey": "a",
+          "available": true,
+          "failure": 5
+        }
+      ],
+      "skills": [
+        {
+          "name": "Fighting",
+          "level": 3.6,
+          "training": 0,
+          "target": null,
+          "hotkey": "a",
+          "enabled": false
+        },
+        {
+          "name": "Maces & Flails",
+          "level": 3.4,
+          "training": 0,
+          "target": null,
+          "hotkey": "b",
+          "enabled": false
+        },
+        {
+          "name": "Axes",
+          "level": 5.7,
+          "training": 100,
+          "target": 10.0,
+          "hotkey": "c",
+          "enabled": true
+        },
+        {
+          "name": "Polearms",
+          "level": 3.4,
+          "training": 0,
+          "target": null,
+          "hotkey": "d",
+          "enabled": false
+        },
+        {
+          "name": "Unarmed Combat",
+          "level": 0.0,
+          "training": 0,
+          "target": null,
+          "hotkey": "e",
+          "enabled": false
+        },
+        {
+          "name": "Short Blades",
+          "level": 0.0,
+          "training": 0,
+          "target": null,
+          "hotkey": "f",
+          "enabled": true
+        },
+        {
+          "name": "Armour",
+          "level": 2.4,
+          "training": 0,
+          "target": null,
+          "hotkey": "g",
+          "enabled": false
+        },
+        {
+          "name": "Dodging",
+          "level": 2.1,
+          "training": 0,
+          "target": null,
+          "hotkey": "h",
+          "enabled": false
+        },
+        {
+          "name": "Stealth",
+          "level": 0.0,
+          "training": 0,
+          "target": null,
+          "hotkey": "i",
+          "enabled": false
+        }
+      ],
+      "attack_delay": 1.0,
+      "weapon_skill": "Axes"
+    },
+    {
+      "name": "Evald3638f10044d4ae4",
+      "species": "Minotaur",
+      "god": "Trog",
+      "turn": 1627,
+      "time": 16537,
+      "place": "Dungeon",
+      "depth": 3,
+      "hp": 31,
+      "hp_max": 31,
+      "xl": 3,
+      "position": [
+        -1,
+        1
+      ],
+      "statuses": [],
+      "inventory": [
+        {
+          "slot": 0,
+          "letter": "a",
+          "name": "+0 hand axe",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 1,
+          "letter": "b",
+          "name": "+0 animal skin",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 2,
+          "letter": "c",
+          "name": "+0 ring mail",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 3,
+          "letter": "d",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 4,
+          "letter": "e",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 5,
+          "letter": "f",
+          "name": "+0 scale mail",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 6,
+          "letter": "g",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 7,
+          "letter": "h",
+          "name": "+1 pair of boots",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 8,
+          "letter": "i",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 9,
+          "letter": "j",
+          "name": "+4 ring of protection",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 52,
+          "letter": "d",
+          "name": "2 fizzy dark potions",
+          "quantity": 2,
+          "equipped": false
+        },
+        {
+          "slot": 53,
+          "letter": "f",
+          "name": "2 ruby potions",
+          "quantity": 2,
+          "equipped": false
+        },
+        {
+          "slot": 54,
+          "letter": "c",
+          "name": "scroll labelled ESUSE MOPTULL",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 55,
+          "letter": "e",
+          "name": "scroll labelled NIOTERYHUI",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 56,
+          "letter": "j",
+          "name": "clear potion",
+          "quantity": 1,
+          "equipped": false
+        }
+      ],
+      "monsters": [
+        {
+          "id": 59,
+          "name": "orc",
+          "x": 1,
+          "y": -1,
+          "threat": 0,
+          "attitude": 0,
+          "description": null,
+          "statuses": [],
+          "equipment": [],
+          "speed_description": null,
+          "spells": []
+        },
+        {
+          "id": 57,
+          "name": "orc priest",
+          "x": -1,
+          "y": 0,
+          "threat": 2,
+          "attitude": 0,
+          "description": null,
+          "statuses": [],
+          "equipment": [],
+          "speed_description": null,
+          "spells": []
+        },
+        {
+          "id": 58,
+          "name": "orc",
+          "x": 0,
+          "y": 1,
+          "threat": 0,
+          "attitude": 0,
+          "description": null,
+          "statuses": [],
+          "equipment": [],
+          "speed_description": null,
+          "spells": []
+        }
+      ],
+      "cells": [
+        {
+          "x": -3,
+          "y": -4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -4,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -4,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -4,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -4,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -4,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -4,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -3,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -6,
+          "y": -2,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -2,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -2,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -2,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -6,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "feature": 33,
+          "glyph": "o",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -1,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -1,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -6,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 0,
+          "feature": 33,
+          "glyph": "\"",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 0,
+          "feature": 33,
+          "glyph": "o",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "feature": 48,
+          "glyph": "<",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -6,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 1,
+          "feature": 33,
+          "glyph": "@",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "feature": 33,
+          "glyph": "o",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -6,
+          "y": 2,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 2,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 4,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 5,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 5,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 6,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 6,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 6,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 6,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        }
+      ],
+      "messages": [
+        "You barely miss the adder. You feel sick.",
+        "The adder bites you but does no damage.",
+        "You closely miss the adder. You feel sick.",
+        "The adder bites you but does no damage.",
+        "You hit the adder.",
+        "The adder is heavily wounded.",
+        "You feel sick. The adder bites you but does no damage. The adder bites you.",
+        "You are more poisoned.",
+        "The adder poisons you!",
+        "You closely miss the adder. Your headbutt misses the adder.",
+        "The adder is heavily wounded.",
+        "You feel sick. The adder bites you.",
+        "You are more poisoned.",
+        "The adder poisons you!",
+        "You feel very sick.",
+        "The adder attacks as it pursues you! The adder barely misses you.",
+        "You hit the adder. Your headbutt misses the adder.",
+        "The adder is almost dead.",
+        "You feel very sick.",
+        "The adder barely misses you. You furiously retaliate! You headbutt the adder.",
+        "You kill the adder!",
+        "Trog accepts your kill.",
+        "* * * LOW HITPOINT WARNING * * *",
+        "You feel sick.",
+        "* * * LOW HITPOINT WARNING * * *",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You are no longer poisoned.",
+        "Okay, then.",
+        "Found 4 poisoned darts.",
+        "You encounter a rat.",
+        "The rat squeaks loudly.",
+        "The rat twitches its whiskers.",
+        "You hit the rat.",
+        "You kill the rat!",
+        "Trog accepts your kill.",
+        "There is a stone staircase leading down here.",
+        "You open the door.",
+        "Found a ruby potion.",
+        "There is an open door here.",
+        "f - 2 ruby potions (gained 1)",
+        "Found Rorafed's Antique Weapon Emporium.",
+        "There is a stone staircase leading up here.",
+        "You open the door.",
+        "You encounter a goblin. It is wielding a +0 dagger.",
+        "The goblin shouts!",
+        "Found a cabochon ring.",
+        "You closely miss the goblin. The goblin completely misses you.",
+        "You barely miss the goblin. Your headbutt misses the goblin.",
+        "The goblin hits you but does no damage.",
+        "You hit the goblin but do no damage. The goblin barely misses you.",
+        "You furiously retaliate! You headbutt the goblin.",
+        "You kill the goblin!",
+        "Trog accepts your kill.",
+        "Things that are here:",
+        "a +0 dagger; a goblin corpse",
+        "i - a +0 dagger",
+        "There is an open door here.",
+        "j - a +4 ring of protection",
+        "j - a +4 ring of protection (worn)",
+        "Okay, then.",
+        "There are no items here.",
+        "There is an open door here.",
+        "You now have 24 gold pieces (gained 9).",
+        "You open the door.",
+        "There is an open door here.",
+        "There is a stone staircase leading down here.",
+        "You climb downwards.",
+        "You encounter an orc priest and 2 orcs.",
+        "The orc shouts! The orc priest shouts! The orc shouts!",
+        "Found a blackened amethyst amulet.",
+        "There is a stone staircase leading up here.",
+        "The orc priest attacks as it pursues you!",
+        "The orc priest barely misses you. You furiously retaliate!",
+        "You headbutt the orc priest, but do no damage."
+      ],
+      "prompt": "",
+      "menu": {},
+      "input_mode": 1,
+      "dead": false,
+      "game_over": false,
+      "ac": 12,
+      "ev": 9,
+      "sh": 0,
+      "piety_rank": 1,
+      "poison_survival": 31,
+      "status_details": [],
+      "resistances": [
+        {
+          "name": "rFire",
+          "level": 0
+        },
+        {
+          "name": "rCold",
+          "level": 0
+        },
+        {
+          "name": "rNeg",
+          "level": 0
+        },
+        {
+          "name": "rPois",
+          "level": 0
+        },
+        {
+          "name": "rElec",
+          "level": 0
+        },
+        {
+          "name": "rCorr",
+          "level": 0
+        },
+        {
+          "name": "SInv",
+          "level": 0
+        },
+        {
+          "name": "Will",
+          "level": 0
+        }
+      ],
+      "will": 0,
+      "abilities": [
+        {
+          "name": "Renounce Religion",
+          "hotkey": "X",
+          "available": true,
+          "failure": 0
+        },
+        {
+          "name": "Berserk",
+          "hotkey": "a",
+          "available": true,
+          "failure": 5
+        }
+      ],
+      "skills": [
+        {
+          "name": "Fighting",
+          "level": 3.6,
+          "training": 0,
+          "target": null,
+          "hotkey": "a",
+          "enabled": false
+        },
+        {
+          "name": "Maces & Flails",
+          "level": 3.4,
+          "training": 0,
+          "target": null,
+          "hotkey": "b",
+          "enabled": false
+        },
+        {
+          "name": "Axes",
+          "level": 5.7,
+          "training": 100,
+          "target": 10.0,
+          "hotkey": "c",
+          "enabled": true
+        },
+        {
+          "name": "Polearms",
+          "level": 3.4,
+          "training": 0,
+          "target": null,
+          "hotkey": "d",
+          "enabled": false
+        },
+        {
+          "name": "Unarmed Combat",
+          "level": 0.0,
+          "training": 0,
+          "target": null,
+          "hotkey": "e",
+          "enabled": false
+        },
+        {
+          "name": "Short Blades",
+          "level": 0.0,
+          "training": 0,
+          "target": null,
+          "hotkey": "f",
+          "enabled": true
+        },
+        {
+          "name": "Armour",
+          "level": 2.4,
+          "training": 0,
+          "target": null,
+          "hotkey": "g",
+          "enabled": false
+        },
+        {
+          "name": "Dodging",
+          "level": 2.1,
+          "training": 0,
+          "target": null,
+          "hotkey": "h",
+          "enabled": false
+        },
+        {
+          "name": "Stealth",
+          "level": 0.0,
+          "training": 0,
+          "target": null,
+          "hotkey": "i",
+          "enabled": false
+        }
+      ],
+      "attack_delay": 1.0,
+      "weapon_skill": "Axes"
+    },
+    {
+      "name": "Evald3638f10044d4ae4",
+      "species": "Minotaur",
+      "god": "Trog",
+      "turn": 1628,
+      "time": 16547,
+      "place": "Dungeon",
+      "depth": 3,
+      "hp": 31,
+      "hp_max": 31,
+      "xl": 3,
+      "position": [
+        -2,
+        2
+      ],
+      "statuses": [],
+      "inventory": [
+        {
+          "slot": 0,
+          "letter": "a",
+          "name": "+0 hand axe",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 1,
+          "letter": "b",
+          "name": "+0 animal skin",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 2,
+          "letter": "c",
+          "name": "+0 ring mail",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 3,
+          "letter": "d",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 4,
+          "letter": "e",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 5,
+          "letter": "f",
+          "name": "+0 scale mail",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 6,
+          "letter": "g",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 7,
+          "letter": "h",
+          "name": "+1 pair of boots",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 8,
+          "letter": "i",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 9,
+          "letter": "j",
+          "name": "+4 ring of protection",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 52,
+          "letter": "d",
+          "name": "2 fizzy dark potions",
+          "quantity": 2,
+          "equipped": false
+        },
+        {
+          "slot": 53,
+          "letter": "f",
+          "name": "2 ruby potions",
+          "quantity": 2,
+          "equipped": false
+        },
+        {
+          "slot": 54,
+          "letter": "c",
+          "name": "scroll labelled ESUSE MOPTULL",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 55,
+          "letter": "e",
+          "name": "scroll labelled NIOTERYHUI",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 56,
+          "letter": "j",
+          "name": "clear potion",
+          "quantity": 1,
+          "equipped": false
+        }
+      ],
+      "monsters": [
+        {
+          "id": 59,
+          "name": "orc",
+          "x": 0,
+          "y": 0,
+          "threat": 0,
+          "attitude": 0,
+          "description": null,
+          "statuses": [],
+          "equipment": [],
+          "speed_description": null,
+          "spells": []
+        },
+        {
+          "id": 57,
+          "name": "orc priest",
+          "x": -2,
+          "y": 1,
+          "threat": 2,
+          "attitude": 0,
+          "description": null,
+          "statuses": [],
+          "equipment": [],
+          "speed_description": null,
+          "spells": []
+        },
+        {
+          "id": 58,
+          "name": "orc",
+          "x": -1,
+          "y": 2,
+          "threat": 0,
+          "attitude": 0,
+          "description": null,
+          "statuses": [],
+          "equipment": [],
+          "speed_description": null,
+          "spells": []
+        }
+      ],
+      "cells": [
+        {
+          "x": -2,
+          "y": -3,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -7,
+          "y": -2,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -6,
+          "y": -2,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -2,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -2,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -7,
+          "y": -1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -6,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -1,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -7,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -6,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 0,
+          "feature": 33,
+          "glyph": "\"",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "feature": 48,
+          "glyph": "o",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -7,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -6,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 1,
+          "feature": 33,
+          "glyph": "o",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -7,
+          "y": 2,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -6,
+          "y": 2,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 2,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 2,
+          "feature": 33,
+          "glyph": "@",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 2,
+          "feature": 33,
+          "glyph": "o",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 4,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 5,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 5,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 6,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 6,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 6,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 6,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 7,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 7,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 7,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 7,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -7,
+          "y": -3,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        }
+      ],
+      "messages": [
+        "You closely miss the adder. You feel sick.",
+        "The adder bites you but does no damage.",
+        "You hit the adder.",
+        "The adder is heavily wounded.",
+        "You feel sick. The adder bites you but does no damage. The adder bites you.",
+        "You are more poisoned.",
+        "The adder poisons you!",
+        "You closely miss the adder. Your headbutt misses the adder.",
+        "The adder is heavily wounded.",
+        "You feel sick. The adder bites you.",
+        "You are more poisoned.",
+        "The adder poisons you!",
+        "You feel very sick.",
+        "The adder attacks as it pursues you! The adder barely misses you.",
+        "You hit the adder. Your headbutt misses the adder.",
+        "The adder is almost dead.",
+        "You feel very sick.",
+        "The adder barely misses you. You furiously retaliate! You headbutt the adder.",
+        "You kill the adder!",
+        "Trog accepts your kill.",
+        "* * * LOW HITPOINT WARNING * * *",
+        "You feel sick.",
+        "* * * LOW HITPOINT WARNING * * *",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You are no longer poisoned.",
+        "Okay, then.",
+        "Found 4 poisoned darts.",
+        "You encounter a rat.",
+        "The rat squeaks loudly.",
+        "The rat twitches its whiskers.",
+        "You hit the rat.",
+        "You kill the rat!",
+        "Trog accepts your kill.",
+        "There is a stone staircase leading down here.",
+        "You open the door.",
+        "Found a ruby potion.",
+        "There is an open door here.",
+        "f - 2 ruby potions (gained 1)",
+        "Found Rorafed's Antique Weapon Emporium.",
+        "There is a stone staircase leading up here.",
+        "You open the door.",
+        "You encounter a goblin. It is wielding a +0 dagger.",
+        "The goblin shouts!",
+        "Found a cabochon ring.",
+        "You closely miss the goblin. The goblin completely misses you.",
+        "You barely miss the goblin. Your headbutt misses the goblin.",
+        "The goblin hits you but does no damage.",
+        "You hit the goblin but do no damage. The goblin barely misses you.",
+        "You furiously retaliate! You headbutt the goblin.",
+        "You kill the goblin!",
+        "Trog accepts your kill.",
+        "Things that are here:",
+        "a +0 dagger; a goblin corpse",
+        "i - a +0 dagger",
+        "There is an open door here.",
+        "j - a +4 ring of protection",
+        "j - a +4 ring of protection (worn)",
+        "Okay, then.",
+        "There are no items here.",
+        "There is an open door here.",
+        "You now have 24 gold pieces (gained 9).",
+        "You open the door.",
+        "There is an open door here.",
+        "There is a stone staircase leading down here.",
+        "You climb downwards.",
+        "You encounter an orc priest and 2 orcs.",
+        "The orc shouts! The orc priest shouts! The orc shouts!",
+        "Found a blackened amethyst amulet.",
+        "There is a stone staircase leading up here.",
+        "The orc priest attacks as it pursues you!",
+        "The orc priest barely misses you. You furiously retaliate!",
+        "You headbutt the orc priest, but do no damage.",
+        "The orc priest attacks as it pursues you!",
+        "The orc priest completely misses you."
+      ],
+      "prompt": "",
+      "menu": {},
+      "input_mode": 1,
+      "dead": false,
+      "game_over": false,
+      "ac": 12,
+      "ev": 9,
+      "sh": 0,
+      "piety_rank": 1,
+      "poison_survival": 31,
+      "status_details": [],
+      "resistances": [
+        {
+          "name": "rFire",
+          "level": 0
+        },
+        {
+          "name": "rCold",
+          "level": 0
+        },
+        {
+          "name": "rNeg",
+          "level": 0
+        },
+        {
+          "name": "rPois",
+          "level": 0
+        },
+        {
+          "name": "rElec",
+          "level": 0
+        },
+        {
+          "name": "rCorr",
+          "level": 0
+        },
+        {
+          "name": "SInv",
+          "level": 0
+        },
+        {
+          "name": "Will",
+          "level": 0
+        }
+      ],
+      "will": 0,
+      "abilities": [
+        {
+          "name": "Renounce Religion",
+          "hotkey": "X",
+          "available": true,
+          "failure": 0
+        },
+        {
+          "name": "Berserk",
+          "hotkey": "a",
+          "available": true,
+          "failure": 5
+        }
+      ],
+      "skills": [
+        {
+          "name": "Fighting",
+          "level": 3.6,
+          "training": 0,
+          "target": null,
+          "hotkey": "a",
+          "enabled": false
+        },
+        {
+          "name": "Maces & Flails",
+          "level": 3.4,
+          "training": 0,
+          "target": null,
+          "hotkey": "b",
+          "enabled": false
+        },
+        {
+          "name": "Axes",
+          "level": 5.7,
+          "training": 100,
+          "target": 10.0,
+          "hotkey": "c",
+          "enabled": true
+        },
+        {
+          "name": "Polearms",
+          "level": 3.4,
+          "training": 0,
+          "target": null,
+          "hotkey": "d",
+          "enabled": false
+        },
+        {
+          "name": "Unarmed Combat",
+          "level": 0.0,
+          "training": 0,
+          "target": null,
+          "hotkey": "e",
+          "enabled": false
+        },
+        {
+          "name": "Short Blades",
+          "level": 0.0,
+          "training": 0,
+          "target": null,
+          "hotkey": "f",
+          "enabled": true
+        },
+        {
+          "name": "Armour",
+          "level": 2.4,
+          "training": 0,
+          "target": null,
+          "hotkey": "g",
+          "enabled": false
+        },
+        {
+          "name": "Dodging",
+          "level": 2.1,
+          "training": 0,
+          "target": null,
+          "hotkey": "h",
+          "enabled": false
+        },
+        {
+          "name": "Stealth",
+          "level": 0.0,
+          "training": 0,
+          "target": null,
+          "hotkey": "i",
+          "enabled": false
+        }
+      ],
+      "attack_delay": 1.0,
+      "weapon_skill": "Axes"
+    },
+    {
+      "name": "Evald3638f10044d4ae4",
+      "species": "Minotaur",
+      "god": "Trog",
+      "turn": 1629,
+      "time": 16557,
+      "place": "Dungeon",
+      "depth": 3,
+      "hp": 31,
+      "hp_max": 31,
+      "xl": 3,
+      "position": [
+        -2,
+        2
+      ],
+      "statuses": [],
+      "inventory": [
+        {
+          "slot": 0,
+          "letter": "a",
+          "name": "+0 hand axe",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 1,
+          "letter": "b",
+          "name": "+0 animal skin",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 2,
+          "letter": "c",
+          "name": "+0 ring mail",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 3,
+          "letter": "d",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 4,
+          "letter": "e",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 5,
+          "letter": "f",
+          "name": "+0 scale mail",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 6,
+          "letter": "g",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 7,
+          "letter": "h",
+          "name": "+1 pair of boots",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 8,
+          "letter": "i",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 9,
+          "letter": "j",
+          "name": "+4 ring of protection",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 52,
+          "letter": "d",
+          "name": "2 fizzy dark potions",
+          "quantity": 2,
+          "equipped": false
+        },
+        {
+          "slot": 53,
+          "letter": "f",
+          "name": "2 ruby potions",
+          "quantity": 2,
+          "equipped": false
+        },
+        {
+          "slot": 54,
+          "letter": "c",
+          "name": "scroll labelled ESUSE MOPTULL",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 55,
+          "letter": "e",
+          "name": "scroll labelled NIOTERYHUI",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 56,
+          "letter": "j",
+          "name": "clear potion",
+          "quantity": 1,
+          "equipped": false
+        }
+      ],
+      "monsters": [
+        {
+          "id": 57,
+          "name": "orc priest",
+          "x": -2,
+          "y": 1,
+          "threat": 2,
+          "attitude": 0,
+          "description": null,
+          "statuses": [],
+          "equipment": [],
+          "speed_description": null,
+          "spells": []
+        },
+        {
+          "id": 59,
+          "name": "orc",
+          "x": -1,
+          "y": 1,
+          "threat": 0,
+          "attitude": 0,
+          "description": null,
+          "statuses": [],
+          "equipment": [],
+          "speed_description": null,
+          "spells": []
+        },
+        {
+          "id": 58,
+          "name": "orc",
+          "x": -1,
+          "y": 2,
+          "threat": 0,
+          "attitude": 0,
+          "description": null,
+          "statuses": [],
+          "equipment": [],
+          "speed_description": null,
+          "spells": []
+        }
+      ],
+      "cells": [
+        {
+          "x": -2,
+          "y": -3,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -7,
+          "y": -2,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -6,
+          "y": -2,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -2,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -2,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -7,
+          "y": -1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -6,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -1,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -7,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -6,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 0,
+          "feature": 33,
+          "glyph": "\"",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "feature": 48,
+          "glyph": "<",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -7,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -6,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 1,
+          "feature": 33,
+          "glyph": "o",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 1,
+          "feature": 33,
+          "glyph": "o",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -7,
+          "y": 2,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -6,
+          "y": 2,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 2,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 2,
+          "feature": 33,
+          "glyph": "@",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 2,
+          "feature": 33,
+          "glyph": "o",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 4,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 5,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 5,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 6,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 6,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 6,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 6,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 7,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 7,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 7,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 7,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -7,
+          "y": -3,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        }
+      ],
+      "messages": [
+        "The adder is heavily wounded.",
+        "You feel sick. The adder bites you but does no damage. The adder bites you.",
+        "You are more poisoned.",
+        "The adder poisons you!",
+        "You closely miss the adder. Your headbutt misses the adder.",
+        "The adder is heavily wounded.",
+        "You feel sick. The adder bites you.",
+        "You are more poisoned.",
+        "The adder poisons you!",
+        "You feel very sick.",
+        "The adder attacks as it pursues you! The adder barely misses you.",
+        "You hit the adder. Your headbutt misses the adder.",
+        "The adder is almost dead.",
+        "You feel very sick.",
+        "The adder barely misses you. You furiously retaliate! You headbutt the adder.",
+        "You kill the adder!",
+        "Trog accepts your kill.",
+        "* * * LOW HITPOINT WARNING * * *",
+        "You feel sick.",
+        "* * * LOW HITPOINT WARNING * * *",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You feel sick.",
+        "You are no longer poisoned.",
+        "Okay, then.",
+        "Found 4 poisoned darts.",
+        "You encounter a rat.",
+        "The rat squeaks loudly.",
+        "The rat twitches its whiskers.",
+        "You hit the rat.",
+        "You kill the rat!",
+        "Trog accepts your kill.",
+        "There is a stone staircase leading down here.",
+        "You open the door.",
+        "Found a ruby potion.",
+        "There is an open door here.",
+        "f - 2 ruby potions (gained 1)",
+        "Found Rorafed's Antique Weapon Emporium.",
+        "There is a stone staircase leading up here.",
+        "You open the door.",
+        "You encounter a goblin. It is wielding a +0 dagger.",
+        "The goblin shouts!",
+        "Found a cabochon ring.",
+        "You closely miss the goblin. The goblin completely misses you.",
+        "You barely miss the goblin. Your headbutt misses the goblin.",
+        "The goblin hits you but does no damage.",
+        "You hit the goblin but do no damage. The goblin barely misses you.",
+        "You furiously retaliate! You headbutt the goblin.",
+        "You kill the goblin!",
+        "Trog accepts your kill.",
+        "Things that are here:",
+        "a +0 dagger; a goblin corpse",
+        "i - a +0 dagger",
+        "There is an open door here.",
+        "j - a +4 ring of protection",
+        "j - a +4 ring of protection (worn)",
+        "Okay, then.",
+        "There are no items here.",
+        "There is an open door here.",
+        "You now have 24 gold pieces (gained 9).",
+        "You open the door.",
+        "There is an open door here.",
+        "There is a stone staircase leading down here.",
+        "You climb downwards.",
+        "You encounter an orc priest and 2 orcs.",
+        "The orc shouts! The orc priest shouts! The orc shouts!",
+        "Found a blackened amethyst amulet.",
+        "There is a stone staircase leading up here.",
+        "The orc priest attacks as it pursues you!",
+        "The orc priest barely misses you. You furiously retaliate!",
+        "You headbutt the orc priest, but do no damage.",
+        "The orc priest attacks as it pursues you!",
+        "The orc priest completely misses you.",
+        "You closely miss the orc priest. You headbutt the orc priest!",
+        "The orc priest is heavily wounded.",
+        "You hit the orc. The orc hits you but does no damage."
+      ],
+      "prompt": "",
+      "menu": {},
+      "input_mode": 1,
+      "dead": false,
+      "game_over": false,
+      "ac": 12,
+      "ev": 9,
+      "sh": 0,
+      "piety_rank": 1,
+      "poison_survival": 31,
+      "status_details": [],
+      "resistances": [
+        {
+          "name": "rFire",
+          "level": 0
+        },
+        {
+          "name": "rCold",
+          "level": 0
+        },
+        {
+          "name": "rNeg",
+          "level": 0
+        },
+        {
+          "name": "rPois",
+          "level": 0
+        },
+        {
+          "name": "rElec",
+          "level": 0
+        },
+        {
+          "name": "rCorr",
+          "level": 0
+        },
+        {
+          "name": "SInv",
+          "level": 0
+        },
+        {
+          "name": "Will",
+          "level": 0
+        }
+      ],
+      "will": 0,
+      "abilities": [
+        {
+          "name": "Renounce Religion",
+          "hotkey": "X",
+          "available": true,
+          "failure": 0
+        },
+        {
+          "name": "Berserk",
+          "hotkey": "a",
+          "available": true,
+          "failure": 5
+        }
+      ],
+      "skills": [
+        {
+          "name": "Fighting",
+          "level": 3.6,
+          "training": 0,
+          "target": null,
+          "hotkey": "a",
+          "enabled": false
+        },
+        {
+          "name": "Maces & Flails",
+          "level": 3.4,
+          "training": 0,
+          "target": null,
+          "hotkey": "b",
+          "enabled": false
+        },
+        {
+          "name": "Axes",
+          "level": 5.7,
+          "training": 100,
+          "target": 10.0,
+          "hotkey": "c",
+          "enabled": true
+        },
+        {
+          "name": "Polearms",
+          "level": 3.4,
+          "training": 0,
+          "target": null,
+          "hotkey": "d",
+          "enabled": false
+        },
+        {
+          "name": "Unarmed Combat",
+          "level": 0.0,
+          "training": 0,
+          "target": null,
+          "hotkey": "e",
+          "enabled": false
+        },
+        {
+          "name": "Short Blades",
+          "level": 0.0,
+          "training": 0,
+          "target": null,
+          "hotkey": "f",
+          "enabled": true
+        },
+        {
+          "name": "Armour",
+          "level": 2.4,
+          "training": 0,
+          "target": null,
+          "hotkey": "g",
+          "enabled": false
+        },
+        {
+          "name": "Dodging",
+          "level": 2.1,
+          "training": 0,
+          "target": null,
+          "hotkey": "h",
+          "enabled": false
+        },
+        {
+          "name": "Stealth",
+          "level": 0.0,
+          "training": 0,
+          "target": null,
+          "hotkey": "i",
+          "enabled": false
+        }
+      ],
+      "attack_delay": 1.0,
+      "weapon_skill": "Axes"
+    }
+  ]
+}

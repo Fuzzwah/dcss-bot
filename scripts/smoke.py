@@ -97,11 +97,13 @@ async def smoke(record: bool, turns: int, username: str | None = None) -> dict:
         if any(message.startswith("Welcome, ") for message in identity.messages):
             assert character.matches_start(identity), "Wrong native starting background"
         meaningful = sum(row["outcome"]["turn_delta"] > 0 for row in actions)
+        meaningful_turns = sum(max(0, row["outcome"]["turn_delta"]) for row in actions)
         if not summary["dead"]:
             assert summary["turns_survived"] >= turns, summary["result"]
-            assert meaningful >= min(100, turns), meaningful
+            assert meaningful_turns >= min(100, turns), meaningful_turns
         evidence = {"username": username, "run_dir": str(directory), "result": summary["result"],
                     "turns": summary["turns_survived"], "meaningful_actions": meaningful,
+                    "meaningful_turns": meaningful_turns,
                     "decisions": summary["decisions"], "kills": summary["kills"],
                     "character": character.identifier,
                     "pause_resume_step": "verified", "video": None}

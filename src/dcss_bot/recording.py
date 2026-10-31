@@ -24,9 +24,9 @@ from .models import Action, Observation
 _LOG = logging.getLogger(__name__)
 _SECRET_KEY = re.compile(r"password|passwd|secret|token|authorization|cookie|api[_-]?key", re.I)
 _URL = re.compile(r"(?:https?|wss?)://[^\s<>\"']+")
-_KILL = re.compile(r"\bYou (?:kill|slay|destroy|blow up)\b", re.I)
+_KILL = re.compile(r"\bYou (?:kill|slay|destroy|blow up)\b|You feel a bit more experienced\.", re.I)
 _DEATH_CAUSE = re.compile(r"slain by|killed by|mangled by|demolished by|annihilated by|succumbed to|burnt to a crisp|drowned|starved to death", re.I)
-_DAMAGE = re.compile(r"\b(?:hits?|bites?|claws?|stings?|mauls?|burns?|poison|damage|engulf|crush|constrict|smite|smitten)\b", re.I)
+_DAMAGE = re.compile(r"\b(?:hits?|bites?|claws?|stings?|mauls?|burns?|poison(?:ed)?|sick|damage|engulfs?|crush(?:es)?|constricts?|smite[sd]?|smitten|smote|pain shoots through)\b", re.I)
 
 
 def _now() -> str:
@@ -208,6 +208,15 @@ class Recorder:
                    "consumables_used": consumed, "new_messages": messages,
                    "dead": after.dead, "game_over": after.game_over,
                    "state_changed": before != after}
+        if action.assessment:
+            before_adjacent = sum(m.distance(before.position) <= 1 for m in before.hostiles)
+            after_adjacent = sum(m.distance(after.position) <= 1 for m in after.hostiles)
+            outcome["tactical_change"] = {
+                "visible_hostiles_delta": len(after.hostiles) - len(before.hostiles),
+                "adjacent_attackers_delta": after_adjacent - before_adjacent,
+                "hp_fraction_delta": after.hp_ratio - before.hp_ratio,
+                "interpretation": "Observed changes only; LOS loss is not proof of an escaped or dead enemy",
+            }
         self._append("observations", {"sequence": self._decisions, "timestamp": timestamp,
                                       "phase": "before", "observation": before.to_dict()})
         self._append("actions", {"sequence": self._decisions, "timestamp": timestamp,
