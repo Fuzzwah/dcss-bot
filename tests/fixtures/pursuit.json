@@ -1,0 +1,886 @@
+{
+  "source": "DCSS 0.34.1, seed 8, rule-v2 turns 190-192; public map cropped around the combat and known retreat path",
+  "known_retreat_positions": [
+    [
+      1,
+      -10
+    ],
+    [
+      2,
+      -10
+    ],
+    [
+      3,
+      -10
+    ]
+  ],
+  "observations": [
+    {
+      "name": "",
+      "species": "Minotaur",
+      "god": "Trog",
+      "turn": 190,
+      "time": 2032,
+      "place": "Dungeon",
+      "depth": 1,
+      "hp": 20,
+      "hp_max": 20,
+      "xl": 1,
+      "position": [
+        0,
+        -10
+      ],
+      "statuses": [],
+      "inventory": [
+        {
+          "slot": 0,
+          "letter": "a",
+          "name": "+0 hand axe",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 1,
+          "letter": "b",
+          "name": "+0 animal skin",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 2,
+          "letter": "c",
+          "name": "+0 club",
+          "quantity": 1,
+          "equipped": false
+        }
+      ],
+      "monsters": [
+        {
+          "id": 10,
+          "name": "goblin",
+          "x": -1,
+          "y": -11,
+          "threat": 0,
+          "attitude": 0
+        }
+      ],
+      "cells": [
+        {
+          "x": -1,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -11,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -11,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -11,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -10,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -11,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -11,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -11,
+          "feature": 33,
+          "glyph": "g",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -10,
+          "feature": 33,
+          "glyph": "@",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -11,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        }
+      ],
+      "messages": [
+        "Trog accepts your kill.",
+        "Found a scroll labelled PEDEPTOVICK.",
+        "Things that are here:",
+        "a hobgoblin corpse; a rat corpse",
+        "You encounter a goblin. It is wielding a +4 dagger.",
+        "The goblin shouts!"
+      ],
+      "prompt": "",
+      "menu": {},
+      "input_mode": 1,
+      "dead": false,
+      "game_over": false
+    },
+    {
+      "name": "",
+      "species": "Minotaur",
+      "god": "Trog",
+      "turn": 191,
+      "time": 2043,
+      "place": "Dungeon",
+      "depth": 1,
+      "hp": 15,
+      "hp_max": 20,
+      "xl": 1,
+      "position": [
+        0,
+        -10
+      ],
+      "statuses": [],
+      "inventory": [
+        {
+          "slot": 0,
+          "letter": "a",
+          "name": "+0 hand axe",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 1,
+          "letter": "b",
+          "name": "+0 animal skin",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 2,
+          "letter": "c",
+          "name": "+0 club",
+          "quantity": 1,
+          "equipped": false
+        }
+      ],
+      "monsters": [
+        {
+          "id": 10,
+          "name": "goblin",
+          "x": -1,
+          "y": -11,
+          "threat": 0,
+          "attitude": 0
+        }
+      ],
+      "cells": [
+        {
+          "x": -1,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -11,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -11,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -11,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -10,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -11,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -11,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -11,
+          "feature": 33,
+          "glyph": "g",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -10,
+          "feature": 33,
+          "glyph": "@",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -11,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        }
+      ],
+      "messages": [
+        "a hobgoblin corpse; a rat corpse",
+        "You encounter a goblin. It is wielding a +4 dagger.",
+        "The goblin shouts!",
+        "You hit the goblin.",
+        "The goblin is moderately wounded.",
+        "The goblin hits you with a +4 dagger."
+      ],
+      "prompt": "",
+      "menu": {},
+      "input_mode": 1,
+      "dead": false,
+      "game_over": false
+    },
+    {
+      "name": "",
+      "species": "Minotaur",
+      "god": "Trog",
+      "turn": 192,
+      "time": 2053,
+      "place": "Dungeon",
+      "depth": 1,
+      "hp": 16,
+      "hp_max": 20,
+      "xl": 1,
+      "position": [
+        1,
+        -10
+      ],
+      "statuses": [],
+      "inventory": [
+        {
+          "slot": 0,
+          "letter": "a",
+          "name": "+0 hand axe",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 1,
+          "letter": "b",
+          "name": "+0 animal skin",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 2,
+          "letter": "c",
+          "name": "+0 club",
+          "quantity": 1,
+          "equipped": false
+        }
+      ],
+      "monsters": [
+        {
+          "id": 10,
+          "name": "goblin",
+          "x": 0,
+          "y": -10,
+          "threat": 0,
+          "attitude": 0
+        }
+      ],
+      "cells": [
+        {
+          "x": -1,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -11,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -11,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -11,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -10,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -11,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -11,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -11,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": -10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": -10,
+          "feature": 33,
+          "glyph": "g",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": -10,
+          "feature": 33,
+          "glyph": "@",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -11,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": -9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        }
+      ],
+      "messages": [
+        "a hobgoblin corpse; a rat corpse",
+        "You encounter a goblin. It is wielding a +4 dagger.",
+        "The goblin shouts!",
+        "You hit the goblin.",
+        "The goblin is moderately wounded.",
+        "The goblin hits you with a +4 dagger."
+      ],
+      "prompt": "",
+      "menu": {},
+      "input_mode": 1,
+      "dead": false,
+      "game_over": false
+    }
+  ]
+}

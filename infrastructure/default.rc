@@ -1,0 +1,10 @@
+# Defaults only: users can edit these in the native WebTiles rc editor.
+# Keep dangerous confirmations and stop automation early when hurt.
+easy_confirm = none
+autofight_stop = 70
+explore_auto_rest = false
+travel_delay = 0
+explore_delay = 0
+rest_delay = 0
+view_delay = 0
+show_more = false

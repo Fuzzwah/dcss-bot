@@ -1,0 +1,38 @@
+{
+  "hp": 50,
+  "hp_max": 50,
+  "position": [
+    0,
+    0
+  ],
+  "monsters": [
+    {
+      "id": 1,
+      "name": "slime creature",
+      "x": 1,
+      "y": 0,
+      "threat": 1
+    },
+    {
+      "id": 2,
+      "name": "slime creature",
+      "x": 1,
+      "y": 1,
+      "threat": 1
+    }
+  ],
+  "cells": [
+    {
+      "x": 0,
+      "y": 0,
+      "feature": 33,
+      "visible": true
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "feature": 33,
+      "visible": true
+    }
+  ]
+}
