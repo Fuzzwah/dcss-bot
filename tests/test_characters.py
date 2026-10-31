@@ -27,18 +27,18 @@ def alternative():
 
 
 
-def test_default_factory_creates_independent_rule_v3_state():
+def test_default_factory_creates_independent_policy_state():
     first = make_agent("rule", PROFILE)
     second = make_agent("rule", PROFILE)
     assert isinstance(first, RuleBasedAgent)
     assert isinstance(second, RuleBasedAgent)
     assert first is not second
-    first.visits[(1, 2)] = 3
+    first.exploration.current.visits[(1, 2)] = 3
     first.equipment_attempts.add(("wear", 1, "+0 chain mail"))
-    first.previous_hp = 10
-    assert not second.visits
+    first.tactics.previous = Observation(hp=10)
+    assert not second.exploration.current.visits
     assert not second.equipment_attempts
-    assert second.previous_hp is None
+    assert second.tactics.previous is None
 
 
 def test_character_with_invalid_policy_is_rejected(alternative):

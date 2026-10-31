@@ -44,6 +44,44 @@ root-owned state files. Do not make this intentionally simple local account serv
 public without configuring TLS, authentication policy, resource limits, and
 appropriate upstream server hardening.
 
+### Private LAN forward on this host
+
+The configured URL is **http://10.1.1.232:8080/#watch-MiBeBot**. The Linux host owns
+`10.1.1.232` on `eno1`. To avoid restarting an existing game, the container remains
+loopback-only and two host-local user units under `~/.config/systemd/user/` provide
+the explicitly requested LAN access:
+
+* `dcss-webtiles-lan.socket`: listens only on `10.1.1.232:8080`, with `FreeBind=true`
+  so it can start before the network address appears.
+* `dcss-webtiles-lan.service`: runs the system-provided
+  `/usr/lib/systemd/systemd-socket-proxyd 127.0.0.1:8080`. It forwards TCP unchanged,
+  including HTTP and WebSockets; no extra proxy package or game-image rebuild.
+
+The socket is enabled and this host already has user lingering enabled. These are
+machine-local configuration files, not automatically installed on another host.
+The game server must still be running; forwarding does not launch the bot/server.
+
+```fish
+systemctl --user status dcss-webtiles-lan.socket dcss-webtiles-lan.service
+systemctl --user disable --now dcss-webtiles-lan.socket
+# Re-enable LAN access without restarting the game:
+systemctl --user enable --now dcss-webtiles-lan.socket
+```
+
+Disabling the socket also stops its dependent forwarding service. The bot's
+`DCSS_URL`, Unix control socket and loopback video capture remain unchanged.
+This exposes the normal WebTiles application to the trusted LAN, not only a
+read-only HTTP endpoint. Do not forward this port from the public internet.
+Off-LAN use of this private URL requires a routed VPN/subnet; otherwise use the
+README's SSH tunnel.
+
+Verification: HTTP200 and a native `no-compression` WebSocket handshake succeeded
+through the LAN address with its browser Origin. Anonymous Chromium loaded the
+actual MiBeBot game at this URL (D:1, HP26/28, Berserk) without bot authentication.
+No container restart or gameplay command was issued. Mac/Firefox access was not
+directly exercised from the remote client.
+
+
 ## Native build and bootstrap (no container)
 
 On Debian/Ubuntu install build prerequisites once:

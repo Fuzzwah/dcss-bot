@@ -482,3 +482,13 @@ async def test_video_cancelled_pause_retains_completed_and_partial_segments(tmp_
     assert output.read_text().splitlines() == ["initial", "initial"]
     assert len(list(tmp_path.glob(".video-*/segment-*.webm"))) == 1
     assert next(tmp_path.glob(".video-*/browser-*.webm")).read_text() == "second segment\n"
+
+
+def test_native_final_smite_is_not_misattributed_to_an_earlier_melee_hit(tmp_path):
+    recorder = Recorder(tmp_path,{})
+    dead = observation(hp=-5,dead=True,game_over=True,messages=(
+        "The orc hits you with a +0 whip.","Beogh smites you!","You die..."))
+    result = recorder.finish("dead",dead)
+    recorder.close()
+    assert result["death_cause"] == "Beogh smites you!"
+    assert result["death_cause_source"] == "last_damage_message"

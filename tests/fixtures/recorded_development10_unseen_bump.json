@@ -1,0 +1,7863 @@
+{
+  "source": "development10 seed5 run 20261031T082310.942448Z-8123811fb397, actions3004-3005 public before/after snapshots",
+  "base": {
+    "name": "Evale715f2bc6b064ff7",
+    "species": "Minotaur",
+    "god": "Trog",
+    "turn": 2897,
+    "time": 29727,
+    "place": "Dungeon",
+    "depth": 4,
+    "hp": 24,
+    "hp_max": 40,
+    "xl": 5,
+    "position": [
+      3,
+      -14
+    ],
+    "statuses": [
+      "strong-willed",
+      "Regen Will++",
+      "Drain"
+    ],
+    "inventory": [
+      {
+        "slot": 0,
+        "letter": "a",
+        "name": "+0 hand axe",
+        "quantity": 1,
+        "equipped": true,
+        "category": "weapon"
+      },
+      {
+        "slot": 1,
+        "letter": "b",
+        "name": "+0 animal skin",
+        "quantity": 1,
+        "equipped": false,
+        "category": "armour"
+      },
+      {
+        "slot": 2,
+        "letter": "c",
+        "name": "+0 sling",
+        "quantity": 1,
+        "equipped": false,
+        "category": "weapon"
+      },
+      {
+        "slot": 3,
+        "letter": "d",
+        "name": "+0 dagger",
+        "quantity": 1,
+        "equipped": false,
+        "category": "weapon"
+      },
+      {
+        "slot": 4,
+        "letter": "e",
+        "name": "+0 scale mail",
+        "quantity": 1,
+        "equipped": false,
+        "category": "armour"
+      },
+      {
+        "slot": 5,
+        "letter": "f",
+        "name": "+0 chain mail",
+        "quantity": 1,
+        "equipped": true,
+        "category": "armour"
+      },
+      {
+        "slot": 6,
+        "letter": "g",
+        "name": "+0 dagger",
+        "quantity": 1,
+        "equipped": false,
+        "category": "weapon"
+      },
+      {
+        "slot": 7,
+        "letter": "h",
+        "name": "+2 tower shield",
+        "quantity": 1,
+        "equipped": true,
+        "category": "armour"
+      },
+      {
+        "slot": 52,
+        "letter": "d",
+        "name": "white potion",
+        "quantity": 1,
+        "equipped": false,
+        "category": "potion"
+      },
+      {
+        "slot": 53,
+        "letter": "m",
+        "name": "pink potion",
+        "quantity": 1,
+        "equipped": false,
+        "category": "potion"
+      },
+      {
+        "slot": 54,
+        "letter": "f",
+        "name": "viscous silvery potion",
+        "quantity": 1,
+        "equipped": false,
+        "category": "potion"
+      },
+      {
+        "slot": 55,
+        "letter": "W",
+        "name": "3 scrolls of brand weapon",
+        "quantity": 3,
+        "equipped": false,
+        "category": "scroll"
+      }
+    ],
+    "monsters": [],
+    "cells": [
+      {
+        "x": -8,
+        "y": -4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -3,
+        "feature": 42,
+        "glyph": ">",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -3,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -3,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -3,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -3,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -3,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -2,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -1,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -1,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -1,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -1,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -1,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -1,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 0,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 0,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 0,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 0,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 0,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 0,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": 0,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 0,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "feature": 46,
+        "glyph": "<",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": 0,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": 0,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": 0,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": 0,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 1,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 1,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 1,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": 1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 1,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 1,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 2,
+        "feature": 33,
+        "glyph": "!",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": 2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 2,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 2,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 3,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": 3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 3,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 3,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 3,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": 4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 4,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 5,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 5,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": 5,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 5,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 5,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 6,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 6,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 6,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 6,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 6,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 7,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 7,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 8,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 8,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 8,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": -7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -7,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": -6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -6,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": -5,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -5,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": -4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": -3,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": -2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": -8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": -8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": -7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -7,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": -6,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -6,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": -5,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 3,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": -9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": -9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": -9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -9,
+        "feature": 33,
+        "glyph": "?",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": -8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -8,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -8,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -8,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -8,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": -7,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": -6,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -6,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -6,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -6,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -5,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -5,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -5,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -3,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": 1,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": 1,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 1,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": 2,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": 2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": 3,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": 3,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 3,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 3,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -12,
+        "y": -9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -12,
+        "y": -8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -12,
+        "y": -7,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -12,
+        "y": -10,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": -10,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": -10,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": -10,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -12,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -12,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -12,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -12,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -13,
+        "y": -11,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -12,
+        "y": -11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": -11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -11,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -13,
+        "y": -10,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -10,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -10,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -10,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -10,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -10,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -10,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -10,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -13,
+        "y": -9,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -13,
+        "y": -8,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -8,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -13,
+        "y": -7,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -12,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": -14,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": -14,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": -14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -14,
+        "feature": 9,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -14,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -14,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -14,
+        "feature": 33,
+        "glyph": "@",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": -13,
+        "feature": 9,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": -13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": -13,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -13,
+        "feature": 33,
+        "glyph": "{",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -12,
+        "y": -12,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": -12,
+        "feature": 9,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": -12,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": -12,
+        "feature": 9,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -12,
+        "feature": 9,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -12,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -12,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -12,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -12,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": -11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": -11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -11,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -10,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -10,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -10,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -10,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -10,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -10,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -9,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": -15,
+        "feature": 9,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": -15,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -15,
+        "feature": 9,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -15,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -15,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -15,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -15,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": -16,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": -16,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -16,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -16,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -16,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -16,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -16,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -16,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -15,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -13,
+        "y": -13,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -12,
+        "y": -13,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -13,
+        "y": -12,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -12,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -15,
+        "feature": 33,
+        "glyph": ")",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -15,
+        "feature": 33,
+        "glyph": ")",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -15,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -14,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -13,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -12,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -16,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -16,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -16,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -10,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -10,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -9,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -8,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -7,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -6,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -5,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -5,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -5,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -17,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -17,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -17,
+        "feature": 48,
+        "glyph": "<",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -17,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -17,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -17,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -16,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -16,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -16,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -16,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -15,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -15,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -15,
+        "feature": 34,
+        "glyph": "'",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -15,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -18,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -18,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -18,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -18,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -18,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -18,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -18,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -18,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -18,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -18,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -18,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -17,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -17,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -17,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -17,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -17,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -16,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -16,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -15,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -13,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -12,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -12,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -12,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -12,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -12,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -11,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -10,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -10,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -19,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -19,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -19,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -19,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -19,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -18,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -18,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -18,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -18,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -17,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -17,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -17,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -17,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -20,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -20,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -20,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -20,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -20,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -20,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -20,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -19,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -18,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -17,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -21,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -21,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -21,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -21,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -21,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -22,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -22,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -22,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -20,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -20,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -20,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -18,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -17,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -16,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -16,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -15,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -23,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -23,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -23,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -24,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -24,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -24,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -24,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -23,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -22,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -19,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -19,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -18,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -17,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -16,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -23,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -23,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -23,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -23,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -23,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -22,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -22,
+        "feature": 33,
+        "glyph": ")",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -22,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -22,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -22,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -21,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -21,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -21,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -21,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -20,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -20,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -19,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -18,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -17,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -16,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -24,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -24,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -24,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -24,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -24,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -24,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -23,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -22,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -19,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -19,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -18,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -17,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -16,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -14,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -25,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -25,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -25,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -15,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -15,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -15,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -15,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -15,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -26,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -26,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -26,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -26,
+        "feature": 45,
+        "glyph": ">",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -26,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -26,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -25,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -25,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -25,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 12,
+        "y": -17,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 12,
+        "y": -16,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 12,
+        "y": -15,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -27,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -27,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -27,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -27,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -14,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -14,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -14,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -28,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -28,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -28,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -28,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -26,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -26,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 12,
+        "y": -26,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 13,
+        "y": -26,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -25,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -25,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -25,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 12,
+        "y": -25,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 13,
+        "y": -25,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -24,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -24,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 12,
+        "y": -24,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 13,
+        "y": -24,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -23,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -23,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -22,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -22,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -29,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -29,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -29,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -29,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -21,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -30,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -30,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -30,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -20,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -20,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -26,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -31,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -31,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -31,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -30,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -30,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -30,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -29,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -29,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -29,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -28,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -28,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -28,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -27,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -27,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -27,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -32,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -32,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -32,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -28,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -27,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -27,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -27,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -27,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -26,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 14,
+        "y": -26,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -26,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -26,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -26,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -25,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 14,
+        "y": -25,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -25,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -25,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -25,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 14,
+        "y": -24,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -24,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -24,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -24,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -33,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -33,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -33,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -31,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -31,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -31,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -30,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -30,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -29,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -32,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -32,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -32,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -31,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -31,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -33,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -33,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -33,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -34,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -34,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -34,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -33,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -33,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -32,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -32,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -40,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -40,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -40,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -39,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -39,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -39,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -38,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -38,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -38,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -37,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -37,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -37,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -36,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -36,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -36,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -35,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -35,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -35,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -40,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -39,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": -42,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": -42,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": -42,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": -42,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -42,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -41,
+        "feature": 44,
+        "glyph": ">",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -40,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -42,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -40,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -43,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -43,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -43,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -43,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -42,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -42,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -42,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -42,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -42,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -40,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -40,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -40,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -40,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -40,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -39,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -39,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -39,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -39,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -39,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": -39,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -43,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -42,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -42,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 12,
+        "y": -42,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 13,
+        "y": -42,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 14,
+        "y": -42,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -42,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 12,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 13,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 14,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -40,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -40,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 12,
+        "y": -40,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 13,
+        "y": -40,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 14,
+        "y": -40,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -40,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -39,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -38,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -38,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -38,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -38,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -38,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -42,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -40,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -42,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -41,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -40,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -39,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -39,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -39,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -39,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -39,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -38,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -38,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -37,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -37,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -36,
+        "feature": 33,
+        "glyph": ")",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -36,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -35,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -35,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 10,
+        "y": -34,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 11,
+        "y": -34,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -38,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -38,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -38,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -37,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -37,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -37,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -36,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -36,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -36,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -35,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -35,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -35,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -34,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -34,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -34,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -33,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -33,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -33,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -32,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -32,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -32,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -31,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -31,
+        "feature": 33,
+        "glyph": "!",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -31,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -30,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -30,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -30,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -29,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -29,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -29,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 15,
+        "y": -28,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 16,
+        "y": -28,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 17,
+        "y": -28,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -44,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -44,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -44,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -43,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -42,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -40,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -39,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -38,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -37,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -37,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -37,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -37,
+        "feature": 33,
+        "glyph": ")",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -37,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -44,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -43,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -42,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -40,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -39,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -38,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -37,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -36,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -36,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -36,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -45,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -45,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -45,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -44,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -43,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -42,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -40,
+        "feature": 33,
+        "glyph": "$",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -39,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -38,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -37,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -37,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -36,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -36,
+        "feature": 34,
+        "glyph": "'",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -36,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -36,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -35,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -35,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -35,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -35,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -35,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -35,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -35,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -45,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -45,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -44,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -43,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -42,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -40,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -39,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -38,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -37,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -36,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -35,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -34,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -34,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": -34,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -34,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -34,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -34,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -33,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -33,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -33,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -45,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -45,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -44,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -43,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -42,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -40,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -39,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -38,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -37,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -36,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -35,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -32,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -32,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -32,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -31,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -31,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -31,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -30,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -30,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -30,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -37,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -36,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -36,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -35,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -35,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -34,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": -34,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -33,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -29,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -29,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -29,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -35,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -34,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -34,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -34,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -34,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -33,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -33,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": -33,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": -33,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -43,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -43,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -42,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -42,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -41,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -41,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -40,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -40,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -35,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -34,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -33,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": -32,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": -32,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": -32,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -28,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -28,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -28,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -32,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -31,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -30,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -29,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -28,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -27,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -27,
+        "feature": 33,
+        "glyph": "o",
+        "visible": false,
+        "cloud": false
+      }
+    ],
+    "messages": [
+      "You kill the orc!",
+      "Trog accepts your kill.",
+      "You encounter an orc wizard. It is wielding a +2 dagger of draining.",
+      "The orc wizard shouts! You hear a shout!",
+      "Things that are here:",
+      "a +0 dagger; an orc corpse",
+      "You fail to use your ability.",
+      "The orc wizard hits you with a +2 dagger of draining.",
+      "You feel drained.",
+      "Your skin crawls.",
+      "You feel strong-willed.",
+      "You block the orc wizard's attack.",
+      "You hear the slow hiss of a very distant avalanche of sand.",
+      "The orc wizard gestures wildly while chanting.",
+      "The orc wizard flickers and vanishes!",
+      "Deactivating autopickup; reactivate with Ctrl-A.",
+      "You feel the effects of Trog's Hand fading.",
+      "A puff of flame appears from out of thin air!",
+      "The puff of flame hits you.",
+      "Your skin stops crawling. You feel less strong-willed.",
+      "A puff of flame appears from out of thin air!",
+      "You block the puff of flame.",
+      "There is an escape hatch in the floor here.",
+      "You encounter an orc. It is wielding a +0 club.",
+      "The orc shouts!",
+      "A puff of flame appears from out of thin air!",
+      "The puff of flame hits you!",
+      "You see here a +0 flail.",
+      "You encounter an orc priest. It is wielding a +0 mace.",
+      "The orc hits you but does no damage.",
+      "The orc hits you but does no damage.",
+      "You completely miss the orc. The orc hits you with a +0 club.",
+      "You closely miss something.",
+      "The orc priest looks satisfied for a moment.",
+      "You hear some strange, mumbled words.",
+      "A puff of flame appears from out of thin air!",
+      "The puff of flame hits you! You block the orc's attack.",
+      "Your skin crawls.",
+      "You feel strong-willed.",
+      "The orc hits you but does no damage. Something hits you but does no damage.",
+      "You feel drained.",
+      "You hit the orc priest. Your headbutt misses the orc priest.",
+      "The orc priest is lightly wounded.",
+      "You hit something but do no damage. You barely miss the orc.",
+      "The orc priest calls down the wrath of Beogh upon you.",
+      "Beogh smites you! You block the orc's attack. You block something's attack.",
+      "You block the orc's attack. Something hits you. You feel drained.",
+      "You block the orc priest's attack.",
+      "You slash the orc priest!",
+      "The orc priest is heavily wounded.",
+      "You barely miss the orc. You barely miss something.",
+      "Something hits you but does no damage. You feel drained.",
+      "The orc hits you but does no damage.",
+      "The orc priest hits you but does no damage.",
+      "You closely miss the orc priest.",
+      "The orc priest is heavily wounded.",
+      "You barely miss the orc. You hit something. You block the orc's attack.",
+      "You block the orc priest's attack. You block something's attack.",
+      "You closely miss the orc priest. Your headbutt misses the orc priest.",
+      "The orc priest is heavily wounded.",
+      "You barely miss something. You hit the orc. You block the orc's attack.",
+      "Something hits you but does no damage. You feel drained.",
+      "You block the orc priest's attack.",
+      "You closely miss the orc priest. You headbutt the orc priest.",
+      "You kill the orc priest!",
+      "Trog accepts your kill.",
+      "You hit something but do no damage. You hit the orc.",
+      "You kill the orc!",
+      "Trog accepts your kill.",
+      "Something hits you. You feel drained.",
+      "Reactivating autopickup.",
+      "An orc wizard appears from thin air!",
+      "The orc wizard hits you but does no damage.",
+      "You feel drained.",
+      "You hit the orc wizard but do no damage.",
+      "The orc wizard is moderately wounded.",
+      "The orc wizard gestures wildly while chanting.",
+      "The orc wizard flickers and vanishes!",
+      "Deactivating autopickup; reactivate with Ctrl-A.",
+      "You block something's attack."
+    ],
+    "prompt": "",
+    "menu": {},
+    "input_mode": 1,
+    "dead": false,
+    "game_over": false,
+    "ac": 8,
+    "ev": 5,
+    "sh": 11,
+    "piety_rank": 2,
+    "poison_survival": 24,
+    "status_details": [
+      {
+        "light": "",
+        "text": "strong-willed",
+        "description": "",
+        "colour": null
+      },
+      {
+        "light": "Regen Will++",
+        "text": "regenerating",
+        "description": "You regenerate health at an unnaturally fast rate. This is only shown for temporary regeneration.\n",
+        "colour": 9
+      },
+      {
+        "light": "Drain",
+        "text": "drained",
+        "description": "Your maximum health has been temporarily drained by negative energy. This status will not wear off by waiting, but will gradually expire as you gain experience.\n",
+        "colour": 14
+      }
+    ],
+    "resistances": [],
+    "will": null,
+    "abilities": [
+      {
+        "name": "Renounce Religion",
+        "hotkey": "X",
+        "available": true,
+        "failure": 0
+      },
+      {
+        "name": "Berserk",
+        "hotkey": "a",
+        "available": true,
+        "failure": 2
+      },
+      {
+        "name": "Trog's Hand",
+        "hotkey": "b",
+        "available": true,
+        "failure": 3
+      }
+    ],
+    "skills": [
+      {
+        "name": "Fighting",
+        "level": 3.6,
+        "training": 0,
+        "target": null,
+        "hotkey": "a",
+        "enabled": false
+      },
+      {
+        "name": "Maces & Flails",
+        "level": 4.3,
+        "training": 0,
+        "target": null,
+        "hotkey": "b",
+        "enabled": false
+      },
+      {
+        "name": "Axes",
+        "level": 7.2,
+        "training": 100,
+        "target": 10.0,
+        "hotkey": "c",
+        "enabled": true
+      },
+      {
+        "name": "Polearms",
+        "level": 4.3,
+        "training": 0,
+        "target": null,
+        "hotkey": "d",
+        "enabled": false
+      },
+      {
+        "name": "Unarmed Combat",
+        "level": 0.0,
+        "training": 0,
+        "target": null,
+        "hotkey": "e",
+        "enabled": false
+      },
+      {
+        "name": "Short Blades",
+        "level": 0.0,
+        "training": 0,
+        "target": null,
+        "hotkey": "f",
+        "enabled": false
+      },
+      {
+        "name": "Ranged Weapons",
+        "level": 0.0,
+        "training": 0,
+        "target": null,
+        "hotkey": "g",
+        "enabled": false
+      },
+      {
+        "name": "Armour",
+        "level": 2.4,
+        "training": 0,
+        "target": null,
+        "hotkey": "h",
+        "enabled": false
+      },
+      {
+        "name": "Dodging",
+        "level": 2.1,
+        "training": 0,
+        "target": null,
+        "hotkey": "i",
+        "enabled": false
+      },
+      {
+        "name": "Shields",
+        "level": 0.0,
+        "training": 0,
+        "target": null,
+        "hotkey": "j",
+        "enabled": false
+      },
+      {
+        "name": "Stealth",
+        "level": 0.0,
+        "training": 0,
+        "target": null,
+        "hotkey": "k",
+        "enabled": false
+      }
+    ],
+    "attack_delay": 1.2,
+    "weapon_skill": "Axes"
+  },
+  "visible_changes": {
+    "turn": 2896,
+    "time": 29715,
+    "hp": 22,
+    "monsters": [
+      {
+        "id": 113,
+        "name": "orc wizard",
+        "x": 3,
+        "y": -13,
+        "threat": 2,
+        "attitude": 0,
+        "description": "An orc who has gained proficiency in the occult arts, using them for martial purposes.\n\nMax HP: ~15      Will: +          AC: +          EV: +++                        \nThreat: High    Class: Natural  Size: Medium    Int: Human      \n\n\nYou have about 53% to hit with your +0 hand axe and 40% to hit with your headbutt.\nIt has about 53% to hit you.\n\nAttack                  Max Damage     \nHit: +2 dagger (drain)  7 + 5 (drain)  \n\nIt can open doors.\nTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.\nSpells:\nMagic Dart: (3d4)\nThrow Flame: (3d5)\nConfuse: (3%)\nInvisibility: ",
+        "statuses": [],
+        "equipment": [
+          "+2 dagger (drain)"
+        ],
+        "speed_description": null,
+        "spells": [
+          "Magic Dart",
+          "Throw Flame",
+          "Confuse",
+          "Invisibility"
+        ],
+        "spell_ranges": [
+          [
+            "Magic Dart",
+            7
+          ],
+          [
+            "Throw Flame",
+            7
+          ],
+          [
+            "Confuse",
+            7
+          ]
+        ]
+      }
+    ],
+    "messages": [
+      "The orc is lightly wounded.",
+      "The orc hits you but does no damage.",
+      "You hit the orc.",
+      "The orc is heavily wounded.",
+      "You block the orc's attack.",
+      "You hit the orc.",
+      "You kill the orc!",
+      "Trog accepts your kill.",
+      "You encounter an orc wizard. It is wielding a +2 dagger of draining.",
+      "The orc wizard shouts! You hear a shout!",
+      "Things that are here:",
+      "a +0 dagger; an orc corpse",
+      "You fail to use your ability.",
+      "The orc wizard hits you with a +2 dagger of draining.",
+      "You feel drained.",
+      "Your skin crawls.",
+      "You feel strong-willed.",
+      "You block the orc wizard's attack.",
+      "You hear the slow hiss of a very distant avalanche of sand.",
+      "The orc wizard gestures wildly while chanting.",
+      "The orc wizard flickers and vanishes!",
+      "Deactivating autopickup; reactivate with Ctrl-A.",
+      "You feel the effects of Trog's Hand fading.",
+      "A puff of flame appears from out of thin air!",
+      "The puff of flame hits you.",
+      "Your skin stops crawling. You feel less strong-willed.",
+      "A puff of flame appears from out of thin air!",
+      "You block the puff of flame.",
+      "There is an escape hatch in the floor here.",
+      "You encounter an orc. It is wielding a +0 club.",
+      "The orc shouts!",
+      "A puff of flame appears from out of thin air!",
+      "The puff of flame hits you!",
+      "You see here a +0 flail.",
+      "You encounter an orc priest. It is wielding a +0 mace.",
+      "The orc hits you but does no damage.",
+      "The orc hits you but does no damage.",
+      "You completely miss the orc. The orc hits you with a +0 club.",
+      "You closely miss something.",
+      "The orc priest looks satisfied for a moment.",
+      "You hear some strange, mumbled words.",
+      "A puff of flame appears from out of thin air!",
+      "The puff of flame hits you! You block the orc's attack.",
+      "Your skin crawls.",
+      "You feel strong-willed.",
+      "The orc hits you but does no damage. Something hits you but does no damage.",
+      "You feel drained.",
+      "You hit the orc priest. Your headbutt misses the orc priest.",
+      "The orc priest is lightly wounded.",
+      "You hit something but do no damage. You barely miss the orc.",
+      "The orc priest calls down the wrath of Beogh upon you.",
+      "Beogh smites you! You block the orc's attack. You block something's attack.",
+      "You block the orc's attack. Something hits you. You feel drained.",
+      "You block the orc priest's attack.",
+      "You slash the orc priest!",
+      "The orc priest is heavily wounded.",
+      "You barely miss the orc. You barely miss something.",
+      "Something hits you but does no damage. You feel drained.",
+      "The orc hits you but does no damage.",
+      "The orc priest hits you but does no damage.",
+      "You closely miss the orc priest.",
+      "The orc priest is heavily wounded.",
+      "You barely miss the orc. You hit something. You block the orc's attack.",
+      "You block the orc priest's attack. You block something's attack.",
+      "You closely miss the orc priest. Your headbutt misses the orc priest.",
+      "The orc priest is heavily wounded.",
+      "You barely miss something. You hit the orc. You block the orc's attack.",
+      "Something hits you but does no damage. You feel drained.",
+      "You block the orc priest's attack.",
+      "You closely miss the orc priest. You headbutt the orc priest.",
+      "You kill the orc priest!",
+      "Trog accepts your kill.",
+      "You hit something but do no damage. You hit the orc.",
+      "You kill the orc!",
+      "Trog accepts your kill.",
+      "Something hits you. You feel drained.",
+      "Reactivating autopickup.",
+      "An orc wizard appears from thin air!",
+      "The orc wizard hits you but does no damage.",
+      "You feel drained."
+    ],
+    "poison_survival": 22
+  },
+  "visible_cell_changes": [
+    {
+      "x": 3,
+      "y": -13,
+      "feature": 33,
+      "glyph": "o",
+      "visible": true,
+      "cloud": false
+    }
+  ],
+  "after_changes": {
+    "turn": 2898,
+    "time": 29739,
+    "hp": 17,
+    "messages": [
+      "Things that are here:",
+      "a +0 dagger; an orc corpse",
+      "You fail to use your ability.",
+      "The orc wizard hits you with a +2 dagger of draining.",
+      "You feel drained.",
+      "Your skin crawls.",
+      "You feel strong-willed.",
+      "You block the orc wizard's attack.",
+      "You hear the slow hiss of a very distant avalanche of sand.",
+      "The orc wizard gestures wildly while chanting.",
+      "The orc wizard flickers and vanishes!",
+      "Deactivating autopickup; reactivate with Ctrl-A.",
+      "You feel the effects of Trog's Hand fading.",
+      "A puff of flame appears from out of thin air!",
+      "The puff of flame hits you.",
+      "Your skin stops crawling. You feel less strong-willed.",
+      "A puff of flame appears from out of thin air!",
+      "You block the puff of flame.",
+      "There is an escape hatch in the floor here.",
+      "You encounter an orc. It is wielding a +0 club.",
+      "The orc shouts!",
+      "A puff of flame appears from out of thin air!",
+      "The puff of flame hits you!",
+      "You see here a +0 flail.",
+      "You encounter an orc priest. It is wielding a +0 mace.",
+      "The orc hits you but does no damage.",
+      "The orc hits you but does no damage.",
+      "You completely miss the orc. The orc hits you with a +0 club.",
+      "You closely miss something.",
+      "The orc priest looks satisfied for a moment.",
+      "You hear some strange, mumbled words.",
+      "A puff of flame appears from out of thin air!",
+      "The puff of flame hits you! You block the orc's attack.",
+      "Your skin crawls.",
+      "You feel strong-willed.",
+      "The orc hits you but does no damage. Something hits you but does no damage.",
+      "You feel drained.",
+      "You hit the orc priest. Your headbutt misses the orc priest.",
+      "The orc priest is lightly wounded.",
+      "You hit something but do no damage. You barely miss the orc.",
+      "The orc priest calls down the wrath of Beogh upon you.",
+      "Beogh smites you! You block the orc's attack. You block something's attack.",
+      "You block the orc's attack. Something hits you. You feel drained.",
+      "You block the orc priest's attack.",
+      "You slash the orc priest!",
+      "The orc priest is heavily wounded.",
+      "You barely miss the orc. You barely miss something.",
+      "Something hits you but does no damage. You feel drained.",
+      "The orc hits you but does no damage.",
+      "The orc priest hits you but does no damage.",
+      "You closely miss the orc priest.",
+      "The orc priest is heavily wounded.",
+      "You barely miss the orc. You hit something. You block the orc's attack.",
+      "You block the orc priest's attack. You block something's attack.",
+      "You closely miss the orc priest. Your headbutt misses the orc priest.",
+      "The orc priest is heavily wounded.",
+      "You barely miss something. You hit the orc. You block the orc's attack.",
+      "Something hits you but does no damage. You feel drained.",
+      "You block the orc priest's attack.",
+      "You closely miss the orc priest. You headbutt the orc priest.",
+      "You kill the orc priest!",
+      "Trog accepts your kill.",
+      "You hit something but do no damage. You hit the orc.",
+      "You kill the orc!",
+      "Trog accepts your kill.",
+      "Something hits you. You feel drained.",
+      "Reactivating autopickup.",
+      "An orc wizard appears from thin air!",
+      "The orc wizard hits you but does no damage.",
+      "You feel drained.",
+      "You hit the orc wizard but do no damage.",
+      "The orc wizard is moderately wounded.",
+      "The orc wizard gestures wildly while chanting.",
+      "The orc wizard flickers and vanishes!",
+      "Deactivating autopickup; reactivate with Ctrl-A.",
+      "You block something's attack.",
+      "You miss something.",
+      "You hear some strange, mumbled words.",
+      "A magic dart appears from out of thin air!",
+      "The magic dart hits you!"
+    ],
+    "poison_survival": 17
+  },
+  "bump_action": {
+    "kind": "move",
+    "value": "j",
+    "reason": "Try the last publicly seen adjacent attacker square once; its current invisible position is unknown",
+    "objective": "defend unseen"
+  },
+  "previous_action": {
+    "kind": "move",
+    "value": "j",
+    "reason": "Attack orc wizard once; reassess fresh damage and formation",
+    "objective": "combat"
+  },
+  "policy_state": {
+    "ineffective_retreats": 2,
+    "recent_unresolved_hostiles": {
+      "orc wizard": 1
+    }
+  }
+}

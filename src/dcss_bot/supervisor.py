@@ -1,6 +1,7 @@
 """Single-flight gameplay with private, boundary-acknowledged local controls."""
 import asyncio
 from collections import deque
+from dataclasses import replace
 import json
 import math
 import os
@@ -18,7 +19,8 @@ from .recording import Recorder, VideoRecorder
 
 
 _TRANSPORT_ERRORS = (OSError, ConnectionClosed, TimeoutError)
-_INTERFACE_ACTIONS = {"cancel", "more", "menu", "confirm"}
+_INTERFACE_ACTIONS = {"cancel", "more", "menu", "pickup_select", "confirm"}
+_NATIVE_STEP_QUANTUM = 5.0
 
 
 class Supervisor:
@@ -28,6 +30,7 @@ class Supervisor:
         self.observation = Observation()
         self.actions = 0
         self.delay = config.delay
+        self.explore_delay = config.explore_delay
         self.state = "starting"
         self.reason = ""
         self._phase = ""
@@ -43,6 +46,7 @@ class Supervisor:
         self._boundary = asyncio.Lock()
         self._commands = asyncio.Lock()
         self._wake = asyncio.Event()
+        self._activity_cancel = asyncio.Event()
         self._server: asyncio.Server | None = None
         self._clients: set[asyncio.Task] = set()
         self._owned_paths: dict[Path, tuple[int, int]] = {}
@@ -55,9 +59,10 @@ class Supervisor:
         self._next_action = 0.0
 
     def request_stop(self) -> None:
-        """Signal-handler-safe request; the current action finishes before saving."""
+        """Signal-handler-safe request; interrupt native activity before saving."""
         self._stopping = True
         self._steps = 0
+        self._activity_cancel.set()
         self._wake.set()
 
     def status(self) -> dict:
@@ -67,6 +72,7 @@ class Supervisor:
             "stopping": self._stopping, "actions": self.actions, "turn": obs.turn,
             "location": obs.location, "hp": obs.hp, "hp_max": obs.hp_max, "xl": obs.xl,
             "delay": self.delay, "reason": self.reason or (self.last_action.reason if self.last_action else ""),
+            "explore_delay": self.explore_delay,
             "turns_played": max(0, obs.turn - self._initial_turn),
             "action": self.last_action.to_dict() if self.last_action else None,
             "objective": self.last_action.objective if self.last_action else "",
@@ -169,18 +175,25 @@ class Supervisor:
         command = request.get("command")
         if command == "status":
             return self.status()
-        if command not in {"pause", "resume", "step", "stop", "delay"}:
+        if command not in {"pause", "resume", "step", "stop", "delay", "explore-delay"}:
             raise ValueError("Unknown control command")
         step_done = None
         async with self._commands:
-            if command == "delay":
+            if command in {"delay", "explore-delay"}:
                 value = request.get("value")
-                if isinstance(value, bool) or not isinstance(value, (int, float)):
-                    raise ValueError("Delay must be a number between 0 and 60")
-                if not math.isfinite(value) or not 0 <= value <= 60:
-                    raise ValueError("Delay must be a number between 0 and 60")
-                self.delay = float(value)
-                self._next_action = asyncio.get_running_loop().time() + self.delay
+                maximum = 2 if command == "explore-delay" else 60
+                if (isinstance(value, bool) or not isinstance(value, (int, float))
+                        or not math.isfinite(value) or not 0 <= value <= maximum):
+                    raise ValueError(f"{command} must be a number between 0 and {maximum}")
+                if command == "delay":
+                    self.delay = float(value)
+                    self._next_action = asyncio.get_running_loop().time() + self.delay
+                else:
+                    self.explore_delay = float(value)
+                    if self._phase == "acting" and (
+                            self.last_action and self.last_action.kind in {"explore", "travel_downstairs"}
+                            or getattr(self.adapter, "native_activity", "") in {"explore", "travel_downstairs"}):
+                        self._activity_cancel.set()
                 self._wake.set()
                 self._publish()
                 return self.status()
@@ -188,6 +201,7 @@ class Supervisor:
             if command in {"pause", "step"}:
                 self._paused = True
                 self._steps = 0
+                self._activity_cancel.set()
             elif command == "stop":
                 self.request_stop()
             self._wake.set()
@@ -222,7 +236,11 @@ class Supervisor:
         return self.status()
 
     def _snapshot(self) -> Observation:
-        return self.adapter.state.observation()
+        observed = self.adapter.state.observation()
+        if observed.location == self.observation.location:
+            observed = replace(observed, native_automation=self.observation.native_automation,
+                               native_result=self.observation.native_result)
+        return observed
 
     async def _reconnect(self, error: Exception) -> None:
         self._connected = False
@@ -290,7 +308,7 @@ class Supervisor:
         # Status timers are hidden: healthy post-berserk Slow can legitimately
         # last longer than the ordinary cycle window. Allow bounded, advancing
         # recovery, not arbitrary waits or a policy-supplied objective string.
-        recovering = (action.kind == "wait" and not after.hostiles and (
+        recovering = (action.kind in {"wait", "rest"} and not after.hostiles and (
             after.hp < after.hp_max or any(
                 status.lower() in {"slow", "berserk", "exh", "exhausted"}
                 or "pois" in status.lower() for status in after.statuses)))
@@ -318,6 +336,7 @@ class Supervisor:
         stepping = self._steps > 0
         if stepping:
             self._steps -= 1
+        self._activity_cancel.clear()
         completed = False
         try:
             if stepping:
@@ -334,16 +353,17 @@ class Supervisor:
                 if not isinstance(action, Action):
                     raise ValueError("Agent did not return an Action")
                 # Revalidate third-party strategy output at the trust boundary.
-                Action(action.kind, action.value, action.reason, action.objective)
+                Action(**action.to_dict())
             except Exception as exc:
                 self._event("strategy_error", {"type": type(exc).__name__, "error": str(exc)})
                 await self._pause(f"Strategy failed: {type(exc).__name__}: {exc}")
                 return
             # pause/stop arriving during decide must prevent the not-yet-sent action.
-            if self._stopping or (self._paused and not stepping):
+            if self._stopping or self._activity_cancel.is_set() or (self._paused and not stepping):
                 return
             self.last_action = action
             if action.kind == "pause":
+                self._event("tactical_pause", {"action": action.to_dict(), "observation": before.to_dict()})
                 await self._pause(action.reason or "Agent requested a pause")
                 return
             self.actions += 1
@@ -351,7 +371,34 @@ class Supervisor:
             self._phase = "acting"
             self._publish()
             try:
-                self.observation = await self._bounded(self.adapter.dispatch(action))
+                activity = (action.kind if action.kind in {"rest", "explore", "travel_downstairs"}
+                            else getattr(self.adapter, "native_activity", ""))
+                if activity:
+                    step_deadline = (asyncio.get_running_loop().time() + _NATIVE_STEP_QUANTUM
+                                     if stepping else None)
+                    def automation_guard(observed: Observation) -> str:
+                        if self._stopping or self._activity_cancel.is_set():
+                            return "control"
+                        if observed.turn - self._initial_turn >= self.config.max_turns:
+                            return "turn_limit"
+                        if (activity == "rest" and observed.hp == before.hp
+                                and observed.statuses == before.statuses
+                                and self._recovery_turns + observed.turn - before.turn >= 120):
+                            return "recovery_limit"
+                        if (step_deadline is not None
+                                and asyncio.get_running_loop().time() >= step_deadline):
+                            return "yielded"
+                        return ""
+                    # Progress and cancellation acknowledgements are bounded
+                    # inside the adapter. Only explicit single-step gets a short
+                    # quantum; normal exploration runs to a native boundary.
+                    self.observation = await self.adapter.dispatch(
+                        action, automation_guard=automation_guard, automation_delay=self.explore_delay)
+                else:
+                    self.observation = await self._bounded(self.adapter.dispatch(action))
+            except asyncio.CancelledError:
+                self.observation = self._snapshot()
+                raise
             except _TRANSPORT_ERRORS as exc:
                 self._event("action_uncertain", {"action": action.to_dict(), "error": str(exc)})
                 await self._reconnect(exc)
@@ -362,8 +409,19 @@ class Supervisor:
                                              "error": str(exc)})
                 await self._pause(f"Action failed: {type(exc).__name__}: {exc}")
                 return
+            # UI acknowledgements do not consume the policy's native outcome.
+            # Keep it through pacing/pauses too, until the next gameplay action.
+            if (action.kind in _INTERFACE_ACTIONS and before.location == self.observation.location
+                    and not self.observation.native_automation):
+                self.observation = replace(
+                    self.observation, native_automation=before.native_automation,
+                    native_result=before.native_result)
             self.recorder.record(before, action, self.observation, time.monotonic() - started)
             completed = True
+            if self.observation.native_result in {"timeout", "recovery_limit"}:
+                await self._pause("Native activity exceeded its bounded "
+                                  + ("recovery allowance" if self.observation.native_result == "recovery_limit"
+                                     else "time allowance"))
             if not (self.observation.dead or self.observation.game_over):
                 await self._check_progress(before, action, self.observation)
             self._next_action = asyncio.get_running_loop().time() + self.delay
@@ -444,10 +502,13 @@ class Supervisor:
                 return "disconnect"
             saved = await self._bounded(self.adapter.dispatch(Action("save", reason="Graceful shutdown")))
             if saved.input_mode == 8 and any(word in saved.prompt.lower() for word in ("save", "saving")):
-                await self._bounded(self.adapter.dispatch(Action("confirm", "y", "Confirm saving the game")))
+                saved = await self._bounded(self.adapter.dispatch(Action("confirm", "Y", "Confirm saving the game")))
             elif saved.input_mode == 8:
                 self._event("save_skipped", {"reason": "Unrecognised save confirmation", "prompt": saved.prompt})
                 return "disconnect"
+            if saved.input_mode != 0 or saved.menu or saved.prompt:
+                self._event("save_unconfirmed", {"input_mode": saved.input_mode, "prompt": saved.prompt})
+                return "uncertain"
             self._event("saved", {})
             return "saved"
         except Exception as exc:

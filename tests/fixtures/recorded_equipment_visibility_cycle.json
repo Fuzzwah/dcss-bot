@@ -1,0 +1,2038 @@
+{
+  "source": "runs/benchmarks/mibe-survival/development7/seed-1/evaluations/20261031T042346Z-d736f6d0/runs/20261031T042346.089888Z-2577563faca6/actions.jsonl.gz",
+  "sequences": [
+    1051,
+    1052
+  ],
+  "description": "Public pre-action observations cropped to the equipment route. The hand axe at (0,14) leaves LOS at the parchment waypoint (5,11); neither waypoint is the item destination. Player identity removed.",
+  "observations": [
+    {
+      "name": "",
+      "species": "Minotaur",
+      "god": "Trog",
+      "turn": 1041,
+      "time": 10515,
+      "place": "Dungeon",
+      "depth": 2,
+      "hp": 26,
+      "hp_max": 26,
+      "xl": 2,
+      "position": [
+        6,
+        11
+      ],
+      "statuses": [],
+      "inventory": [
+        {
+          "slot": 0,
+          "letter": "a",
+          "name": "+0 hand axe",
+          "quantity": 1,
+          "equipped": true,
+          "category": "weapon"
+        },
+        {
+          "slot": 1,
+          "letter": "b",
+          "name": "+0 animal skin",
+          "quantity": 1,
+          "equipped": false,
+          "category": "armour"
+        },
+        {
+          "slot": 2,
+          "letter": "c",
+          "name": "+0 ring mail",
+          "quantity": 1,
+          "equipped": false,
+          "category": "armour"
+        },
+        {
+          "slot": 3,
+          "letter": "d",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false,
+          "category": "weapon"
+        },
+        {
+          "slot": 4,
+          "letter": "e",
+          "name": "+0 scale mail",
+          "quantity": 1,
+          "equipped": true,
+          "category": "armour"
+        },
+        {
+          "slot": 5,
+          "letter": "f",
+          "name": "amulet of magic regeneration",
+          "quantity": 1,
+          "equipped": false,
+          "category": "jewellery"
+        },
+        {
+          "slot": 6,
+          "letter": "g",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false,
+          "category": "weapon"
+        },
+        {
+          "slot": 52,
+          "letter": "d",
+          "name": "2 fizzy dark potions",
+          "quantity": 2,
+          "equipped": false,
+          "category": "potion"
+        },
+        {
+          "slot": 53,
+          "letter": "c",
+          "name": "scroll labelled ESUSE MOPTULL",
+          "quantity": 1,
+          "equipped": false,
+          "category": "scroll"
+        },
+        {
+          "slot": 54,
+          "letter": "f",
+          "name": "ruby potion",
+          "quantity": 1,
+          "equipped": false,
+          "category": "potion"
+        },
+        {
+          "slot": 55,
+          "letter": "e",
+          "name": "scroll labelled FOABEI XAWUQ",
+          "quantity": 1,
+          "equipped": false,
+          "category": "scroll"
+        }
+      ],
+      "monsters": [],
+      "cells": [
+        {
+          "x": -1,
+          "y": 8,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 8,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 8,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 8,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 8,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 6,
+          "y": 8,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 6,
+          "y": 9,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 8,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 9,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 9,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 10,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 10,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 10,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 6,
+          "y": 10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 10,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 11,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 11,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 11,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 11,
+          "feature": 33,
+          "glyph": ":",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 6,
+          "y": 11,
+          "feature": 33,
+          "glyph": "@",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 11,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 12,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 12,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 6,
+          "y": 12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 11,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 12,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 13,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 6,
+          "y": 13,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 13,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 13,
+          "feature": 1,
+          "glyph": "+",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 14,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 6,
+          "y": 14,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 14,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 14,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 15,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 6,
+          "y": 15,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 15,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 15,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 8,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 9,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 16,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 6,
+          "y": 16,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 16,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 16,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 13,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 13,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 13,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 13,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 14,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 14,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 14,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 14,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 15,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 15,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 15,
+          "feature": 44,
+          "glyph": ">",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 15,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 16,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 16,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 16,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 16,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 17,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 17,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 17,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 17,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 17,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 17,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 17,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 12,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 18,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 18,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 18,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 18,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 18,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 18,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 18,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 12,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 13,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 13,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 14,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 14,
+          "feature": 33,
+          "glyph": ")",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 15,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 15,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        }
+      ],
+      "messages": [
+        "You see here a parchment of Searing Ray.",
+        "You see here a parchment of Searing Ray.",
+        "You see here a parchment of Searing Ray.",
+        "You see here a parchment of Searing Ray.",
+        "You see here a parchment of Searing Ray.",
+        "You see here a parchment of Searing Ray."
+      ],
+      "prompt": "",
+      "menu": {},
+      "input_mode": 1,
+      "dead": false,
+      "game_over": false,
+      "ac": 6,
+      "ev": 9,
+      "sh": 0,
+      "piety_rank": 1,
+      "poison_survival": 26,
+      "status_details": [],
+      "resistances": [
+        {
+          "name": "rFire",
+          "level": 0
+        },
+        {
+          "name": "rCold",
+          "level": 0
+        },
+        {
+          "name": "rNeg",
+          "level": 0
+        },
+        {
+          "name": "rPois",
+          "level": 0
+        },
+        {
+          "name": "rElec",
+          "level": 0
+        },
+        {
+          "name": "rCorr",
+          "level": 0
+        },
+        {
+          "name": "SInv",
+          "level": 0
+        },
+        {
+          "name": "Will",
+          "level": 0
+        }
+      ],
+      "will": 0,
+      "abilities": [
+        {
+          "name": "Renounce Religion",
+          "hotkey": "X",
+          "available": true,
+          "failure": 0
+        },
+        {
+          "name": "Berserk",
+          "hotkey": "a",
+          "available": true,
+          "failure": 4
+        }
+      ],
+      "skills": [
+        {
+          "name": "Fighting",
+          "level": 3.6,
+          "training": 0,
+          "target": null,
+          "hotkey": "a",
+          "enabled": false
+        },
+        {
+          "name": "Maces & Flails",
+          "level": 2.9,
+          "training": 0,
+          "target": null,
+          "hotkey": "b",
+          "enabled": false
+        },
+        {
+          "name": "Axes",
+          "level": 4.9,
+          "training": 100,
+          "target": 10.0,
+          "hotkey": "c",
+          "enabled": true
+        },
+        {
+          "name": "Polearms",
+          "level": 2.9,
+          "training": 0,
+          "target": null,
+          "hotkey": "d",
+          "enabled": false
+        },
+        {
+          "name": "Unarmed Combat",
+          "level": 0.0,
+          "training": 0,
+          "target": null,
+          "hotkey": "e",
+          "enabled": false
+        },
+        {
+          "name": "Short Blades",
+          "level": 0.0,
+          "training": 0,
+          "target": null,
+          "hotkey": "f",
+          "enabled": true
+        },
+        {
+          "name": "Armour",
+          "level": 2.4,
+          "training": 0,
+          "target": null,
+          "hotkey": "g",
+          "enabled": false
+        },
+        {
+          "name": "Dodging",
+          "level": 2.1,
+          "training": 0,
+          "target": null,
+          "hotkey": "h",
+          "enabled": false
+        },
+        {
+          "name": "Stealth",
+          "level": 0.0,
+          "training": 0,
+          "target": null,
+          "hotkey": "i",
+          "enabled": false
+        }
+      ],
+      "attack_delay": 1.0,
+      "weapon_skill": "Axes"
+    },
+    {
+      "name": "",
+      "species": "Minotaur",
+      "god": "Trog",
+      "turn": 1042,
+      "time": 10525,
+      "place": "Dungeon",
+      "depth": 2,
+      "hp": 26,
+      "hp_max": 26,
+      "xl": 2,
+      "position": [
+        5,
+        11
+      ],
+      "statuses": [],
+      "inventory": [
+        {
+          "slot": 0,
+          "letter": "a",
+          "name": "+0 hand axe",
+          "quantity": 1,
+          "equipped": true,
+          "category": "weapon"
+        },
+        {
+          "slot": 1,
+          "letter": "b",
+          "name": "+0 animal skin",
+          "quantity": 1,
+          "equipped": false,
+          "category": "armour"
+        },
+        {
+          "slot": 2,
+          "letter": "c",
+          "name": "+0 ring mail",
+          "quantity": 1,
+          "equipped": false,
+          "category": "armour"
+        },
+        {
+          "slot": 3,
+          "letter": "d",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false,
+          "category": "weapon"
+        },
+        {
+          "slot": 4,
+          "letter": "e",
+          "name": "+0 scale mail",
+          "quantity": 1,
+          "equipped": true,
+          "category": "armour"
+        },
+        {
+          "slot": 5,
+          "letter": "f",
+          "name": "amulet of magic regeneration",
+          "quantity": 1,
+          "equipped": false,
+          "category": "jewellery"
+        },
+        {
+          "slot": 6,
+          "letter": "g",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false,
+          "category": "weapon"
+        },
+        {
+          "slot": 52,
+          "letter": "d",
+          "name": "2 fizzy dark potions",
+          "quantity": 2,
+          "equipped": false,
+          "category": "potion"
+        },
+        {
+          "slot": 53,
+          "letter": "c",
+          "name": "scroll labelled ESUSE MOPTULL",
+          "quantity": 1,
+          "equipped": false,
+          "category": "scroll"
+        },
+        {
+          "slot": 54,
+          "letter": "f",
+          "name": "ruby potion",
+          "quantity": 1,
+          "equipped": false,
+          "category": "potion"
+        },
+        {
+          "slot": 55,
+          "letter": "e",
+          "name": "scroll labelled FOABEI XAWUQ",
+          "quantity": 1,
+          "equipped": false,
+          "category": "scroll"
+        }
+      ],
+      "monsters": [],
+      "cells": [
+        {
+          "x": -1,
+          "y": 8,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 8,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 8,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 8,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 8,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 6,
+          "y": 8,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 6,
+          "y": 9,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 8,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 9,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 9,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 10,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 10,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 10,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 6,
+          "y": 10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 10,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 11,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 11,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 11,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 11,
+          "feature": 33,
+          "glyph": "@",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 6,
+          "y": 11,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 11,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 9,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 12,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 12,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 6,
+          "y": 12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 12,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 11,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 12,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 13,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 6,
+          "y": 13,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 13,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 13,
+          "feature": 1,
+          "glyph": "+",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 14,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 6,
+          "y": 14,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 14,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 14,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 15,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 6,
+          "y": 15,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 15,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 15,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 8,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 9,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 10,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 16,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 6,
+          "y": 16,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 16,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 16,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 13,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 13,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 13,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 13,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 14,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 14,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 14,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 14,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 15,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 15,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 15,
+          "feature": 44,
+          "glyph": ">",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 15,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 16,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 16,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 16,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 16,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 17,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 17,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 17,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 17,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 17,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 17,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 17,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 12,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 18,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 2,
+          "y": 18,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 3,
+          "y": 18,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 4,
+          "y": 18,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 5,
+          "y": 18,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 7,
+          "y": 18,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 8,
+          "y": 18,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 12,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 13,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 13,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 14,
+          "feature": 33,
+          "glyph": ".",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 14,
+          "feature": 33,
+          "glyph": ")",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 15,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 15,
+          "feature": 0,
+          "glyph": " ",
+          "visible": false,
+          "cloud": false
+        }
+      ],
+      "messages": [
+        "You see here a parchment of Searing Ray.",
+        "You see here a parchment of Searing Ray.",
+        "You see here a parchment of Searing Ray.",
+        "You see here a parchment of Searing Ray.",
+        "You see here a parchment of Searing Ray.",
+        "You see here a parchment of Searing Ray."
+      ],
+      "prompt": "",
+      "menu": {},
+      "input_mode": 1,
+      "dead": false,
+      "game_over": false,
+      "ac": 6,
+      "ev": 9,
+      "sh": 0,
+      "piety_rank": 1,
+      "poison_survival": 26,
+      "status_details": [],
+      "resistances": [
+        {
+          "name": "rFire",
+          "level": 0
+        },
+        {
+          "name": "rCold",
+          "level": 0
+        },
+        {
+          "name": "rNeg",
+          "level": 0
+        },
+        {
+          "name": "rPois",
+          "level": 0
+        },
+        {
+          "name": "rElec",
+          "level": 0
+        },
+        {
+          "name": "rCorr",
+          "level": 0
+        },
+        {
+          "name": "SInv",
+          "level": 0
+        },
+        {
+          "name": "Will",
+          "level": 0
+        }
+      ],
+      "will": 0,
+      "abilities": [
+        {
+          "name": "Renounce Religion",
+          "hotkey": "X",
+          "available": true,
+          "failure": 0
+        },
+        {
+          "name": "Berserk",
+          "hotkey": "a",
+          "available": true,
+          "failure": 4
+        }
+      ],
+      "skills": [
+        {
+          "name": "Fighting",
+          "level": 3.6,
+          "training": 0,
+          "target": null,
+          "hotkey": "a",
+          "enabled": false
+        },
+        {
+          "name": "Maces & Flails",
+          "level": 2.9,
+          "training": 0,
+          "target": null,
+          "hotkey": "b",
+          "enabled": false
+        },
+        {
+          "name": "Axes",
+          "level": 4.9,
+          "training": 100,
+          "target": 10.0,
+          "hotkey": "c",
+          "enabled": true
+        },
+        {
+          "name": "Polearms",
+          "level": 2.9,
+          "training": 0,
+          "target": null,
+          "hotkey": "d",
+          "enabled": false
+        },
+        {
+          "name": "Unarmed Combat",
+          "level": 0.0,
+          "training": 0,
+          "target": null,
+          "hotkey": "e",
+          "enabled": false
+        },
+        {
+          "name": "Short Blades",
+          "level": 0.0,
+          "training": 0,
+          "target": null,
+          "hotkey": "f",
+          "enabled": true
+        },
+        {
+          "name": "Armour",
+          "level": 2.4,
+          "training": 0,
+          "target": null,
+          "hotkey": "g",
+          "enabled": false
+        },
+        {
+          "name": "Dodging",
+          "level": 2.1,
+          "training": 0,
+          "target": null,
+          "hotkey": "h",
+          "enabled": false
+        },
+        {
+          "name": "Stealth",
+          "level": 0.0,
+          "training": 0,
+          "target": null,
+          "hotkey": "i",
+          "enabled": false
+        }
+      ],
+      "attack_delay": 1.0,
+      "weapon_skill": "Axes"
+    }
+  ]
+}

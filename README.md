@@ -6,6 +6,13 @@ through the official WebTiles protocol and watched in the native graphical brows
 client. No paid API keys. DCSS **0.34.1** is pinned to commit
 `1eebc1a2892e1c89776a0d7a10691f8dac8d9796`; the engine is not modified.
 
+**Gameplay status:** this is experimental, not a demonstrated survival improvement.
+The latest matched eight-seed development sample reached D:5 in 1/8 runs versus
+baseline 3/8, and all eight candidate runs safety-paused. D:10/Lair were not
+reached. The final 30-game comparison was not run. See the
+[stabilized handover](docs/verification.md#stabilized-handover) for tested evidence,
+remaining failures and the archived unfinished work.
+
 ## Start and watch
 
 Run these from the repository root on the Linux host. Commands work in Fish.
@@ -59,6 +66,15 @@ terminal open. The browser and WebSocket both use the forwarded port. If Mac por
 8080 is occupied, use `-L 8081:127.0.0.1:8080` and browse to `localhost:8081`.
 No router port forwarding, public bind, Tailscale Funnel, or bot credentials needed.
 
+### Direct LAN spectating on this host
+
+Open **http://10.1.1.232:8080/#watch-MiBeBot** from the same LAN. No SSH tunnel or
+bot login is needed. A host-local systemd user socket forwards that specific
+private address to the existing loopback server; the container and bot connection
+remain unchanged. See [LAN forwarding](infrastructure/README.md#private-lan-forward-on-this-host)
+for service controls. Off-LAN clients need a route to this private network or the
+SSH tunnel above; Tailscale alone does not automatically route the LAN subnet.
+
 ## Controls
 
 In a second Linux terminal (or over SSH):
@@ -70,14 +86,24 @@ uv run --locked dcss-bot step
 uv run --locked dcss-bot resume
 uv run --locked dcss-bot delay 1
 uv run --locked dcss-bot delay 0
+uv run --locked dcss-bot explore-delay 0.02
 uv run --locked dcss-bot stop
 ```
 
-`pause` preserves the live game connection. `step` executes one decision/action and
-stays paused. A decision can include a menu response or an inventory-selection
-transaction; it does not always advance a game turn. `delay 0` accelerates play,
-not turn batching. A pause cannot undo an already accepted attack or native armour
-change; it stops further commands at the next action boundary.
+`pause` preserves the live game connection. `step` executes one decision/native
+command and stays paused: menu inspection may cost no turn, while native `5`
+rest or `o` exploration can advance several turns. Pause/stop interrupt active
+native automation with a turn-free redraw and await its consumed input boundary.
+Escape is reserved for menus/prompts. Already accepted turns cannot be undone.
+
+`delay` controls the pause between decisions (default `0.4` seconds), not each tile
+of native travel. `explore-delay` independently controls native exploration and
+downstairs travel (default `0.02` seconds per tile, range `0`–`2`). Changing
+decision pacing does not interrupt travel; changing tile pacing interrupts it at
+a safe boundary before applying the new speed. Normal native `o` continues until
+the game stops it; only explicit single-stepping has a five-second cooperative
+bound. Recovery is deliberately fast (`rest_delay=5` milliseconds). `delay 0`
+accelerates decisions; combat stays single-action.
 
 `stop` saves/disconnects; it does not abandon or kill the character. Ctrl-C also
 requests graceful stop. Start paused with `uv run --locked dcss-bot run --paused`.
@@ -244,6 +270,27 @@ all results.
 Comparisons reject mixed character profiles. Historical reports without character
 identity retain descriptive metrics but cannot establish matched starting combos.
 
+For frozen-source comparisons, `scripts/benchmark.py` snapshots the package before
+starting separate fresh-account workers. Development defaults to seeds 1–8;
+held-out evaluation defaults to 101–130. Do not tune against held-out traces.
+Use the same turn/action/wall-clock bounds for both sides:
+
+```fish
+uv run --locked --extra video python scripts/benchmark.py launch --label development --source src/dcss_bot --output runs/benchmarks/development --split development --concurrency 8 --max-turns 8000 --max-actions 20000 --seconds-per-run 1800 --record-seeds 6
+uv run --locked python scripts/benchmark.py launch --label heldout --source src/dcss_bot --output runs/benchmarks/heldout --split heldout --concurrency 8 --max-turns 8000 --max-actions 20000 --seconds-per-run 1800
+uv run --locked python scripts/benchmark.py report --baseline runs/benchmarks/BASELINE --improved runs/benchmarks/heldout --output runs/benchmarks/comparison.json
+```
+
+Each output root must be new. Preserve the baseline snapshot **before** modifying
+policy. Reports validate public starting conditions/provenance, give Wilson
+intervals for observed milestone fractions and an exact two-sided paired McNemar
+test. These describe attainment **under the run bounds**, not eventual survival;
+pauses/caps are not wins. P-values are unadjusted for multiple comparisons.
+Use equal concurrency and avoid other play/recording during formal comparisons;
+capture representative development games separately.
+Completed large JSONL files are losslessly gzipped. Keep each benchmark's private
+credential directory and socket alias if you intend to resume its saved games.
+
 For the longer opening-dungeon progression suite:
 
 ```fish
@@ -290,14 +337,19 @@ vi .env
 ```
 
 For `run`, supplied CLI options override environment values, which override `.env`.
-Useful flags: `--character mibe`, `--agent rule`, `--delay 0.4`, `--max-turns 10000`,
-`--max-actions 10000`, `--record`, `--paused`. Turn limits count turns played during
-this invocation, not a resumed character's lifetime.
+Useful flags: `--character mibe`, `--agent rule`, `--delay 0.4`,
+`--explore-delay 0.02`, `--max-turns 10000`, `--max-actions 10000`, `--record`,
+`--paused`. Turn limits count turns played during this invocation, not a resumed
+character's lifetime. `EXPLORE_DELAY` configures native tile pacing independently
+of `ACTION_DELAY`.
 
 `evaluate` shares connection, character and storage configuration, but takes its
 engine list, pacing, limits and recording choice from its own `--agents`, `--delay`,
 `--max-turns`, `--max-actions`, `--seconds-per-run` and `--record` options. Those do
 not inherit `BOT_AGENT`, `ACTION_DELAY`, `MAX_*` or `RECORD_VIDEO`.
+Its optional `--explore-delay` overrides `EXPLORE_DELAY`; otherwise native travel
+uses that configured speed. For fully accelerated evaluation, supply both
+`--delay 0 --explore-delay 0`.
 
 Generated credentials live **beside the control socket**, with mode `0600`.
 The default is `state/credentials-USERNAME.json`; changing the socket's directory
@@ -358,54 +410,197 @@ transport branches.
 
 ### Current MiBe policy
 
-The `rule-v3` policy explores toward known walkable boundaries adjoining unseen
-terrain, rather than walking onto every already-revealed room tile. It opens
-reachable ordinary doors, retires unproductive viewpoints until local knowledge
-changes, and descends once no useful reachable frontier remains. Temporary cloud
-blockage causes bounded waiting, not premature descent or movement through clouds.
-Paths never step into unknown cells. Exploration is subordinate to combat, healing and danger:
-the agent attacks adjacent enemies, recovers between fights, considers visible
-threat ratings/statuses/damage, and retreats onto previously visited ground when
-that reduces immediate danger.
-It uses identified healing/escape consumables and Trog's berserk for appropriate
-committed fights. It does not treat stairs as an automatic escape: visible hostiles
-block stair commands. Merging or already enlarged slime creatures trigger explicit
-danger handling. Unknown UI states pause or are safely cancelled; run/stall limits
-prevent unbounded command loops.
+The `rule-v4` policy evaluates a typed short-horizon threat assessment before each
+consequential action. It considers public monster descriptions, attack tables,
+speed, reach, ranged/disabling/summoning threats, recent damage, statuses,
+formation, known retreat terrain and available resources. Physical attack maxima
+no longer stand in for means: displayed rows supply a conservative rolled-damage
+approximation while burst maxima stay intact. Missing tables retain their
+uncertainty bound. Expected losses and plausible bursts are heuristics, **not a
+combat simulator**.
+Displayed projectile and distant-spell damage is separate from physical melee.
+Verified ordinary throwers cannot keep shooting while adjacent; ranged
+specialists and uncertain types retain conservative bounds.
+`Threat.ranged` records exposure during the forecast horizon, not merely whether
+the enemy is currently within shooting distance.
+Harmless butterflies remain visible obstacles but are not fast melee threats:
+the pinned engine gives them no attacks. Public Throw Ally/Battlecry capabilities
+represent possible ally relocation/Might, not invented summons, haste or active
+buffs. Clockroach range warding blocks nonadjacent HP damage, not all control:
+the policy retains roots/corrosion and status darts while avoiding known
+damage-only ranged spending.
 
-The policy recognises common shooters (including dart slugs), prefers nearby known
-opaque-wall cover, briefly lures enemies around it, and cautiously closes on lone
-ordinary shooters rather than waiting for free ranged attacks. Cover is a heuristic,
-not an exact implementation of Crawl's line-of-sight rules.
-Luring a lone ordinary shooter is bounded: after twelve encounter turns, a healthy
-agent can cautiously close rather than circle cover forever. Brief loss of sight
-or a changed protocol monster ID does not restart that timer.
+Candidate actions and rejection reasons are stored with the chosen action; the
+recorder links that decision to the next observed outcome.
 
-An adjacent enemy following a retreat is evidence that distance-only movement did
-not provide escape. Further retreat must improve cover or the enemy formation;
-otherwise the agent considers a timely available berserk or a single defensive
-attack, while preserving healing, cooldown and slime safeguards. This reduces one
-observed pursuit failure mode; it does not make disengagement universally safe.
+Approach safety counts enemies that can reach contact during the next reaction,
+not only those already adjacent to the proposed tile. Bounded holds preserve
+formation without renewing an exhausted stationary-wait budget. If standing
+permits multiple arrivals, a tighter-budgeted defensive step can reduce them to
+at most one without approaching an enemy. Remaining poison damage is reserved;
+hard control, ally relocation and unresolved threats cannot certify this fallback.
 
-Bombardier beetles are recognised as ranged threats. Liquid fire requires movement
-on clear visible terrain, even while berserk or after the enemy dies; it is not a
-reason to rest. Visible “hits you from afar” messages trigger a reach-weapon
-response without using hidden monster equipment. The agent can close a safe step
-instead of accepting free attacks or wasting an already-active berserk.
+Combat is single-action: attack, wait, lure, reposition, use a resource, then
+observe again. Following enemies and ineffective retreat attempts limit repeated
+backpedalling under attacks of opportunity. Merging slimes and hydras with an
+unsuitable axe receive explicit avoidance policies. Trog's Hand prepares
+regeneration/Will, Brothers in Arms spends available piety on unacceptable fights,
+and Berserk requires both a **difficult fight** and a bounded commitment with an
+acceptable aftermath. A dangerous multi-turn forecast alone is insufficient:
+substantial public attack bounds/group damage or significant observed HP loss
+must justify spending rage. A native “High” label alone is insufficient. Ordinary
+weak groups and a healthy character's lone weak-snake encounter use normal defence.
+Poison, exhaustion,
+unresolved enemies and delayed teleport still restrict commitment.
+Active Berserk preserves ordinary melee commitments instead of backpedalling
+until rage expires. A known single-front queue or small fully visible wave can
+justify early rage only after the difficulty check. One weak future poison source
+requires an HP reserve; ongoing poison and unresolved threats remain guarded.
+High-risk melee preferences are distinct from hard harmful interactions. An
+already-Berserk character may finish an examined ordinary caster fight without
+the preference first forcing retreat and then forbidding its attack. Hydra,
+escalating-slime, dangerous-weapon, poison/control and axe-cleave guards remain.
+This does not authorize starting rage against an unexamined caster. Native
+“Berserker Rage” is a self-enchantment, not a fictional ranged damage spell.
+A lone, fully examined low-HP ally-throwing leader can receive preparatory rage
+from three tiles away only with at least 75% HP, a current visible two-step
+approach, bounded activation exposure and an aftermath reserve. A visible army,
+unresolved foe, poison, cooldown or missing staging terrain removes that option;
+it is not permission to charge a supported group.
 
-Equipment decisions use visible names/enchantments and actual worn markers read
-from the native inventory menu. The agent collects/selects useful axe and body-armour
-upgrades, verifies wear outcomes, avoids repeated failed requests, and rejects
-unrankable artefacts or hazardous brands rather than guessing their properties.
-Post-berserk recovery can advance bounded hidden status timers without tripping
-the short action-cycle detector; the `-Berserk` cooldown alone does not cause rest.
 
-This is an opening-dungeon baseline, not a winning bot. It lacks sophisticated
-ranged tactics, comprehensive equipment evaluation, spellcasting, branch planning,
-and long-term learning. Threat heuristics cannot guarantee survival or that an
-unseen destination behind stairs is safe. Never rely on it for an existing valued
-character. Reusing an account resumes that save; it does not create a comparable
-seeded benchmark run automatically.
+One explicitly bounded caster case is also supported: a nearby, publicly examined
+low-HP Dart/Slow/Call Imp/Throw Flame caster with at most one weak companion. Blink,
+invisibility, hard control, poison and unobserved spell data do not receive that
+exception. Missing public ability data, piety-rank changes and recovery from
+native `Conf` or `-Berserk`/`CD` trigger a bounded turn-free ability refresh;
+unchanged empty responses cannot create a zero-turn loop.
+When useful routes and resources produce no action, an examined low-HP short
+book can receive a finite close from at most five squares away. Plain `Slow`
+is not Berserk cooldown, but this action still budgets 1.5 world turns, retains
+the displayed raw projectile mean without an evasion discount, requires a
+nonlethal maximum burst, and reserves at least 40% maximum HP or one maximum
+body hit after expected damage. That reserve is not a survival guarantee.
+Each close must show fresh distance progress; failed movement or changing native
+IDs cannot replenish its initial distance-minus-one action allowance. This does
+not authorize rage while slowed. A displayed minor-only summoner with one
+examined weak summon can instead justify one available Trog's Hand attempt,
+reserving two maximum summoner melee hits, followed by at most one clear-tile
+interception outside the summoner's melee. Neither action renews a spent
+summoner approach or authorizes chasing Blink; hard control, unknown/greater
+summoning, dangerous brands, low HP, restraint and pending teleport remain guarded.
+Stationary luring is limited by observed approach, not a timer that can be
+replenished by a bat circling at the same distance or by free inspections.
+A separate bounded shooter approach requires one fully examined, publicly bounded
+ordinary projectile/pure-damage target and a visible clear closing path. It starts
+at least 80% healthy, spends at most six actions/eight turns per encounter, and
+requires remaining expected loss and the next-position single-attack bound each
+to fit current HP with a 15% max-HP reserve. Each step needs fresh displacement
+and closing progress. A brief additional/unresolved foe suspends execution without
+refilling or automatically discarding an otherwise retained allowance; its
+original clock keeps running. Lost target LOS, failed/kiting movement, changed
+unsafe mechanics or exhausted action/time/HP bounds still cancel it. Native
+client-ID aliases prove neither extra bodies nor persistent identity and cannot
+refund an encounter budget.
+Missing descriptions trigger free reexamination. Only route cells—not every
+neighboring cell—must be visible and clear; known open doors are legal ground.
+This is not a kill or survival guarantee.
+An issued movement result is consumed once; a later deliberate withdrawal is not
+another result of that move. A still-admitted approach is not reversed merely to
+return to its old stair, and an admitted manageable shooter alone is not a reason
+to evacuate a floor. Fresh safety/resource overrides retain priority.
+
+
+
+Moving retreat forecasts follow an actual known upstairs/cover route, not three
+stationary turns at the next tile. A retained
+goal must make observed progress; losing LOS does not automatically abandon it.
+At most one fully examined plain low-damage melee interceptor per forecast step
+may be charged against the retreat damage budget, including possible opportunity
+attacks. Strong, reaching, poison, control and other nonplain threats remain excluded.
+An observed floor transition completes that withdrawal; the bot must not chain
+retreats up clear floors and ban every return staircase. Temporary clouds blocking
+otherwise eligible stairs cause bounded waiting, not false exploration exhaustion.
+Cover remains an intermediate escape waypoint. Native monster IDs can change
+after LOS loss; free inspection refreshes the new instance without cancelling a
+progressing route. Fresh invisible-attack messages and unexplained damage remain
+threat evidence even alongside visible weak enemies; no hidden location is invented.
+Fresh unlocated melee can trigger a finite native Ctrl-direction search without
+walking into guessed squares. Each further attack needs fresh evidence; an axe
+cleave hitting “something” does not identify or locate the invisible creature.
+A plain movement key that fails to displace while producing fresh anonymous
+outgoing melee is uncertain blockage evidence, not proof of an invisible creature's
+identity or position; it is distinct from deliberate native Ctrl-direction attacks.
+
+A narrowly certified, observed sealed undead pocket need not stall exploration.
+The bot can retain its historical wall evidence while moving away, invalidating
+it on new threats or contradictory observations rather than inventing visibility.
+A separate finite walking/projectile separation proof can authorize one visible
+dry nonapproaching step, not permanent enclosure. Reach-two walking bounds use
+known barriers conservatively (save34 lava30/deep water31; shallow water32 is
+passable). Ordinary net-only throwers additionally require every optimistic firing
+origin/path to exclude exposure within range eight: one departure action at the
+current endpoint and four actions at the next. Their restraint capability remains.
+
+After a fight, full HP and the end of slowing do not mean Berserk is ready.
+Quiet HP, slowing and cooldown recovery use native **`5`**, which stops for native
+recovery events or danger; observations are reassessed between commands. Poison
+retains one-turn treatment/reassessment. A stale cooldown has an 80-player-turn
+policy budget, rather than 80 native commands, and eventually pauses diagnostically.
+Visible nets/webs have an explicit struggle decision: a native movement key cuts
+or escapes the restraint instead of moving. Known emergency resources still take
+precedence, and the immobile turn does not blacklist an actual floor step.
+
+On clear ground, development selects exclusive skill targets, compares axe damage
+and delay at the observed skill level, fills useful defensive equipment slots,
+and uses native identification/enchantment menus. Ordinary brands/armour egos are
+read from their displayed names; unrankable artefacts and hazardous equipment are
+rejected. Jewellery fills empty slots only. Unknown potions are not blindly drunk.
+Unknown scroll identification is bounded and requires full health, an observed
+quiet interval and a known ordinary stair anchor; it remains intrinsically risky.
+**Spotted scrolls and potions are explicit destinations before more exploration
+or distant equipment.** Their public-map locations survive loss of LOS and
+verified coordinate rebases; a safe visible next step is still required. Mixed
+pickup piles collect unidentified supplies without using them, plus a verified
+equipment upgrade. Empty/full/failed piles are bounded; danger interruptions do
+not permanently retire their supplies. A rejected pursuit remains deferred, not
+an excuse to walk straight back into the encounter.
+
+Routine safe exploration prefers native **`o`**, including autopickup and travel,
+even when our fallback frontier finder has no target. Native **“Done exploring”**
+allows safe progression instead of a speculative corner sweep. Benign stops can
+resume `o` on already mapped ground. Remembered dangers, hazards and deferred loot
+retain guarded manual routing; partial/no-progress results use bounded fallback
+frontiers, doors, cloud waits and diagonal probes. Position caches translate only
+with proven public terrain anchors. Urgent tactical actions always take precedence.
+
+After exploration completes, travel to an eligible ordinary downstairs uses
+native **`X`, `>`, Enter** rather than repeated movement decisions. The adapter
+checks the actual map cursor, cycling `>` if needed; hatches, branch entrances
+and remembered dangerous stairs are not interchangeable targets. Arrival stops
+on the staircase. Descending is a separate decision with a fresh danger check.
+Tactical hazards retain guarded manual routing.
+
+The initial route is Dungeon and, with sufficient XL/armour and a poison response,
+Lair. Other branches are not deliberately entered. Dangerous stair destinations
+are remembered. Routine stair commands still reject visible hostiles. A separate
+`escape_upstairs` action can return through a recently observed ordinary upstairs
+when no visible enemy is adjacent and estimated traversal risk fits the policy
+budget. Departure attacks, arrival uncertainty and the abandoned destination are
+recorded; immediate descent back into that encounter is blocked. **Previously
+clear is not guaranteed safe.** Tactical stair memory is per supervisor process.
+There is no complete inter-floor escape planner, return routing to a previously
+passed Lair entrance, rune collection or winning play.
+
+This remains an experimental survival policy. Cover, threat and equipment
+estimates can be wrong; an unknown prompt or encounter without a credible legal
+action can pause the run. No survival or win-rate claim follows from passing an
+opening smoke. Never use a valued character as a disposable benchmark.
+
+Tactical thresholds are typed policy configuration:
+`RuleBasedAgent(tactical_config=TacticalConfig(...))`. Installed strategies can
+choose these values without changing transport code; no extra environment
+variables or model provider are required.
 
 ## Extend and test
 
@@ -453,12 +648,12 @@ survival guarantee; use additional held-out seeds when evaluating strategy chang
 
 ### Recorded verification
 
-The latest recorded character-module verification (2026-10-30) passed **333 tests**.
-The seed-8 recorded run completed **130 turns and 10 kills**, with a public
-action/state trace identical to the pre-refactor MiBe run. Four explicit-module
-evaluation trials also completed 130 turns each with matching repeated traces.
-Ordinary unseeded creation, saved-game resumption, live native spectating and
-pause-aware WebM capture were exercised.
+Run the survival-policy suite with `uv run --locked pytest -q`; dated receipts
+are linked below. A fresh seed-8 recorded run completed
+**160 turns, 159 turn-advancing decisions and six kills**; its save
+then resumed for **30 more turns and four kills** under the updated adapter.
+Pause/resume/step, native anonymous spectating and pause-aware WebM playback were
+exercised. These are integration checks, not evidence of a survival win rate.
 
 Earlier milestones exercised Firefox on Linux, container restart persistence and
 real character death. Infrastructure was verified with rootless Podman; Docker

@@ -1,124 +1,120 @@
-"""Minotaur Berserker's deterministic rule-v3 survival policy."""
-from collections import Counter, deque
+"""Minotaur Berserker's survival-first rule-v4 policy."""
+from collections import deque
+from dataclasses import replace
 import re
 
-from ..danger import assess_danger, is_ranged
-from ..models import Action, DIRECTIONS, Item, Monster, Observation
+from ..models import Action, DIRECTIONS, Monster, Observation
+from ..terrain import CLOSED_DOORS, DOWNSTAIRS, SOLID_CORNER_SIDES
 from ..state import plain
 from .base import CharacterProfile
+from .mibe_tactics import TacticalConfig, TacticalController
+from .mibe_equipment import equipment_kind, equipment_score, equipment_upgrade
+from .mibe_development import DevelopmentPlanner, development_menu_action, pickup_menu_action, supply_name
+from .mibe_progression import ProgressionPlanner
+from .mibe_exploration import ExplorationMemory
+from .mibe_encounter import EnclosureMemory, enclosed_melee_bypass
 
 
-WEAPON_RANKS = {"executioner's axe": 18, "battleaxe": 15, "broad axe": 13,
-                "war axe": 11, "hand axe": 7}
-ARMOUR_RANKS = {"plate armour": 10, "chain mail": 8, "scale mail": 6,
-                "ring mail": 5, "leather armour": 3, "animal skin": 2, "robe": 1}
 
 
-HAZARDOUS_EQUIPMENT = ("distortion", "chaos", "draining", "pain", "harm",
-                       "fragile", "angry", "*rage", "*corrode", "*slow",
-                       "ponderous", "contam")
-
-
-def equipment_kind(name: str) -> str | None:
-    name = name.lower()
-    if any(base in name for base in WEAPON_RANKS):
-        return "wield"
-    if any(base in name for base in ARMOUR_RANKS) or "dragon scales" in name:
-        return "wear"
-    return None
-
-
-def equipment_score(name: str) -> int | None:
-    """Small visible-name ranking; unknown enchantments/artefacts stay unknown."""
-    name = name.lower()
-    kind = equipment_kind(name)
-    if not kind or any(mark in name for mark in ('"', "{", "}")):
-        return None
-    ranks = WEAPON_RANKS if kind == "wield" else ARMOUR_RANKS
-    base = next((base for base in ranks if base in name), None)
-    if base is None:
-        return None
-    # Require the enchantment displayed before the base type, never wire plus.
-    plus = re.search(r"([+-]\d+)\s+" + re.escape(base), name)
-    if not plus:
-        return None
-    score = ranks[base] + int(plus.group(1))
-    if kind == "wield" and any(brand in name for brand in
-                             ("flaming", "freezing", "venom", "electrocution", "vampiric")):
-        score += 2
-    return score
-
-
-def equipment_upgrade(name: str, inventory: tuple[Item, ...]) -> bool:
-    """Shared safe pickup/equip filter using only player-visible descriptions."""
-    kind = equipment_kind(name)
-    score = equipment_score(name)
-    if score is None or any(mark in name.lower() for mark in HAZARDOUS_EQUIPMENT):
-        return False
-    equipped = [item for item in inventory if item.equipped]
-    if kind == "wield":
-        if any("distortion" in item.name.lower() for item in equipped):
-            return False  # Unwielding distortion is itself dangerous.
-        if any(base in name.lower() for base in ("battleaxe", "executioner's axe")) and any(
-                shield in item.name.lower() for item in equipped
-                for shield in ("buckler", "kite shield", "tower shield")):
-            return False
-    current = [equipment_score(item.name) for item in equipped if equipment_kind(item.name) == kind]
-    if any(value is None for value in current):
-        return False  # Do not replace an unrankable known equipped item.
-    return score > max(current, default=0)
+def visible_equipment_name(text: str) -> str:
+    text = plain(text).strip()
+    text = re.sub(r"^[a-zA-Z]\s+[-+#]\s+", "", text)
+    text = re.sub(r"^You see here\s+", "", text, flags=re.I)
+    return text.removesuffix(".").strip()
 
 
 class RuleBasedAgent:
-    identifier = "rule-v3"
+    identifier = "rule-v4"
 
-    def __init__(self) -> None:
-        self.visits: Counter = Counter()
-        self.last_location = ""
-        self.previous_hp: int | None = None
-        self.previous_turn = -1
-        self.previous_position: tuple[int, int] | None = None
-        self.last_ability = -100
+    def __init__(self, *, tactical_config: TacticalConfig | None = None) -> None:
+        self.tactics = TacticalController(tactical_config)
+        self.development = DevelopmentPlanner()
+        self.progression = ProgressionPlanner()
+        self.exploration = ExplorationMemory()
+        self.enclosures = EnclosureMemory()
+        self.tactical_avoided: set[tuple[int, int]] = set()
         self.last_equipment = -100
         self.equipment_attempts: set[tuple[str, int, str]] = set()
-        self.lure_until = -1
-        self.ranged_first_seen = -100
-        self.ranged_last_seen = -100
-        self.pickup_attempts: set = set()
-        self.equipment_ground: set[tuple[int, int]] = set()
-        self.blocked: set = set()
-        self.exhausted_frontiers: dict[tuple[int, int], frozenset[tuple[int, int]]] = {}
-        self.last_move: tuple[int, int] | None = None
-        self.retreat_from_adjacent = False
-        self.pursued = False
         self.previous_messages: tuple[str, ...] = ()
+        self.cooldown_recovery_started: int | None = None
+        self.native_explore_attempt: tuple[str, frozenset[tuple[int, int]], int] | None = None
+        self.native_explore_before: Observation | None = None
+        self.native_explore_complete: tuple[str, frozenset[tuple[int, int]], int] | None = None
+        self.ability_inspection_key: tuple[str, int | None, tuple[str, ...]] | None = None
+        self.ability_refresh_pending = False
+        self.abilities_observed = False
 
     def _neighbours(self, obs: Observation, cells: dict, position: tuple[int, int],
-                    avoid_monsters=True, *, allow_clouds=False):
+                    avoid_monsters=True, *, allow_clouds=False, allowed_avoidance=frozenset()):
         occupied = {(m.x, m.y) for m in obs.monsters if not m.passive} if avoid_monsters else set()
         for key, (dx, dy) in DIRECTIONS.items():
             target = position[0] + dx, position[1] + dy
             cell = cells.get(target)
             if (cell and cell.walkable and (allow_clouds or not cell.cloud)
-                    and target not in occupied and target not in self.blocked):
+                    and target not in occupied and target not in self.exploration.current.blocked):
+                if target in self.tactical_avoided and target not in allowed_avoidance:
+                    continue
                 yield key, target
 
-    def _path(self, obs: Observation, cells: dict, targets: set, *, allow_clouds=False) -> str | None:
+    def _route(self, obs: Observation, cells: dict, targets: set, *, allow_clouds=False,
+               allowed_avoidance=frozenset(), visible_first=False) -> tuple[str, tuple[int, int]] | None:
         queue = deque([(obs.position, None)])
         seen = {obs.position}
         while queue:
             position, first = queue.popleft()
             if position in targets and first:
-                return first
-            for key, target in self._neighbours(obs, cells, position, allow_clouds=allow_clouds):
+                return first, position
+            for key, target in self._neighbours(obs, cells, position, allow_clouds=allow_clouds,
+                                                allowed_avoidance=allowed_avoidance):
+                if visible_first and first is None and not cells[target].visible:
+                    continue
                 if target not in seen:
                     seen.add(target)
                     queue.append((target, first or key))
         return None
+    def _path(self, obs: Observation, cells: dict, targets: set, *, allow_clouds=False,
+              allowed_avoidance=frozenset(), visible_first=False) -> str | None:
+        route = self._route(obs, cells, targets, allow_clouds=allow_clouds,
+                            allowed_avoidance=allowed_avoidance, visible_first=visible_first)
+        return route[0] if route is not None else None
+
+    def _native_route_safe(self, obs: Observation, cells: dict) -> bool:
+        """Native routing cannot enforce our remembered per-square exclusions."""
+        return (
+            not obs.hostiles and not obs.statuses and obs.hp == obs.hp_max
+            and not self.tactical_avoided and not self.tactics.recent_hostiles
+            and self.tactics.withdrawal is None
+            and self.tactics.unseen_harm is None and self.tactics.unseen_contact is None
+            and not any(cell.cloud for cell in cells.values())
+            and not any(pos in cells and cells[pos].walkable
+                        for pos in self.exploration.current.blocked))
+
+
+    def _leave_avoided_area(self, obs: Observation, cells: dict) -> Action | None:
+        """Find an exit without reducing nearest remembered-threat clearance."""
+        if obs.hostiles or obs.position not in self.tactical_avoided:
+            return None
+        centres = tuple(entry.position for entry in self.tactics.avoided.get(obs.location, ())
+                        if obs.xl < entry.xl + 3)
+        if not centres:
+            return None
+        def clearance(position):
+            return min(max(abs(position[0]-x),abs(position[1]-y)) for x,y in centres)
+        minimum = clearance(obs.position)
+        visible = {position: cell for position,cell in cells.items()
+                   if cell.visible and cell.walkable and not cell.cloud and cell.feature not in CLOSED_DOORS}
+        exits = visible.keys() - self.tactical_avoided
+        allowed = {position for position in visible if clearance(position) >= minimum}
+        direction = self._path(obs,visible,exits,allowed_avoidance=allowed)
+        if direction:
+            return self._move(obs,direction,"Leave the remembered threat zone on visible ground without reducing nearest-threat clearance",
+                              "retreat")
+        return None
 
     @staticmethod
     def _unknown_edges(cells: dict, position: tuple[int, int]) -> frozenset[tuple[int, int]]:
-        """Unknown neighbours that are not hidden behind a sealed wall corner."""
+        """Unknown neighbours likely revealable from a known viewpoint."""
         x, y = position
         edges = set()
         for dx, dy in DIRECTIONS.values():
@@ -143,14 +139,29 @@ class RuleBasedAgent:
         """
         frontiers = {}
         for position, cell in cells.items():
-            if cell.walkable and position not in self.blocked:
+            if cell.walkable and position not in self.exploration.current.blocked:
                 edges = self._unknown_edges(cells, position)
                 if edges:
                     frontiers[position] = edges
         if obs.position in frontiers:
-            self.exhausted_frontiers[obs.position] = frontiers[obs.position]
+            self.exploration.current.exhausted_frontiers[obs.position] = frontiers[obs.position]
         return {position for position, edges in frontiers.items()
-                if self.exhausted_frontiers.get(position) != edges}
+                if self.exploration.current.exhausted_frontiers.get(position) != edges}
+
+    def _corner_probes(self, cells: dict, position: tuple[int, int]):
+        """Bounded unknown diagonal attempts, not optimistic traversability."""
+        x, y = position
+        for key, (dx, dy) in DIRECTIONS.items():
+            if not dx or not dy:
+                continue
+            target = x + dx, y + dy
+            cell = cells.get(target)
+            if (cell is None or cell.feature != 0 or target in self.exploration.current.blocked
+                    or target in self.tactical_avoided):
+                continue
+            sides = cells.get((x+dx,y)), cells.get((x,y+dy))
+            if all(side is not None and side.feature in SOLID_CORNER_SIDES for side in sides):
+                yield key
 
     @staticmethod
     def _covered(cells: dict, shooter: Monster, position: tuple[int, int]) -> bool:
@@ -173,77 +184,24 @@ class RuleBasedAgent:
                     blocked[track] = True
         return all(blocked)
 
-    def _exposure(self, obs: Observation, cells: dict, position: tuple[int, int]) -> int:
-        return sum(m.threat + 1 for m in obs.hostiles
-                   if is_ranged(m) and not self._covered(cells, m, position))
 
-    def _cover(self, obs: Observation, cells: dict) -> str | None:
-        """Find nearby visible cover without advancing through an enemy group."""
-        current = self._exposure(obs, cells, obs.position)
-        if not current:
-            return None
-        adjacent = sum(m.distance(obs.position) <= 1 for m in obs.hostiles)
-        queue = deque([(obs.position, None, 0)])
-        seen = {obs.position}
-        options = []
-        while queue:
-            position, first, steps = queue.popleft()
-            exposure = self._exposure(obs, cells, position)
-            if first and exposure < current:
-                options.append((exposure, steps, -self.visits[position], first))
-                continue
-            if steps == 3:
-                continue
-            for key, target in self._neighbours(obs, cells, position):
-                if target in seen or not cells[target].visible or cells[target].feature == 1:
-                    continue
-                if sum(m.distance(target) <= 1 for m in obs.hostiles) > adjacent:
-                    continue
-                if self._exposure(obs, cells, target) > current:
-                    continue
-                # Do not first close on shooters just to reach speculative cover.
-                if any(m.distance(target) < min(3, m.distance(obs.position)) for m in obs.hostiles):
-                    continue
-                seen.add(target)
-                queue.append((target, first or key, steps + 1))
-        return min(options)[3] if options else None
 
-    def _retreat(self, obs: Observation, cells: dict) -> str | None:
-        def risk(pos):
-            distances = [m.distance(pos) for m in obs.hostiles]
-            return (sum(d <= 1 for d in distances), self._exposure(obs, cells, pos),
-                    -min(distances, default=9),
-                    sum(max(0, 5 - d) * (m.threat + 1) for d, m in zip(distances, obs.hostiles)))
-        current = risk(obs.position)
-        options = [(risk(target), -self.visits[target], key)
-                   for key, target in self._neighbours(obs, cells, obs.position)
-                   if cells[target].visible and self.visits[target] > 0]
-        options = [option for option in options if option[0] < current]
-        if self.pursued:
-            # The last adjacent foe followed our retreat. Distance alone is
-            # not escape; it can grant free pursuit attacks. Require cover or
-            # a formation improvement that still helps after one foe follows.
-            options = [option for option in options
-                       if option[0][1] < current[1] or option[0][0] + 1 < current[0]]
-        return min(options)[2] if options else None
-
-    def _consumable(self, obs: Observation, kind: str, names: tuple[str, ...], reason: str) -> Action | None:
-        for name in names:
-            for item in obs.inventory:
-                if name in item.name.lower():
-                    return Action(kind, item.letter, reason, "emergency recovery")
-        return None
-
+    @staticmethod
+    def _equipment_options(obs: Observation) -> dict:
+        skills = {skill.name: skill.level for skill in obs.skills}
+        return {"axes_skill": skills.get("Axes"), "shields_skill": skills.get("Shields")}
 
     def _equipment(self, obs: Observation) -> Action | None:
         if obs.hostiles or obs.turn - self.last_equipment < 12:
             return None
+        options = self._equipment_options(obs)
         candidates = [item for item in obs.inventory if not item.equipped
-                      and equipment_upgrade(item.name, obs.inventory)
+                      and equipment_upgrade(item.name, obs.inventory, **options,
+                                            attack_delay=obs.attack_delay, hostiles=obs.hostiles)
                       and (equipment_kind(item.name), item.slot, item.name) not in self.equipment_attempts]
         if not candidates:
             return None
-        item = max(candidates, key=lambda i: (equipment_score(i.name), -i.slot))
+        item = max(candidates, key=lambda i: (equipment_score(i.name, **options), -i.slot))
         kind = equipment_kind(item.name)
         self.equipment_attempts.add((kind, item.slot, item.name))
         self.last_equipment = obs.turn
@@ -252,186 +210,198 @@ class RuleBasedAgent:
                       "equipment")
 
     async def decide(self, observation: Observation) -> Action:
+        action = await self._decide(observation)
+        return self.tactics.routine(observation, action)
+
+    async def _decide(self, observation: Observation) -> Action:
         obs = observation
+        cooldown = any(status.casefold()=="-berserk" for status in obs.statuses)
+        if not cooldown:
+            self.cooldown_recovery_started = None
+        self.development.observe(obs)
         if obs.dead or obs.game_over:
             return Action("pause", reason="Game over", objective="finished")
         if not obs.hp_max:
             return Action("pause", reason="No playable character observation")
-        if obs.menu.get("tag") == "pickup":
-            if obs.hostiles or obs.hp_ratio < .98:
-                return Action("cancel", reason="Leave equipment pile while unsafe", objective="equipment")
-            choices = []
-            for entry in obs.menu.get("items", []):
-                name = plain(entry.get("text", ""))
-                hotkeys = entry.get("hotkeys", [])
-                if not hotkeys or not equipment_upgrade(name, obs.inventory):
-                    continue
-                key = chr(hotkeys[0]) if isinstance(hotkeys[0], int) else hotkeys[0]
-                if len(key) == 1 and key.isascii() and key.isalpha():
-                    choices.append((equipment_score(name), key, name))
-            if choices:
-                _, key, name = max(choices)
-                return Action("menu", key, f"Collect visible useful equipment: {name.strip()}", "equipment")
-            return Action("cancel", reason="No verified useful equipment in this pile; leave it", objective="equipment")
-        if obs.location != self.last_location:
-            self.visits.clear()
-            self.blocked.clear()
-            self.exhausted_frontiers.clear()
-            self.pickup_attempts.clear()
-            self.equipment_ground.clear()
-            self.lure_until = -1
-            self.ranged_first_seen = self.ranged_last_seen = -100
-            self.last_move = None
-            self.retreat_from_adjacent = False
-            self.pursued = False
-            self.last_location = obs.location
-        if self.last_move is not None and obs.position != self.last_move and obs.turn == self.previous_turn:
-            self.blocked.add(self.last_move)
-        adjacent_now = any(m.distance(obs.position) <= 1 for m in obs.hostiles)
-        if not adjacent_now:
-            self.pursued = False
-        elif (self.retreat_from_adjacent and obs.turn > self.previous_turn
-              and obs.position != self.previous_position):
-            self.pursued = True
-        self.retreat_from_adjacent = False
-        if obs.turn != self.previous_turn or obs.position != self.previous_position:
-            self.visits[obs.position] += 1
-        danger = assess_danger(obs, self.previous_hp)
-        self.previous_hp = obs.hp
-        self.previous_turn = obs.turn
-        self.previous_position = obs.position
-        self.last_move = None
+        development_menu = development_menu_action(obs)
+        if development_menu is not None:
+            return development_menu
+        pickup_menu = pickup_menu_action(obs, **self._equipment_options(obs))
+        if pickup_menu is not None:
+            if pickup_menu.kind == "cancel" and (obs.hostiles or obs.hp_ratio < .98):
+                # A danger interruption is not an empty/full/failed pile.
+                # Keep the supplies eligible after the encounter is resolved.
+                floor = self.exploration.current
+                floor.pickup_attempts.discard(obs.position)
+                floor.deferred_equipment[obs.position] = floor.known_positions, obs.xl
+            return pickup_menu
+        frame_change = self.exploration.observe(obs)
+        native_signature = obs.location, self.exploration.current.known_positions, obs.xl
+        if self.native_explore_before is not None and obs.native_automation == "explore":
+            before = self.native_explore_before
+            progressed = (obs.turn > before.turn or obs.position != before.position
+                          or obs.inventory != before.inventory
+                          or bool(obs.hostiles) != bool(before.hostiles)
+                          or self.native_explore_attempt != native_signature)
+            if obs.native_result == "complete":
+                self.native_explore_complete = native_signature
+                self.native_explore_attempt = native_signature
+            elif obs.native_result == "control" or (
+                    obs.native_result in {"interrupted", "yielded"} and progressed):
+                # Native item/feature stops and voluntary control interruption
+                # do not mean exploration failed, even on already mapped ground.
+                self.native_explore_attempt = None
+            elif obs.native_result in {"partial", "unsupported_delay"}:
+                self.native_explore_attempt = native_signature
+            self.native_explore_before = None
+        if frame_change is not None:
+            self.tactics.rebase(obs.location, frame_change.offset)
+            self.tactical_avoided.clear()
+            self.native_explore_attempt = None
+            self.native_explore_before = None
+            self.native_explore_complete = None
+            if frame_change.offset != (0, 0):
+                self.enclosures.clear()
         new_messages = obs.messages
         for overlap in range(min(len(self.previous_messages), len(obs.messages)), 0, -1):
             if self.previous_messages[-overlap:] == obs.messages[:overlap]:
                 new_messages = obs.messages[overlap:]
                 break
         self.previous_messages = obs.messages
+        seen_here = [message for message in new_messages if message.casefold().startswith("you see here ")]
+        supplies_here = any(supply_name(visible_equipment_name(message)) for message in seen_here)
+        if supplies_here:
+            self.exploration.current.supply_ground.add(obs.position)
         cells = {(c.x, c.y): c for c in obs.cells}
-        status = " ".join(obs.statuses).lower()
+        self.enclosures.observe(obs,cells)
+        status = self.tactics.status(obs)
         berserk = any(s.lower() == "berserk" for s in obs.statuses)
-        reason = "; ".join(danger.reasons)
+        missing_abilities = self.abilities_observed and not obs.abilities
+        self.abilities_observed = bool(obs.abilities)
+        if obs.god.casefold() == "trog" and obs.input_mode == 1 and not obs.menu and not obs.prompt:
+            # Native menus grey out powers during restrictions, including an
+            # initial public inspection of a resumed confused/berserking game.
+            if berserk or any(mark in status for mark in ("conf","silenc","paral","petr","sleep")):
+                self.ability_refresh_pending = True
+            else:
+                ability_cooldowns = tuple(sorted(s.casefold() for s in obs.statuses
+                                                if "berserk" in s.casefold() or "exh" in s.casefold()))
+                key = obs.god, obs.piety_rank, ability_cooldowns
+                previous_key = self.ability_inspection_key
+                if self.ability_refresh_pending or previous_key != key or missing_abilities:
+                    inspect = self.ability_refresh_pending or missing_abilities or previous_key is not None or not obs.abilities
+                    self.ability_inspection_key = key
+                    self.ability_refresh_pending = False
+                    if inspect:
+                        return Action("inspect","abilities","Read current native powers after piety, restriction or public-data loss; do not retain stale or missing availability",
+                                      "assess abilities")
 
-        ranged = [m for m in obs.hostiles if is_ranged(m)]
-        if ranged:
-            if obs.turn - self.ranged_last_seen > 8:
-                self.ranged_first_seen = obs.turn
-            self.ranged_last_seen = obs.turn
-        # Brief LOS loss and regenerated wire IDs must not restart the lure.
-        close_after_lure = (len(obs.hostiles) == len(ranged) == 1
-                            and ranged[0].threat < 2 and obs.hp_ratio >= .75
-                            and not danger.emergency
-                            and obs.turn - self.ranged_first_seen >= 12)
-
-        if not berserk:
-            if "pois" in status or "conf" in status:
-                action = self._consumable(obs, "quaff", ("potion of curing", "potions of curing"), "Cure poison/confusion before it becomes fatal")
-                if action:
-                    return action
-            if obs.hp_ratio < .55:
-                action = self._consumable(obs, "quaff", ("heal wounds", "potion of curing", "potions of curing"), "Low HP: use known healing")
-                if action:
-                    return action
-        if any(s.lower() == "fire" for s in obs.statuses):
-            options = []
-            for key, target in self._neighbours(obs, cells, obs.position):
-                if not cells[target].visible or cells[target].feature == 1:
-                    continue  # Opening a door is not a step that sheds fire.
-                distances = [m.distance(target) for m in obs.hostiles]
-                risk = (sum(d <= 1 for d in distances), self._exposure(obs, cells, target),
-                        -min(distances, default=9), not self.visits[target], self.visits[target])
-                options.append((risk, key))
-            if options:
-                return self._move(obs, min(options)[1], "Move on clear visible ground to shake off liquid fire",
-                                  "emergency recovery")
-            return Action("pause", reason="Liquid fire with no clear movement square; unsafe to wait or guess",
-                          objective="blocked")
-        if not berserk:
-            if obs.hostiles and danger.emergency:
-                if obs.hp_ratio < .35 and "tele" not in status:
-                    action = self._consumable(obs, "read", ("teleportation",), "Emergency escape; teleport takes time, keep defending")
-                    if action:
-                        return action
-                direction = self._cover(obs, cells) or self._retreat(obs, cells)
-                if direction:
-                    self.lure_until = obs.turn + 3
-                    return self._move(obs, direction, reason + "; seek cover or safer known ground", "retreat")
-
-        adjacent = sorted((m for m in obs.hostiles if m.distance(obs.position) <= 1),
-                          key=lambda m: (-m.threat, m.id, m.name))
-        if adjacent:
-            can_berserk = not any(s in status for s in ("berserk", "exhaust", "-berserk", "slow", "conf"))
-            if (can_berserk and obs.hp_ratio >= .55 and obs.turn - self.last_ability > 40
-                    and (self.pursued or len(adjacent) >= 2 or any(m.threat >= 2 for m in adjacent))
-                    and not any("slime creature" in m.name for m in obs.hostiles)):
-                self.last_ability = obs.turn
-                reason = ("Retreat did not gain separation; commit with Trog berserk before HP collapses"
-                          if self.pursued else "Trog berserk for a committed close-range fight")
-                return Action("ability", "a", reason, "combat")
-            enemy = adjacent[0]
-            delta = enemy.x - obs.position[0], enemy.y - obs.position[1]
-            direction = next(k for k, d in DIRECTIONS.items() if d == delta)
-            return Action("move", direction, f"Strike adjacent {enemy.name}; reassess after one attack", "combat")
-        if obs.hostiles:
-            if ranged and not close_after_lure and not self._exposure(obs, cells, obs.position) and obs.turn < self.lure_until:
-                return Action("wait", reason="Briefly hold the covered lane to lure the shooter closer", objective="lure")
-            direction = self._cover(obs, cells) if ranged and not close_after_lure else None
-            if direction:
-                self.lure_until = obs.turn + 3
-                return self._move(obs, direction, "Break a ranged firing lane using nearby known cover; lure enemies closer",
-                                  "retreat" if danger.emergency else "lure")
-            direction = self._retreat(obs, cells) if danger.emergency else None
-            if direction:
-                return self._move(obs, direction, reason + "; retreat onto known ground", "retreat")
-            # Visible reach-attack messages identify an immediate attacker
-            # without consulting hidden weapon fields. Already-berserk combat
-            # should also close safe distance rather than waste its duration.
-            reaching = [m for m in obs.hostiles if m.distance(obs.position) == 2
-                        and any(m.name.lower() in message.lower() and "you from afar" in message.lower()
-                                for message in new_messages)]
-            targets = [m for m in obs.hostiles if m in reaching or (berserk and m.threat < 2)
-                       or (len(ranged) == 1 and m == ranged[0] and m.threat < 2 and obs.hp_ratio >= .5)]
-            for target in sorted(targets, key=lambda m: (m.distance(obs.position), -m.threat, m.name, m.x, m.y)):
-                options = [(target.distance(pos), self.visits[pos], key)
-                           for key, pos in self._neighbours(obs, cells, obs.position)
-                           if cells[pos].visible and cells[pos].feature != 1
-                           and target.distance(pos) < target.distance(obs.position)
-                           and all(m.id == target.id or m.distance(pos) > 1 for m in obs.hostiles)]
-                if options:
-                    return self._move(obs, min(options)[2],
-                                      f"Close one visible step on {target.name}; avoid free ranged hits or wasted committed combat",
-                                      "combat")
-            if reaching:
-                return Action("pause", reason="Active reach attacker with no safe attack or retreat route",
+        self.tactics.observe(obs)
+        self.tactical_avoided = self.tactics.avoided_positions(obs,cells)
+        if (obs.hostiles and self.tactics.unseen_harm is None and self.tactics.unseen_contact is None
+                and not self.tactics.unseen_search.active(obs)
+                and not self.tactics.unseen_displacement_evidence(obs)):
+            bypass_cells = {position:cell for position,cell in cells.items()
+                            if position == obs.position or position not in self.tactical_avoided}
+            def bypass_targets():
+                # Goal discovery retires frontiers. Run it only after actual
+                # enclosure or finite separation evidence permits a bypass.
+                yield from self._frontiers(obs,cells)
+                yield from self.tactics.safe_stairs(
+                    obs,{position for position,cell in cells.items() if cell.feature in DOWNSTAIRS})
+            bypass = enclosed_melee_bypass(obs,bypass_cells,bypass_targets(),memory=self.enclosures,
+                                           walking=self.tactics.walking_geometry(obs))
+            if bypass is not None:
+                return replace(self._move(obs,bypass.value,bypass.reason,bypass.objective),assessment=bypass.assessment)
+        tactical = self.tactics.decide(obs, cells, self.exploration.current.visits, self._covered)
+        self.tactical_avoided = self.tactics.avoided_positions(obs, cells)
+        if tactical is not None:
+            if tactical.kind == "move" and tactical.objective != "escape restraint":
+                moved = self._move(obs, tactical.value, tactical.reason, tactical.objective)
+                return replace(moved, assessment=tactical.assessment)
+            return tactical
+        escape_memory = self._leave_avoided_area(obs,cells)
+        if escape_memory is not None:
+            return escape_memory
+        if "pois" in status:
+            return Action("wait", reason="Reassess poison each turn after immediate treatment options", objective="recover")
+        if obs.hp_ratio < .98 or berserk or any(s in status for s in ("slow", "exhaust")):
+            return Action("rest", reason="Use native 5-key recovery on clear ground; new danger interrupts rest",
+                          objective="recover")
+        if cooldown:
+            if self.cooldown_recovery_started is None:
+                self.cooldown_recovery_started = obs.turn
+            if obs.turn-self.cooldown_recovery_started >= self.tactics.config.berserk_recovery_limit:
+                return Action("pause", reason="Berserk cooldown failed to clear within the bounded recovery interval",
                               objective="blocked")
-            return Action("wait", reason="Hold position; enemies visible, no safe advance", objective="combat")
-        if obs.turn < self.lure_until:
-            return Action("wait", reason="Briefly hold cover to lure the last visible shooter; do not immediately reopen its lane",
-                          objective="lure")
-        if obs.hp_ratio < .98 or berserk or any(s in status for s in ("pois", "slow", "exhaust")):
-            return Action("wait", reason="Recover one turn with no visible hostiles", objective="recover")
+            return Action("rest", reason="Use native 5-key rest until Berserk recovery clears; do not pace every rested turn",
+                          objective="recover")
+        development = self.development.decide(obs)
+        if development is not None:
+            return development
         action = self._equipment(obs)
         if action:
             return action
         here = cells.get(obs.position)
-        seen_here = [message for message in new_messages if "you see here" in message.lower()]
-        equipment_here = any(equipment_upgrade(message, obs.inventory) for message in seen_here)
-        if seen_here and not equipment_here:
-            self.pickup_attempts.add(obs.position)  # A described non-upgrade needs no pickup inspection.
-        self.equipment_ground.update(pos for pos, cell in cells.items()
-                                     if cell.visible and cell.glyph in {"[", ")"})
-        if here and (obs.position in self.equipment_ground or equipment_here) and obs.position not in self.pickup_attempts:
-            self.pickup_attempts.add(obs.position)
-            return Action("pickup", reason="Inspect visible equipment once on safe ground; select only useful pile items",
-                          objective="equipment")
-        equipment_targets = {pos for pos in self.equipment_ground - self.pickup_attempts
-                             if pos in cells and cells[pos].visible}
-        direction = self._path(obs, {pos: cell for pos, cell in cells.items() if cell.visible}, equipment_targets)
-        if direction:
-            return self._move(obs, direction, "Inspect visible equipment on clear nearby terrain before leaving it behind",
+        # Supply descriptions were remembered before any tactical return.
+        equipment_here = any(equipment_upgrade(visible_equipment_name(message), obs.inventory, **self._equipment_options(obs),
+                                              attack_delay=obs.attack_delay, hostiles=obs.hostiles)
+                             for message in seen_here)
+        if seen_here and not equipment_here and not supplies_here:
+            self.exploration.current.pickup_attempts.add(obs.position)
+        self.exploration.current.equipment_ground.update(pos for pos, cell in cells.items()
+                                     if cell.visible and cell.glyph in {"[", ")", "="})
+        floor = self.exploration.current
+        if (here and not here.cloud and (obs.position in floor.equipment_ground or obs.position in floor.supply_ground
+                      or equipment_here or supplies_here)
+                and obs.position not in floor.pickup_attempts):
+            floor.pickup_attempts.add(obs.position)
+            floor.equipment_target = None
+            return Action("pickup", reason="Collect spotted supplies and inspect useful equipment on safe ground",
+                          objective="supplies" if obs.position in floor.supply_ground else "equipment")
+        # Keep unseen remembered loot reachable, but not when the same pursuit
+        # just forced a deliberate withdrawal. Only newly mapped terrain or XL
+        # progress permits another optional attempt; LOS and actor IDs do not.
+        floor = self.exploration.current
+        progress = floor.known_positions, obs.xl
+        supply_targets = {pos for pos in floor.supply_ground - floor.pickup_attempts
+                          if pos in cells and floor.deferred_equipment.get(pos) != progress}
+        route = self._route(obs, cells, supply_targets, visible_first=True)
+        if route is not None:
+            direction, floor.equipment_target = route
+            return self._move(obs, direction,
+                              "Collect spotted supplies before exploring farther; use known safe ground",
+                              "supplies")
+        equipment_targets = {pos for pos in floor.equipment_ground - floor.pickup_attempts
+                             if pos in cells and floor.deferred_equipment.get(pos) != progress}
+        route = self._route(obs, cells, equipment_targets, visible_first=True)
+        if route is not None:
+            direction, floor.equipment_target = route
+            return self._move(obs, direction, "Reach previously seen equipment via a visible clear step before leaving it behind",
                               "equipment")
-        frontiers = self._frontiers(obs, cells)
+        native_done = self.native_explore_complete == native_signature
+        frontiers = set() if native_done else self._frontiers(obs, cells)
+        progression = self.progression.choose(
+            obs, cells, lambda targets: self._path(obs, cells, targets),
+            lambda targets: self.tactics.safe_stairs(obs, targets), explored=False)
+        if progression is not None:
+            if progression.kind == "move":
+                return self._move(obs, progression.value, progression.reason, progression.objective)
+            return progression
         direction = self._path(obs, cells, frontiers)
+        # Native o handles ordinary exploration and native item greed. Do not
+        # let its route bypass our remembered dangers or optional-loot retreat.
+        # Refused/no-progress exploration uses the manual fallback. Native
+        # completion is authoritative; do not follow it with speculative probes.
+        native_safe = (
+            self._native_route_safe(obs, cells)
+            and not any(signature == progress for signature in floor.deferred_equipment.values()))
+        if native_safe and not native_done and self.native_explore_attempt != native_signature:
+            self.native_explore_attempt = native_signature
+            self.native_explore_before = obs
+            self.exploration.last_move = None
+            return Action("explore", reason="Use native o as the primary safe explorer; resume after benign stops and obey native completion",
+                          objective="explore")
         if direction:
             return self._move(obs, direction, "Explore a reachable known boundary of unseen terrain", "explore")
         if frontiers and self._path(obs, cells, frontiers, allow_clouds=True):
@@ -440,24 +410,70 @@ class RuleBasedAgent:
             # The supervisor bounds waiting if the cloud never dissipates.
             return Action("wait", reason="Wait for clouds blocking unexplored terrain; do not rush downstairs",
                           objective="wait for terrain")
-        stairs = {pos for pos, cell in cells.items() if cell.feature in {42, 43, 44}}
+        # Native LOS can leave a diagonal floor unknown between two walls even
+        # after every known viewpoint is exhausted. Try one movement key and
+        # observe; failed no-turn moves are retired by normal blocked tracking.
+        probes = () if native_done else tuple(self._corner_probes(cells, obs.position))
+        if probes:
+            return self._move(obs, probes[0], "Probe one unseen wall corner on safe ground; observe before continuing", "explore")
+        corner_views = set() if native_done else {
+            position for position, cell in cells.items()
+            if cell.walkable and any(self._corner_probes(cells, position))}
+        direction = self._path(obs, cells, corner_views)
+        if direction:
+            return self._move(obs, direction, "Reach a known viewpoint for a bounded unseen-corner probe", "explore")
+        progression = self.progression.choose(
+            obs, cells, lambda targets: self._path(obs, cells, targets),
+            lambda targets: self.tactics.safe_stairs(obs, targets), explored=True)
+        if progression is not None:
+            if progression.kind == "move":
+                return self._move(obs, progression.value, progression.reason, progression.objective)
+            return progression
+        stairs = self.tactics.safe_stairs(obs, {pos for pos, cell in cells.items() if cell.feature in DOWNSTAIRS})
         if obs.position in stairs:
             return Action("stairs_down", reason="No useful reachable frontier; descend healthy with no visible enemies", objective="descend")
-        direction = self._path(obs, cells, stairs)
-        if direction:
-            return self._move(obs, direction, "Reach known downstairs after exhausting useful frontiers", "descend")
+        route = self._route(obs, cells, stairs)
+        if route is not None:
+            direction, target = route
+            if self._native_route_safe(obs, cells):
+                self.exploration.last_move = None
+                floor.equipment_target = None
+                return Action("travel_downstairs", f"{target[0]},{target[1]}",
+                              "Use native map travel to the selected safe downstairs; observe arrival before descending",
+                              "descend")
+            return self._move(obs, direction, "Reach known downstairs by a guarded step; native routing cannot enforce remembered hazards",
+                              "descend")
+        if stairs and self._path(obs, cells, stairs, allow_clouds=True):
+            # As with a frontier, a known useful stair behind a transient
+            # cloud is not a dead end. Keep stair bans and every other route
+            # restriction intact; only wait and reobserve, never cross it.
+            return Action("wait", reason="Wait for clouds blocking safe known downstairs; do not return through an unsafe stair",
+                          objective="wait for terrain")
+        reevaluate = self.tactics.stair_reevaluation.choose(
+            obs,cells,lambda targets:self._path(obs,cells,targets),
+            self.tactics.unsafe_stairs,exhausted=True)
+        if reevaluate is not None:
+            if reevaluate.kind == "move":
+                return self._move(obs,reevaluate.value,reevaluate.reason,reevaluate.objective)
+            return reevaluate
         return Action("pause", reason="No safe reachable exploration or stairs; inspect recorded state", objective="blocked")
 
     def _move(self, obs: Observation, direction: str, reason: str, objective: str) -> Action:
+        floor = self.exploration.current
+        if objective in {"bypass barrier", "bypass enclosure", "planned retreat", "retreat", "lure"}:
+            if floor.equipment_target is not None:
+                floor.deferred_equipment[floor.equipment_target] = floor.known_positions, obs.xl
+        elif objective not in {"equipment", "supplies"}:
+            floor.equipment_target = None
         dx, dy = DIRECTIONS[direction]
-        self.last_move = obs.position[0] + dx, obs.position[1] + dy
-        self.retreat_from_adjacent = objective == "retreat" and any(
-            m.distance(obs.position) <= 1 for m in obs.hostiles)
+        self.exploration.last_move = obs.position[0] + dx, obs.position[1] + dy
         return Action("move", direction, reason, objective)
 
 
 PROFILE = CharacterProfile(
     identifier="mibe", abbreviation="MiBe", species="Minotaur", background="Berserker",
     god="Trog", weapon="hand axe", preferred_stat="strength", agent_factory=RuleBasedAgent,
-    rc_options=(("autopickup", '$?!+"/='), ("default_autopickup", "true")),
+    rc_options=(("autopickup", '$?!+"/='), ("default_autopickup", "true"),
+                ("travel_delay", "20"), ("explore_delay", "20"),
+                ("rest_delay", "5"), ("tile_runrest_rate", "17")),
 )

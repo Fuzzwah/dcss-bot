@@ -1,0 +1,557 @@
+{
+  "source": {
+    "dcss": "0.34.1",
+    "development": 5,
+    "seed": 2,
+    "run": "20261031T031008.324954Z-1ba00ddd5a3c",
+    "turn": 222,
+    "capture": "summary final_observation; cells cropped to public visible cells"
+  },
+  "observation": {
+    "species": "Minotaur",
+    "god": "Trog",
+    "turn": 222,
+    "time": 2424,
+    "place": "Dungeon",
+    "depth": 1,
+    "hp": 19,
+    "hp_max": 19,
+    "xl": 1,
+    "position": [
+      -26,
+      24
+    ],
+    "statuses": [],
+    "inventory": [
+      {
+        "slot": 0,
+        "letter": "a",
+        "name": "+0 hand axe",
+        "quantity": 1,
+        "equipped": true,
+        "category": "weapon"
+      },
+      {
+        "slot": 1,
+        "letter": "b",
+        "name": "+0 animal skin",
+        "quantity": 1,
+        "equipped": true,
+        "category": "armour"
+      },
+      {
+        "slot": 2,
+        "letter": "c",
+        "name": "+0 dagger",
+        "quantity": 1,
+        "equipped": false,
+        "category": "weapon"
+      }
+    ],
+    "monsters": [
+      {
+        "id": 11,
+        "name": "endoplasm",
+        "x": -19,
+        "y": 24,
+        "threat": 1,
+        "attitude": 0,
+        "description": "A glob of grey sludge that has somehow developed a rudimentary awareness and limited motility. It periodically draws heat from its surroundings to sustain itself, freezing enemies unfortunate enough to be adjacent at the time.\n\nMax HP: ~6       Will: none       AC: +          EV: +                          \nThreat: Low     Class: Natural  Size: V. Small  Int: Mindless   \n\n\nYou have about 87% to hit with your +0 hand axe and 85% to hit with your headbutt.\nIt has about 49% to hit you.\n\nAttack  Max Damage  \nHit     3           \n\nIt has a 44% chance to notice you each turn.\nIt is immune to acid and corrosion and blinding.\nIt can see invisible.\nIt is amorphous and immune to ensnarement.\nTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.\nSpells:\nFreeze: (1d5)",
+        "statuses": [],
+        "equipment": [],
+        "speed_description": null,
+        "spells": [
+          "Freeze"
+        ]
+      }
+    ],
+    "cells": [
+      {
+        "x": -21,
+        "y": 23,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -20,
+        "y": 23,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -19,
+        "y": 23,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -21,
+        "y": 24,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -20,
+        "y": 24,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -19,
+        "y": 24,
+        "feature": 33,
+        "glyph": "J",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -25,
+        "y": 23,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -24,
+        "y": 23,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -23,
+        "y": 23,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -22,
+        "y": 23,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -22,
+        "y": 24,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -22,
+        "y": 25,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -21,
+        "y": 25,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -20,
+        "y": 25,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -19,
+        "y": 25,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -23,
+        "y": 24,
+        "feature": 33,
+        "glyph": "!",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -23,
+        "y": 25,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -24,
+        "y": 24,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -24,
+        "y": 25,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -29,
+        "y": 23,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -28,
+        "y": 23,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -27,
+        "y": 23,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -26,
+        "y": 23,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -29,
+        "y": 24,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -28,
+        "y": 24,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -27,
+        "y": 24,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -26,
+        "y": 24,
+        "feature": 33,
+        "glyph": "@",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -25,
+        "y": 24,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -29,
+        "y": 25,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -28,
+        "y": 25,
+        "feature": 33,
+        "glyph": "$",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -27,
+        "y": 25,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -26,
+        "y": 25,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -25,
+        "y": 25,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -29,
+        "y": 26,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      }
+    ],
+    "messages": [
+      "You kill the bat!",
+      "Trog accepts your kill.",
+      "A red film seems to cover your vision as you go berserk!",
+      "You feel yourself moving faster! You feel mighty!",
+      "The hobgoblin closely misses you.",
+      "You hit the hobgoblin.",
+      "The hobgoblin is severely wounded.",
+      "The hobgoblin barely misses you. You furiously retaliate!",
+      "You headbutt the hobgoblin.",
+      "You kill the hobgoblin!",
+      "Trog accepts your kill.",
+      "You feel a strong urge to attack something.",
+      "You feel your anger nearly subside. You are no longer berserk.",
+      "You are exhausted. You feel yourself slow down.",
+      "You feel yourself speed up.",
+      "Okay, then.",
+      "You recover from your berserk rage.",
+      "Okay, then.",
+      "You encounter a rat.",
+      "You slash the rat!",
+      "You kill the rat!",
+      "Trog accepts your kill.",
+      "You encounter a goblin. It is wielding a +0 dagger.",
+      "The goblin shouts!",
+      "You hit the goblin.",
+      "You kill the goblin!",
+      "Trog accepts your kill.",
+      "You see here a +0 dagger.",
+      "You encounter a kobold. It is wielding a +0 dagger.",
+      "The kobold shouts!",
+      "You encounter a ball python.",
+      "The kobold hits you but does no damage.",
+      "You hit the kobold.",
+      "You kill the kobold!",
+      "Trog accepts your kill.",
+      "The ball python hisses angrily.",
+      "Your Axes skill increases to level 4!",
+      "Things that are here:",
+      "a +0 dagger; a kobold corpse",
+      "The ball python bites you but does no damage.",
+      "The ball python grabs you. The ball python constricts you.",
+      "The ball python bites you. The ball python constricts you.",
+      "A red film seems to cover your vision as you go berserk!",
+      "You feel yourself moving faster! You feel mighty! The ball python bites you.",
+      "The ball python constricts you.",
+      "You escape the ball python's grasp.",
+      "You feel a strong urge to attack something.",
+      "You hit the ball python.",
+      "You kill the ball python!",
+      "Trog accepts your kill.",
+      "You feel a strong urge to attack something.",
+      "You are no longer berserk.",
+      "You are exhausted. You feel yourself slow down.",
+      "You feel yourself speed up.",
+      "Okay, then.",
+      "Things that are here:",
+      "a +0 dagger; a kobold corpse",
+      "c - a +0 dagger",
+      "You see here a ball python corpse.",
+      "You recover from your berserk rage.",
+      "Okay, then.",
+      "You encounter a ball python.",
+      "The ball python hisses angrily.",
+      "You slash the ball python!",
+      "You kill the ball python!",
+      "Trog accepts your kill.",
+      "Found 5 gold pieces.",
+      "You now have 5 gold pieces.",
+      "Found a cyan potion.",
+      "Found 10 gold pieces.",
+      "You encounter a rat.",
+      "The rat squeaks loudly.",
+      "You see here a cyan potion.",
+      "You see here 10 gold pieces.",
+      "You slash the rat!",
+      "You kill the rat!",
+      "Trog accepts your kill.",
+      "You see here a rat corpse.",
+      "You encounter an endoplasm.",
+      "You see here a rat corpse."
+    ],
+    "input_mode": 1,
+    "ac": 2,
+    "ev": 11,
+    "sh": 0,
+    "piety_rank": 1,
+    "poison_survival": 19,
+    "status_details": [],
+    "resistances": [
+      {
+        "name": "rFire",
+        "level": 0
+      },
+      {
+        "name": "rCold",
+        "level": 0
+      },
+      {
+        "name": "rNeg",
+        "level": 0
+      },
+      {
+        "name": "rPois",
+        "level": 0
+      },
+      {
+        "name": "rElec",
+        "level": 0
+      },
+      {
+        "name": "rCorr",
+        "level": 0
+      },
+      {
+        "name": "SInv",
+        "level": 0
+      },
+      {
+        "name": "Will",
+        "level": 0
+      }
+    ],
+    "will": 0,
+    "abilities": [
+      {
+        "name": "Renounce Religion",
+        "hotkey": "X",
+        "available": true,
+        "failure": 0
+      },
+      {
+        "name": "Berserk",
+        "hotkey": "a",
+        "available": true,
+        "failure": 9
+      }
+    ],
+    "skills": [
+      {
+        "name": "Fighting",
+        "level": 3.6,
+        "training": 0,
+        "target": null,
+        "hotkey": "a",
+        "enabled": false
+      },
+      {
+        "name": "Maces & Flails",
+        "level": 2.3,
+        "training": 0,
+        "target": null,
+        "hotkey": "b",
+        "enabled": false
+      },
+      {
+        "name": "Axes",
+        "level": 4.1,
+        "training": 100,
+        "target": 10.0,
+        "hotkey": "c",
+        "enabled": true
+      },
+      {
+        "name": "Polearms",
+        "level": 2.3,
+        "training": 0,
+        "target": null,
+        "hotkey": "d",
+        "enabled": false
+      },
+      {
+        "name": "Unarmed Combat",
+        "level": 0.0,
+        "training": 0,
+        "target": null,
+        "hotkey": "e",
+        "enabled": false
+      },
+      {
+        "name": "Short Blades",
+        "level": 0.0,
+        "training": 0,
+        "target": null,
+        "hotkey": "f",
+        "enabled": true
+      },
+      {
+        "name": "Armour",
+        "level": 2.4,
+        "training": 0,
+        "target": null,
+        "hotkey": "g",
+        "enabled": false
+      },
+      {
+        "name": "Dodging",
+        "level": 2.1,
+        "training": 0,
+        "target": null,
+        "hotkey": "h",
+        "enabled": false
+      },
+      {
+        "name": "Stealth",
+        "level": 0.0,
+        "training": 0,
+        "target": null,
+        "hotkey": "i",
+        "enabled": false
+      }
+    ],
+    "attack_delay": 1.0,
+    "weapon_skill": "Axes"
+  }
+}

@@ -1,0 +1,2553 @@
+{
+  "source_run": "runs/benchmarks/mibe-survival/development12/seed-3/evaluations/20261031T113746Z-6044c8fe/runs/20261031T113746.777131Z-bbc09f06ebb7",
+  "observation_source": {
+    "sequence": 2171,
+    "phase": "before",
+    "turn": 2103
+  },
+  "observation": {
+    "name": "Evalf4aeb3d1d7954a87",
+    "species": "Minotaur",
+    "god": "Trog",
+    "turn": 2103,
+    "time": 21377,
+    "place": "Dungeon",
+    "depth": 3,
+    "hp": 31,
+    "hp_max": 31,
+    "xl": 3,
+    "position": [
+      -3,
+      9
+    ],
+    "statuses": [],
+    "inventory": [
+      {
+        "slot": 0,
+        "letter": "a",
+        "name": "+0 hand axe",
+        "quantity": 1,
+        "equipped": true,
+        "category": "weapon"
+      },
+      {
+        "slot": 1,
+        "letter": "b",
+        "name": "+0 animal skin",
+        "quantity": 1,
+        "equipped": true,
+        "category": "armour"
+      },
+      {
+        "slot": 2,
+        "letter": "c",
+        "name": "+0 dagger",
+        "quantity": 1,
+        "equipped": false,
+        "category": "weapon"
+      },
+      {
+        "slot": 3,
+        "letter": "d",
+        "name": "ring of flight",
+        "quantity": 1,
+        "equipped": false,
+        "category": "jewellery"
+      },
+      {
+        "slot": 52,
+        "letter": "d",
+        "name": "3 lumpy orange potions",
+        "quantity": 3,
+        "equipped": false,
+        "category": "potion"
+      },
+      {
+        "slot": 53,
+        "letter": "c",
+        "name": "scroll labelled FOED OGGIUSCHOY",
+        "quantity": 1,
+        "equipped": false,
+        "category": "scroll"
+      },
+      {
+        "slot": 54,
+        "letter": "f",
+        "name": "grey potion",
+        "quantity": 1,
+        "equipped": false,
+        "category": "potion"
+      },
+      {
+        "slot": 55,
+        "letter": "j",
+        "name": "2 glowing brown potions",
+        "quantity": 2,
+        "equipped": false,
+        "category": "potion"
+      },
+      {
+        "slot": 56,
+        "letter": "e",
+        "name": "scroll labelled DOT XOROCAEMOI",
+        "quantity": 1,
+        "equipped": false,
+        "category": "scroll"
+      }
+    ],
+    "monsters": [
+      {
+        "id": 235,
+        "name": "frilled lizard",
+        "x": -4,
+        "y": 9,
+        "threat": 0,
+        "attitude": 0,
+        "description": "A lizard with a giant and colourful fringe folded around its neck. It flares its impressive frill at its victims while hissing angrily.\n\nMax HP: ~2       Will: none       AC: none       EV: +++                        \nThreat: Minor   Class: Natural  Size: Tiny      Int: Animal     \n\n\nYou have about 98% to hit with your +0 hand axe and 100% to hit with your headbutt (while incapacitated).\nIt has about 49% to hit you.\n\nAttack  Max Damage  \nBite    3           \n\nIt has a 44% chance to notice you each turn.\nIt is resistant to drowning.\nIt is cold-blooded and may be slowed by cold attacks.\nIt can travel through water.",
+        "statuses": [],
+        "equipment": [],
+        "speed_description": null,
+        "spells": [],
+        "spell_ranges": []
+      },
+      {
+        "id": 237,
+        "name": "kobold",
+        "x": -4,
+        "y": 11,
+        "threat": 0,
+        "attitude": 0,
+        "description": null,
+        "statuses": [],
+        "equipment": [],
+        "speed_description": null,
+        "spells": [],
+        "spell_ranges": []
+      },
+      {
+        "id": 238,
+        "name": "adder",
+        "x": -5,
+        "y": 13,
+        "threat": 1,
+        "attitude": 0,
+        "description": null,
+        "statuses": [],
+        "equipment": [],
+        "speed_description": null,
+        "spells": [],
+        "spell_ranges": []
+      },
+      {
+        "id": 239,
+        "name": "Sigmund",
+        "x": -6,
+        "y": 16,
+        "threat": 3,
+        "attitude": 0,
+        "description": null,
+        "statuses": [],
+        "equipment": [],
+        "speed_description": null,
+        "spells": [],
+        "spell_ranges": []
+      }
+    ],
+    "cells": [
+      {
+        "x": -2,
+        "y": -3,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -3,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -3,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": -1,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": -1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": -1,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -1,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -1,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": 0,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 0,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "feature": 46,
+        "glyph": "<",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": 1,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 1,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 1,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 1,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 1,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 3,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 5,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 5,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 7,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 7,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 7,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 8,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -4,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -4,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -3,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -3,
+        "feature": 47,
+        "glyph": "<",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -3,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": -2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": -2,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": -1,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 6,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": 7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": 8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": 9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 9,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": 2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": 2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": 2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": 2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": 2,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": 3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": 3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": 3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": 3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": 3,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": 4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": 4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": 4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": 4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": 4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": 5,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": 5,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 9,
+        "y": 5,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": 6,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 9,
+        "feature": 33,
+        "glyph": "@",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 10,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": 10,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 10,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 10,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 10,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 10,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": 4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -2,
+        "y": 5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 9,
+        "feature": 33,
+        "glyph": "l",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 10,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 10,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 11,
+        "feature": 33,
+        "glyph": "K",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 11,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 11,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 11,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 4,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": 5,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 6,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 6,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 6,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 6,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": 6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 5,
+        "y": 7,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 10,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 12,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 12,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 12,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 12,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 12,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 12,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 12,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 12,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 3,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 3,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 3,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 3,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 4,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": 5,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": 6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": 6,
+        "feature": 33,
+        "glyph": "$",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": 6,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": 7,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": 7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": 7,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 6,
+        "y": 8,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 7,
+        "y": 8,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 8,
+        "y": 8,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 12,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 13,
+        "feature": 33,
+        "glyph": "S",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 13,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 13,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 10,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 10,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 11,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 12,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 12,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 13,
+        "feature": 33,
+        "glyph": "?",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 13,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 14,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 6,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 7,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 8,
+        "feature": 33,
+        "glyph": ")",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 9,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 10,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 11,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 12,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 13,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 13,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 14,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 14,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 15,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 15,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 15,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 15,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 15,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -1,
+        "y": 15,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 0,
+        "y": 15,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 15,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 15,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 15,
+        "feature": 33,
+        "glyph": ".",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 15,
+        "feature": 7,
+        "glyph": "#",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": 4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 4,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": 5,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": 6,
+        "feature": 33,
+        "glyph": ":",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": 7,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": 8,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": 9,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": 10,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 14,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 16,
+        "feature": 7,
+        "glyph": "#",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 16,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 16,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 16,
+        "feature": 33,
+        "glyph": "@",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 16,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": 1,
+        "y": 16,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 2,
+        "y": 16,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 3,
+        "y": 16,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": 4,
+        "y": 16,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": 2,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": 2,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 2,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": 3,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -10,
+        "y": 3,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 3,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": 4,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": 5,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": 6,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": 7,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": 8,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -11,
+        "y": 9,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 13,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 14,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 15,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 15,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 16,
+        "feature": 33,
+        "glyph": ".",
+        "visible": true,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 16,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -9,
+        "y": 17,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -8,
+        "y": 17,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -7,
+        "y": 17,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -6,
+        "y": 17,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -5,
+        "y": 17,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -4,
+        "y": 17,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      },
+      {
+        "x": -3,
+        "y": 17,
+        "feature": 0,
+        "glyph": " ",
+        "visible": false,
+        "cloud": false
+      }
+    ],
+    "messages": [
+      "The kobold hits you with a +0 short sword.",
+      "You barely miss the kobold.",
+      "The kobold is severely wounded.",
+      "The kobold misses you.",
+      "You barely miss the kobold. Your headbutt misses the kobold.",
+      "The kobold is severely wounded.",
+      "The kobold barely misses you.",
+      "You barely miss the kobold. Your headbutt misses the kobold.",
+      "The kobold is severely wounded.",
+      "The kobold hits you with a +0 short sword.",
+      "You hit the kobold.",
+      "You kill the kobold!",
+      "Trog accepts your kill.",
+      "You see here a +0 short sword.",
+      "You see here a +0 spear.",
+      "Found a scroll labelled DOT XOROCAEMOI.",
+      "Found a parchment of Momentum Strike.",
+      "e - a scroll labelled DOT XOROCAEMOI",
+      "You encounter a bat.",
+      "The bat hits you but does no damage.",
+      "You closely miss the bat. The bat barely misses you. You furiously retaliate!",
+      "You headbutt the bat.",
+      "You kill the bat!",
+      "Trog accepts your kill.",
+      "Found 12 gold pieces.",
+      "You now have 44 gold pieces (gained 12).",
+      "Things that are here:",
+      "a +0 dagger; 3 stones; a kobold corpse",
+      "Found a glowing brown potion.",
+      "j - 2 glowing brown potions (gained 1)",
+      "Okay, then.",
+      "You see here a +0 spear.",
+      "There is an escape hatch in the floor here.",
+      "You see here a quokka skeleton.",
+      "You now have 54 gold pieces (gained 10).",
+      "You encounter a rat.",
+      "The rat squeaks loudly. You hear a shout!",
+      "You completely miss the rat. Your headbutt misses the rat. The rat bites you.",
+      "You barely miss the rat.",
+      "You encounter a kobold. It is wielding a +0 whip.",
+      "The rat bites you.",
+      "You barely miss the rat.",
+      "The kobold shouts!",
+      "The rat closely misses you.",
+      "You slash the rat!",
+      "You kill the rat!",
+      "Trog accepts your kill.",
+      "You closely miss the kobold. The kobold misses you.",
+      "You hit the kobold.",
+      "You kill the kobold!",
+      "Trog accepts your kill.",
+      "You see here a +0 whip.",
+      "There is a stone staircase leading down here.",
+      "You climb downwards.",
+      "There is a stone staircase leading up here.",
+      "Found a stone staircase leading up.",
+      "Okay, then.",
+      "There is a stone staircase leading up here.",
+      "Found 11 gold pieces.",
+      "You encounter a frilled lizard.",
+      "Found a scroll labelled VEMOSH BOBEI.",
+      "Found a runed quarterstaff.",
+      "The frilled lizard hisses angrily.",
+      "You encounter a kobold. It is wielding a +0 club and quivering stones.",
+      "Found a parchment of Passage of Golubria.",
+      "The kobold shouts!",
+      "The frilled lizard barely misses you.",
+      "You miss the frilled lizard.",
+      "You encounter an adder.",
+      "The frilled lizard barely misses you. The kobold throws a stone.",
+      "The stone closely misses you.",
+      "You barely miss the frilled lizard.",
+      "The adder hisses angrily.",
+      "The frilled lizard bites you but does no damage.",
+      "The kobold throws a stone. The stone misses you.",
+      "You miss the frilled lizard.",
+      "Your headbutt misses the frilled lizard.",
+      "The frilled lizard barely misses you. You furiously retaliate!",
+      "You headbutt the frilled lizard.",
+      "You encounter Sigmund the Dreaded. He is wielding a +4 scythe of distortion."
+    ],
+    "prompt": "",
+    "menu": {},
+    "input_mode": 1,
+    "dead": false,
+    "game_over": false,
+    "ac": 2,
+    "ev": 11,
+    "sh": 0,
+    "piety_rank": 1,
+    "poison_survival": 31,
+    "status_details": [],
+    "resistances": [
+      {
+        "name": "rFire",
+        "level": 0
+      },
+      {
+        "name": "rCold",
+        "level": 0
+      },
+      {
+        "name": "rNeg",
+        "level": 0
+      },
+      {
+        "name": "rPois",
+        "level": 0
+      },
+      {
+        "name": "rElec",
+        "level": 0
+      },
+      {
+        "name": "rCorr",
+        "level": 0
+      },
+      {
+        "name": "SInv",
+        "level": 0
+      },
+      {
+        "name": "Will",
+        "level": 0
+      }
+    ],
+    "will": 0,
+    "abilities": [
+      {
+        "name": "Renounce Religion",
+        "hotkey": "X",
+        "available": true,
+        "failure": 0
+      },
+      {
+        "name": "Berserk",
+        "hotkey": "a",
+        "available": true,
+        "failure": 5
+      }
+    ],
+    "skills": [
+      {
+        "name": "Fighting",
+        "level": 3.6,
+        "training": 0,
+        "target": null,
+        "hotkey": "a",
+        "enabled": false
+      },
+      {
+        "name": "Maces & Flails",
+        "level": 3.4,
+        "training": 0,
+        "target": null,
+        "hotkey": "b",
+        "enabled": false
+      },
+      {
+        "name": "Axes",
+        "level": 5.7,
+        "training": 100,
+        "target": 10.0,
+        "hotkey": "c",
+        "enabled": true
+      },
+      {
+        "name": "Polearms",
+        "level": 3.4,
+        "training": 0,
+        "target": null,
+        "hotkey": "d",
+        "enabled": false
+      },
+      {
+        "name": "Unarmed Combat",
+        "level": 0.0,
+        "training": 0,
+        "target": null,
+        "hotkey": "e",
+        "enabled": false
+      },
+      {
+        "name": "Short Blades",
+        "level": 0.0,
+        "training": 0,
+        "target": null,
+        "hotkey": "f",
+        "enabled": true
+      },
+      {
+        "name": "Armour",
+        "level": 2.4,
+        "training": 0,
+        "target": null,
+        "hotkey": "g",
+        "enabled": false
+      },
+      {
+        "name": "Dodging",
+        "level": 2.1,
+        "training": 0,
+        "target": null,
+        "hotkey": "h",
+        "enabled": false
+      },
+      {
+        "name": "Stealth",
+        "level": 0.0,
+        "training": 0,
+        "target": null,
+        "hotkey": "i",
+        "enabled": false
+      }
+    ],
+    "attack_delay": 1.0,
+    "weapon_skill": "Axes"
+  },
+  "sigmund_examination_source": {
+    "sequence": 2181,
+    "phase": "after",
+    "turn": 2113
+  },
+  "sigmund_examination": {
+    "id": 241,
+    "name": "Sigmund",
+    "x": -3,
+    "y": 9,
+    "threat": 3,
+    "attitude": 0,
+    "description": "The elder of a pair of brothers who came for the Orb. No one knows what Sigmund saw in the dungeon to drive him mad, but his shrewd magical tactics and wicked scythe now leave little time for his victims to wonder. Despite his reputation as a vicious murderer, his grandiose and dramatic ways have earned him the admiration of many denizens of the dungeon.\n\nMax HP: ~27      Will: +          AC: +          EV: +++                        \nThreat: Lethal  Class: Natural  Size: Medium    Int: Human      \nSpeed: 100% (attack: 66%)\n\nYou have about 55% to hit with your +0 hand axe and 45% to hit with your headbutt.\nHe has about 57% to hit you.\n\nAttack                    Max Damage         \nHit: +4 scythe (distort)  17 + 26 (distort)  \n\nHe has an unusual item: a +4 scythe of distortion.\nHe can open doors.\nTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.\nSpells:\nMagic Dart: (3d4)\nThrow Flame: (3d5)\nConfuse: (56%)\nInvisibility: ",
+    "statuses": [],
+    "equipment": [
+      "+4 scythe (distort)"
+    ],
+    "speed_description": "Speed: 100% (attack: 66%)",
+    "spells": [
+      "Magic Dart",
+      "Throw Flame",
+      "Confuse",
+      "Invisibility"
+    ],
+    "spell_ranges": [
+      [
+        "Magic Dart",
+        7
+      ],
+      [
+        "Throw Flame",
+        7
+      ],
+      [
+        "Confuse",
+        7
+      ]
+    ]
+  },
+  "composition_note": "Tests synthesize a turn-free response by copying only recorded Sigmund description/equipment/speed/spells/ranges onto the earlier visible native instance. This does not establish a survival counterfactual."
+}

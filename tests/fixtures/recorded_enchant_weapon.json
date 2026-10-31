@@ -1,0 +1,415 @@
+{
+  "source": "development4 seed6 sequence1640 actual before-observation; native menu cropped to header and first three weapon choices, map cropped to current cell",
+  "observation": {
+    "name": "Evalb29f5aa37eeb4901",
+    "species": "Minotaur",
+    "god": "Trog",
+    "turn": 1632,
+    "time": 16520,
+    "place": "Dungeon",
+    "depth": 2,
+    "hp": 31,
+    "hp_max": 31,
+    "xl": 3,
+    "position": [
+      14,
+      0
+    ],
+    "statuses": [],
+    "inventory": [
+      {
+        "slot": 0,
+        "letter": "a",
+        "name": "+0 hand axe",
+        "quantity": 1,
+        "equipped": true
+      },
+      {
+        "slot": 1,
+        "letter": "b",
+        "name": "+0 animal skin",
+        "quantity": 1,
+        "equipped": false
+      },
+      {
+        "slot": 2,
+        "letter": "c",
+        "name": "+0 ring mail",
+        "quantity": 1,
+        "equipped": false
+      },
+      {
+        "slot": 3,
+        "letter": "d",
+        "name": "+0 club",
+        "quantity": 1,
+        "equipped": false
+      },
+      {
+        "slot": 4,
+        "letter": "e",
+        "name": "+0 club",
+        "quantity": 1,
+        "equipped": false
+      },
+      {
+        "slot": 5,
+        "letter": "f",
+        "name": "+0 chain mail",
+        "quantity": 1,
+        "equipped": true
+      },
+      {
+        "slot": 6,
+        "letter": "g",
+        "name": "+0 short sword",
+        "quantity": 1,
+        "equipped": false
+      },
+      {
+        "slot": 7,
+        "letter": "h",
+        "name": "+0 dagger",
+        "quantity": 1,
+        "equipped": false
+      },
+      {
+        "slot": 8,
+        "letter": "i",
+        "name": "+0 club",
+        "quantity": 1,
+        "equipped": false
+      },
+      {
+        "slot": 52,
+        "letter": "c",
+        "name": "scroll labelled IGETHA EFRIU",
+        "quantity": 1,
+        "equipped": false
+      },
+      {
+        "slot": 53,
+        "letter": "d",
+        "name": "scroll labelled VUUNKOTIEM",
+        "quantity": 1,
+        "equipped": false
+      },
+      {
+        "slot": 54,
+        "letter": "f",
+        "name": "smoky pink potion",
+        "quantity": 1,
+        "equipped": false
+      },
+      {
+        "slot": 55,
+        "letter": "e",
+        "name": "2 scrolls labelled SAOHI FAIFF",
+        "quantity": 2,
+        "equipped": false
+      }
+    ],
+    "monsters": [],
+    "cells": [
+      {
+        "x": 14,
+        "y": 0,
+        "feature": 47,
+        "glyph": "@",
+        "visible": true,
+        "cloud": false
+      }
+    ],
+    "messages": [
+      "You closely miss the kobold. Your headbutt misses the kobold.",
+      "The kobold closely misses you.",
+      "You closely miss the kobold. The kobold hits you with a +0 dagger.",
+      "You hit the kobold but do no damage. The kobold barely misses you.",
+      "You furiously retaliate! You headbutt the kobold.",
+      "You barely miss the kobold. Your headbutt misses the kobold.",
+      "The kobold is moderately wounded.",
+      "The kobold completely misses you. You furiously retaliate!",
+      "You headbutt the kobold.",
+      "You kill the kobold!",
+      "Trog accepts your kill.",
+      "Things that are here:",
+      "a +0 dagger; a kobold corpse",
+      "h - a +0 dagger",
+      "Found a stone staircase leading down and a stone staircase leading up.",
+      "You encounter a kobold. It is wielding a +0 club.",
+      "The kobold shouts!",
+      "You see here a kobold corpse.",
+      "You hit the kobold.",
+      "You kill the kobold!",
+      "Trog accepts your kill.",
+      "Things that are here:",
+      "a +0 club; a kobold corpse",
+      "i - a +0 club",
+      "Found a flail.",
+      "Found a stone staircase leading down.",
+      "You see here a +0 flail.",
+      "Okay, then.",
+      "Found a dagger.",
+      "You hit the endoplasm.",
+      "The endoplasm is almost dead.",
+      "The endoplasm barely misses you.",
+      "You barely miss the endoplasm. You headbutt the endoplasm.",
+      "You kill the endoplasm!",
+      "Trog accepts your kill.",
+      "You see here a +0 dagger.",
+      "Found a parchment of Foxfire.",
+      "You encounter a ribbon worm.",
+      "Found a scroll labelled NUPTUT YLYA.",
+      "The ribbon worm expels a string of sticky webbing.",
+      "The stream of webbing hits you but does no damage.",
+      "You are caught in a web!",
+      "You struggle to detach yourself from the web.",
+      "You struggle to detach yourself from the web.",
+      "The ribbon worm expels a string of sticky webbing.",
+      "The stream of webbing misses you.",
+      "You disentangle yourself.",
+      "You hit the ribbon worm.",
+      "The ribbon worm is lightly wounded.",
+      "The ribbon worm barely misses you.",
+      "You hit the ribbon worm.",
+      "The ribbon worm is moderately wounded.",
+      "The ribbon worm bites you.",
+      "You slash the ribbon worm! Your headbutt misses the ribbon worm.",
+      "The ribbon worm is severely wounded.",
+      "The ribbon worm closely misses you.",
+      "You hit the ribbon worm. You headbutt the ribbon worm.",
+      "The ribbon worm is severely wounded.",
+      "You slash the ribbon worm!",
+      "You kill the ribbon worm!",
+      "Trog accepts your kill.",
+      "You see here a ribbon worm corpse.",
+      "You encounter a goblin. It is wielding a +0 club.",
+      "The goblin shouts!",
+      "You slash the goblin!",
+      "You kill the goblin!",
+      "Trog accepts your kill.",
+      "Found a scroll labelled SAOHI FAIFF.",
+      "Found an escape hatch in the ceiling.",
+      "e - 2 scrolls labelled SAOHI FAIFF (gained 1)",
+      "You see here a parchment of Foxfire.",
+      "Things that are here:",
+      "a +0 club; a ribbon worm corpse",
+      "Found a faded altar of an unknown god.",
+      "Okay, then.",
+      "You see here a parchment of Kinetic Grapnel.",
+      "You see here a parchment of Kinetic Grapnel.",
+      "There is a stone staircase leading up here.",
+      "As you read the scroll labelled SAOHI FAIFF, it crumbles to dust.",
+      "It is a scroll of enchant weapon."
+    ],
+    "prompt": "",
+    "menu": {
+      "msg": "menu",
+      "ui-centred": false,
+      "tag": "use_item",
+      "flags": 262722,
+      "last_hovered": 1,
+      "title": {
+        "text": "<white>Enchant which weapon?"
+      },
+      "more": "<lightgrey>                                                          [<white>?<lightgrey>] describe selected",
+      "alt_more": "<lightgrey>                                                          [<white>?<lightgrey>] describe selected",
+      "total_items": 7,
+      "chunk_start": 0,
+      "items": [
+        {
+          "text": "Hand Weapons",
+          "colour": 1,
+          "level": 1
+        },
+        {
+          "text": " a - a +0 hand axe (weapon)",
+          "q": 1,
+          "colour": 10,
+          "hotkeys": [
+            97
+          ],
+          "level": 2,
+          "tiles": [
+            {
+              "t": 5209,
+              "tex": 4
+            },
+            {
+              "t": 3668,
+              "tex": 4
+            }
+          ]
+        },
+        {
+          "text": " d - a +0 club",
+          "q": 1,
+          "hotkeys": [
+            100
+          ],
+          "level": 2,
+          "tiles": [
+            {
+              "t": 3598,
+              "tex": 4
+            }
+          ]
+        },
+        {
+          "text": " e - a +0 club",
+          "q": 1,
+          "hotkeys": [
+            101
+          ],
+          "level": 2,
+          "tiles": [
+            {
+              "t": 3598,
+              "tex": 4
+            }
+          ]
+        }
+      ]
+    },
+    "input_mode": 0,
+    "dead": false,
+    "game_over": false,
+    "ac": 8,
+    "ev": 8,
+    "sh": 0,
+    "piety_rank": 2,
+    "poison_survival": 31,
+    "status_details": [],
+    "resistances": [
+      {
+        "name": "rFire",
+        "level": 0
+      },
+      {
+        "name": "rCold",
+        "level": 0
+      },
+      {
+        "name": "rNeg",
+        "level": 0
+      },
+      {
+        "name": "rPois",
+        "level": 0
+      },
+      {
+        "name": "rElec",
+        "level": 0
+      },
+      {
+        "name": "rCorr",
+        "level": 0
+      },
+      {
+        "name": "SInv",
+        "level": 0
+      },
+      {
+        "name": "Will",
+        "level": 0
+      }
+    ],
+    "will": 0,
+    "abilities": [
+      {
+        "name": "Renounce Religion",
+        "hotkey": "X",
+        "available": true,
+        "failure": 0
+      },
+      {
+        "name": "Berserk",
+        "hotkey": "a",
+        "available": true,
+        "failure": 2
+      },
+      {
+        "name": "Trog's Hand",
+        "hotkey": "b",
+        "available": true,
+        "failure": 2
+      }
+    ],
+    "skills": [
+      {
+        "name": "Fighting",
+        "level": 3.6,
+        "training": 0,
+        "target": null,
+        "hotkey": "a",
+        "enabled": false
+      },
+      {
+        "name": "Maces & Flails",
+        "level": 3.3,
+        "training": 0,
+        "target": null,
+        "hotkey": "b",
+        "enabled": false
+      },
+      {
+        "name": "Axes",
+        "level": 5.6,
+        "training": 100,
+        "target": 10.0,
+        "hotkey": "c",
+        "enabled": true
+      },
+      {
+        "name": "Polearms",
+        "level": 3.3,
+        "training": 0,
+        "target": null,
+        "hotkey": "d",
+        "enabled": false
+      },
+      {
+        "name": "Unarmed Combat",
+        "level": 0.0,
+        "training": 0,
+        "target": null,
+        "hotkey": "e",
+        "enabled": false
+      },
+      {
+        "name": "Short Blades",
+        "level": 0.0,
+        "training": 0,
+        "target": null,
+        "hotkey": "f",
+        "enabled": true
+      },
+      {
+        "name": "Armour",
+        "level": 2.4,
+        "training": 0,
+        "target": null,
+        "hotkey": "g",
+        "enabled": false
+      },
+      {
+        "name": "Dodging",
+        "level": 2.1,
+        "training": 0,
+        "target": null,
+        "hotkey": "h",
+        "enabled": false
+      },
+      {
+        "name": "Stealth",
+        "level": 0.0,
+        "training": 0,
+        "target": null,
+        "hotkey": "i",
+        "enabled": false
+      }
+    ],
+    "attack_delay": 1.0,
+    "weapon_skill": "Axes"
+  }
+}

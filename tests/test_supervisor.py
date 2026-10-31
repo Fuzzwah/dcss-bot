@@ -101,7 +101,10 @@ class FakeAdapter:
             if action.kind == "save":
                 self.obs = replace(self.obs, input_mode=8, prompt=self.save_prompt)
             elif action.kind == "confirm":
-                self.obs = replace(self.obs, input_mode=1, prompt="")
+                if action.value == "Y":
+                    self.obs = replace(self.obs, input_mode=0, prompt="")
+                elif action.value in {"n", "N"}:
+                    self.obs = replace(self.obs, input_mode=1, prompt="")
             else:
                 self.started.set()
                 if self.release is not None:
@@ -906,3 +909,228 @@ async def test_video_transition_failures_disable_capture_without_stopping_play(
     assert errors[0]["type"] == ("TimeoutError" if failure == "timeout" else "RuntimeError")
     assert "recording disabled" in capsys.readouterr().out
     assert video.closed and not video.active and supervisor.adapter.closed
+
+
+@pytest.mark.parametrize("pending_mode", [1,8])
+async def test_shutdown_does_not_claim_saved_when_native_game_has_not_exited(tmp_path,pending_mode):
+    class UnresolvedSave(FakeAdapter):
+        async def dispatch(self,action):
+            if action.kind == "confirm":
+                self.commands.append(action)
+                return replace(self.obs,input_mode=pending_mode)
+            return await super().dispatch(action)
+
+    adapter = UnresolvedSave()
+    supervisor = make_supervisor(tmp_path,adapter=adapter,max_actions=1)
+    summary = await asyncio.wait_for(supervisor.run(),1)
+    assert summary["details"]["save"] == "uncertain"
+    assert not any(kind == "saved" for kind,_ in supervisor.recorder.events)
+    assert [action.kind for action in adapter.commands].count("save") == 1
+
+
+class NativeActivityAdapter(FakeAdapter):
+    """Expose advancing public snapshots while a single native action is busy."""
+
+    def __init__(self):
+        super().__init__()
+        self.native_packets = asyncio.Queue()
+
+    async def dispatch(self, action, *, automation_guard=None, automation_delay=None):
+        if action.kind not in {"rest", "explore"}:
+            return await super().dispatch(action)
+        assert not self.receiving and not self.active
+        self.active += 1
+        self.commands.append(action)
+        self.started.set()
+        try:
+            while True:
+                reason = automation_guard(self.obs)
+                if reason:
+                    self.obs = replace(self.obs, input_mode=1, native_automation=action.kind,
+                                       native_result=reason)
+                    return self.obs
+                try:
+                    self.obs = await asyncio.wait_for(self.native_packets.get(), .01)
+                except TimeoutError:
+                    continue
+                if self.obs.input_mode == 1:
+                    self.obs = replace(self.obs, native_automation=action.kind,
+                                       native_result="complete")
+                    return self.obs
+        finally:
+            self.active -= 1
+
+
+@pytest.mark.parametrize("control", ["pause", "stop"])
+@pytest.mark.parametrize("kind", ["rest", "explore"])
+async def test_native_activity_controls_interrupt_before_acknowledging_and_pause_video(
+        tmp_path, video, control, kind):
+    adapter = NativeActivityAdapter()
+    supervisor = make_supervisor(tmp_path, adapter=adapter, agent=FakeAgent(Action(kind)),
+                                 record_video=True)
+    async with running(supervisor) as task:
+        await asyncio.wait_for(adapter.started.wait(), 1)
+        video.capture("native recovery")
+        response = await command(supervisor, control)
+        assert response["ok"]
+        assert supervisor.observation.native_result == "control"
+        assert not adapter.active
+        video.capture("after control")
+        if control == "stop":
+            summary = await asyncio.wait_for(task, 1)
+            assert summary["details"]["save"] == "saved"
+        else:
+            assert response["paused"]
+            assert not task.done()
+    assert video.segments == [["native recovery"]]
+    assert len(supervisor.recorder.records) == 1
+
+
+async def test_single_step_waits_for_whole_native_activity_and_repauses_video(tmp_path, video):
+    adapter = NativeActivityAdapter()
+    supervisor = make_supervisor(tmp_path, adapter=adapter, agent=FakeAgent(Action("rest")),
+                                 paused=True, record_video=True)
+    async with running(supervisor):
+        step = asyncio.create_task(command(supervisor, "step"))
+        await asyncio.wait_for(adapter.started.wait(), 1)
+        adapter.native_packets.put_nowait(replace(adapter.obs, input_mode=0, turn=4))
+        await asyncio.sleep(.03)
+        assert not step.done()
+        video.capture("recovering")
+        adapter.native_packets.put_nowait(replace(adapter.obs, input_mode=1, turn=30))
+        response = await asyncio.wait_for(step, 1)
+        assert response["step_completed"] and response["paused"]
+        assert response["turn"] == 30
+        video.capture("paused")
+    assert video.segments == [["recovering"]]
+    assert len(supervisor.recorder.records) == 1
+
+
+async def test_paused_native_exploration_step_yields_at_acknowledged_boundary(tmp_path, video, monkeypatch):
+    monkeypatch.setattr("dcss_bot.supervisor._NATIVE_STEP_QUANTUM", .05)
+    adapter = NativeActivityAdapter()
+    supervisor = make_supervisor(tmp_path, adapter=adapter, agent=FakeAgent(Action("explore")),
+                                 paused=True, record_video=True)
+    async with running(supervisor):
+        step = asyncio.create_task(command(supervisor, "step"))
+        await asyncio.wait_for(adapter.started.wait(), 1)
+        adapter.native_packets.put_nowait(replace(adapter.obs, input_mode=0, turn=4))
+        video.capture("exploring")
+        response = await asyncio.wait_for(step, 1)
+        assert response["step_completed"] and response["paused"]
+        assert response["turn"] == 4
+        assert not adapter.active
+        assert supervisor.observation.input_mode == 1
+        assert supervisor.observation.native_result == "yielded"
+        video.capture("after acknowledgement")
+        assert len(supervisor.recorder.records) == 1
+        assert (await command(supervisor, "status"))["actions"] == 1
+    assert video.segments == [["exploring"]]
+
+
+async def test_normal_native_exploration_is_not_subject_to_single_step_quantum(tmp_path, monkeypatch):
+    monkeypatch.setattr("dcss_bot.supervisor._NATIVE_STEP_QUANTUM", .03)
+    adapter = NativeActivityAdapter()
+    supervisor = make_supervisor(tmp_path, adapter=adapter, agent=FakeAgent(Action("explore")),
+                                 max_actions=1)
+    async with running(supervisor) as task:
+        await asyncio.wait_for(adapter.started.wait(), 1)
+        adapter.native_packets.put_nowait(replace(adapter.obs, input_mode=0, turn=2))
+        await asyncio.sleep(.08)
+        assert adapter.active == 1
+        assert not supervisor.recorder.records
+        adapter.native_packets.put_nowait(replace(adapter.obs, input_mode=1, turn=20))
+        summary = await asyncio.wait_for(task, 1)
+    assert summary["result"] == "action_limit"
+    assert supervisor.recorder.records[0][2].native_result == "complete"
+    assert len(supervisor.recorder.records) == 1
+
+
+async def test_native_macro_obeys_turn_guard_before_policy_can_start_another_action(tmp_path):
+    adapter = NativeActivityAdapter()
+    supervisor = make_supervisor(tmp_path, adapter=adapter, agent=FakeAgent(Action("explore")),
+                                 max_turns=3)
+    async with running(supervisor) as task:
+        await asyncio.wait_for(adapter.started.wait(), 1)
+        adapter.native_packets.put_nowait(replace(adapter.obs, input_mode=0, turn=3))
+        summary = await asyncio.wait_for(task, 1)
+    assert summary["result"] == "turn_limit"
+    assert supervisor.recorder.records[0][2].native_result == "turn_limit"
+    assert len(supervisor.recorder.records) == 1
+
+
+async def test_native_completion_survives_paused_idle_until_policy_reconsiders(tmp_path):
+    adapter = NativeActivityAdapter()
+    supervisor = make_supervisor(tmp_path, adapter=adapter, agent=FakeAgent(Action("explore")),
+                                 paused=True)
+    async with running(supervisor):
+        step = asyncio.create_task(command(supervisor, "step"))
+        await asyncio.wait_for(adapter.started.wait(), 1)
+        adapter.native_packets.put_nowait(replace(adapter.obs, input_mode=1, turn=2))
+        assert (await asyncio.wait_for(step, 1))["step_completed"]
+        # The wire snapshot has no adapter-derived completion metadata.
+        adapter.obs = replace(adapter.obs, native_automation="", native_result="")
+        adapter.incoming.put_nowait(replace(adapter.obs, hp=19))
+        async def received_update():
+            while (await command(supervisor, "status"))["hp"] != 19:
+                await asyncio.sleep(.01)
+        await asyncio.wait_for(received_update(), 1)
+        assert supervisor.observation.native_result == "complete"
+
+
+async def test_live_explore_delay_change_interrupts_native_explore_without_pausing_or_replaying(tmp_path):
+    adapter = NativeActivityAdapter()
+    supervisor = make_supervisor(tmp_path, adapter=adapter, agent=FakeAgent(Action("explore")),
+                                 max_actions=1)
+    async with running(supervisor) as task:
+        await asyncio.wait_for(adapter.started.wait(), 1)
+        response = await command(supervisor, "explore-delay", value=.08)
+        assert response["ok"] and response["explore_delay"] == .08
+        summary = await asyncio.wait_for(task, 1)
+    assert summary["result"] == "action_limit"
+    assert supervisor.recorder.records[0][2].native_result == "control"
+    assert len(supervisor.recorder.records) == 1
+    assert adapter.reconnects == 0
+
+
+async def test_changing_decision_delay_does_not_interrupt_active_native_exploration(tmp_path):
+    adapter = NativeActivityAdapter()
+    supervisor = make_supervisor(tmp_path, adapter=adapter, agent=FakeAgent(Action("explore")),
+                                 max_actions=1)
+    async with running(supervisor) as task:
+        await asyncio.wait_for(adapter.started.wait(), 1)
+        assert (await command(supervisor, "delay", value=.8))["ok"]
+        adapter.native_packets.put_nowait(replace(adapter.obs, input_mode=0, turn=10))
+        await asyncio.sleep(.03)
+        assert not task.done() and adapter.active
+        adapter.native_packets.put_nowait(replace(adapter.obs, input_mode=1, turn=20))
+        summary = await asyncio.wait_for(task, 1)
+    assert summary["result"] == "action_limit"
+    assert supervisor.recorder.records[0][2].native_result == "complete"
+    assert supervisor.recorder.records[0][2].turn == 20
+
+
+async def test_invalid_explore_delay_control_does_not_cancel_native_activity(tmp_path):
+    adapter = NativeActivityAdapter()
+    supervisor = make_supervisor(tmp_path, adapter=adapter, agent=FakeAgent(Action("explore")),
+                                 max_actions=1)
+    async with running(supervisor) as task:
+        await asyncio.wait_for(adapter.started.wait(), 1)
+        for value in (-.01, 2.001, True, "0.02", float("nan")):
+            assert not (await command(supervisor, "explore-delay", value=value))["ok"]
+        adapter.native_packets.put_nowait(replace(adapter.obs, input_mode=1, turn=20))
+        await asyncio.wait_for(task, 1)
+    assert supervisor.recorder.records[0][2].native_result == "complete"
+
+
+async def test_native_recovery_is_interrupted_and_paused_after_bounded_no_improvement(tmp_path):
+    adapter = NativeActivityAdapter()
+    adapter.obs = replace(adapter.obs, statuses=("Slow",))
+    supervisor = make_supervisor(tmp_path, adapter=adapter, agent=FakeAgent(Action("rest")))
+    async with running(supervisor):
+        await asyncio.wait_for(adapter.started.wait(), 1)
+        adapter.native_packets.put_nowait(replace(adapter.obs, input_mode=0, turn=120))
+        status = await supervisor.recorder.wait_status(lambda s: s["paused"])
+        assert "recovery" in status["reason"].lower()
+        assert supervisor.recorder.records[0][2].native_result == "recovery_limit"
+        assert len(supervisor.recorder.records) == 1
