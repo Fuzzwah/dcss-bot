@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dcss-bot"
+version = "0.1.0"
+description = "Observable, conservative DCSS WebTiles agent"
+requires-python = ">=3.11"
+dependencies = ["websockets==15.0.1"]
+
+[project.optional-dependencies]
+video = ["playwright==1.56.0"]
+
+[dependency-groups]
+dev = ["pytest==8.4.2", "pytest-asyncio==1.2.0"]
+
+[project.scripts]
+dcss-bot = "dcss_bot.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dcss_bot"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

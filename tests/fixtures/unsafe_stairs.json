@@ -1,0 +1,32 @@
+{
+  "hp": 8,
+  "hp_max": 30,
+  "position": [
+    0,
+    0
+  ],
+  "monsters": [
+    {
+      "id": 1,
+      "name": "ogre",
+      "x": 1,
+      "y": 0,
+      "threat": 3
+    }
+  ],
+  "cells": [
+    {
+      "x": 0,
+      "y": 0,
+      "feature": 46,
+      "glyph": "<",
+      "visible": true
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "feature": 33,
+      "visible": true
+    }
+  ]
+}

@@ -1,0 +1,453 @@
+{
+  "source": "DCSS0.34.1 seed2, frozen frontier trial turn1832; public observation cropped around the player",
+  "observations": [
+    {
+      "name": "",
+      "species": "Minotaur",
+      "god": "Trog",
+      "turn": 1832,
+      "time": 18738,
+      "place": "Dungeon",
+      "depth": 3,
+      "hp": 16,
+      "hp_max": 33,
+      "xl": 3,
+      "position": [
+        -2,
+        44
+      ],
+      "statuses": [
+        "Fire",
+        "glowing"
+      ],
+      "inventory": [
+        {
+          "slot": 0,
+          "letter": "a",
+          "name": "+0 hand axe",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 1,
+          "letter": "b",
+          "name": "+0 animal skin",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 2,
+          "letter": "c",
+          "name": "+0 dagger",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 3,
+          "letter": "d",
+          "name": "+0 scale mail",
+          "quantity": 1,
+          "equipped": true
+        },
+        {
+          "slot": 4,
+          "letter": "e",
+          "name": "+0 club",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 5,
+          "letter": "f",
+          "name": "+0 club",
+          "quantity": 1,
+          "equipped": false
+        },
+        {
+          "slot": 52,
+          "letter": "c",
+          "name": "scroll labelled ZYDOLUE GATWAI",
+          "quantity": 1,
+          "equipped": false
+        }
+      ],
+      "monsters": [
+        {
+          "id": 68,
+          "name": "bombardier beetle",
+          "x": -6,
+          "y": 45,
+          "threat": 2,
+          "attitude": 0
+        }
+      ],
+      "cells": [
+        {
+          "x": -2,
+          "y": 38,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 38,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": 0,
+          "y": 38,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": 1,
+          "y": 38,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 38,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 39,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 39,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 39,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 40,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 40,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 40,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 41,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 41,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 41,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 42,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 42,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 42,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 43,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 43,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 43,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 44,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 44,
+          "feature": 33,
+          "glyph": "@",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 44,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 45,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 45,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 45,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 44,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 45,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -4,
+          "y": 46,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -3,
+          "y": 46,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -2,
+          "y": 46,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -1,
+          "y": 46,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -8,
+          "y": 44,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -7,
+          "y": 44,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -6,
+          "y": 44,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 44,
+          "feature": 7,
+          "glyph": "#",
+          "visible": false,
+          "cloud": false
+        },
+        {
+          "x": -8,
+          "y": 45,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -7,
+          "y": 45,
+          "feature": 33,
+          "glyph": "\u2020",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -6,
+          "y": 45,
+          "feature": 33,
+          "glyph": "B",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 45,
+          "feature": 33,
+          "glyph": ".",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -8,
+          "y": 46,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -7,
+          "y": 46,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -6,
+          "y": 46,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        },
+        {
+          "x": -5,
+          "y": 46,
+          "feature": 7,
+          "glyph": "#",
+          "visible": true,
+          "cloud": false
+        }
+      ],
+      "messages": [
+        "The liquid fire burns you!",
+        "You shake off the liquid fire.",
+        "You see here a goblin corpse.",
+        "The bombardier beetle sprays incendiary fluid at you.",
+        "The burning spray hits you.",
+        "You are covered in liquid fire! Move or burn!"
+      ],
+      "prompt": "",
+      "menu": {},
+      "input_mode": 1,
+      "dead": false,
+      "game_over": false
+    }
+  ]
+}

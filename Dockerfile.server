@@ -1,0 +1,20 @@
+FROM docker.io/library/debian:bookworm-slim@sha256:99c0b25c46d0214d5a2091092e7908907dcaecd6a962cde0ac700acee222b6f3
+
+ARG BUILD_JOBS=2
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates git build-essential pkg-config bison flex \
+    libncursesw5-dev liblua5.4-dev libsqlite3-dev zlib1g-dev libpng-dev \
+    python3 python-is-python3 python3-yaml python3-tornado && \
+    rm -rf /var/lib/apt/lists/*
+RUN git clone --depth 1 --branch 0.34.1 https://github.com/crawl/crawl.git /opt/crawl && \
+    test "$(git -C /opt/crawl rev-parse HEAD)" = "1eebc1a2892e1c89776a0d7a10691f8dac8d9796" && \
+    make -C /opt/crawl/crawl-ref/source -j"${BUILD_JOBS}" WEBTILES=y USE_DGAMELAUNCH=y
+# Retain the complete matching source and all upstream license notices.
+COPY infrastructure /opt/dcss-infrastructure
+RUN chmod +x /opt/dcss-infrastructure/init-player.py
+ENV LANG=C.UTF-8 DCSS_SOURCE=/opt/crawl DCSS_STATE=/state DCSS_BIND=0.0.0.0
+WORKDIR /opt/crawl/crawl-ref/source
+EXPOSE 8080
+STOPSIGNAL SIGTERM
+HEALTHCHECK --interval=10s --timeout=3s --start-period=10s CMD python3 -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/', timeout=2).read(1)"
+CMD ["python3", "/opt/dcss-infrastructure/run_server.py"]
